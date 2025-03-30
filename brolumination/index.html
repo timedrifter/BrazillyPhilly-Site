@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🖐️ Founder's Chip – Brazilly Philly</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brolumination – Secret Unlocked</title>
+  <link rel="icon" href="https://timedrifter.github.io/BrazillyPhilly-Site/favicon.ico" />
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
       color: #e0e0e0;
       text-align: center;
-      padding: 2rem;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .badge {
-      width: 200px;
-      margin: 1rem auto;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
 
     header img.logo {
@@ -28,7 +21,7 @@
       width: 90%;
       filter: drop-shadow(0 0 10px #00ffc3);
       animation: pulse 2s infinite;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
     }
 
     h1, h2 {
@@ -46,89 +39,201 @@
       margin-top: 3rem;
     }
 
+    button {
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    #sauce-output {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ffc3); }
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .emoji-link {
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .emoji-link:hover {
+      transform: rotate(20deg) scale(1.3);
+    }
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
 
   <header>
     <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
-    <p style="font-size: 1.5rem; font-weight: bold;">Where Philly Meets Picanha</p>
+    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Secret Brolumination Chamber</p>
   </header>
 
   <section>
-    <h1>🖐️ You Found the Founder's Chip</h1>
-    <p>Welcome to the <strong>secret zone</strong> of the Brolumination.</p>
-    <p>Only the curious, the bold, and the pixel-sniffers find their way here.</p>
+    <h1>🛸 Welcome, Initiate</h1>
+    <p>You found the secret. You are now part of the Brolumination.</p>
+    <p>🌟 Drop a high five and spread the glow.</p>
   </section>
 
   <section>
-    <h2>💡 What You Just Did</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>✅ You're observant</li>
-      <li>✅ You're committed</li>
-      <li>✅ You're now <em>officially</em> part of the inner circle</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🧠 From the Desk of Commodore Timedrifter</h2>
-    <blockquote>
-      “If you made it here, you're one of us. You see past the ordinary. You feel the sauce before it sizzles. You hear the robot humming in the kitchen. Welcome home.”
-    </blockquote>
-  </section>
-
-  <section>
-    <h2>🧢 Claim Your Chip Finder Badge</h2>
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/chip_finder_badge.png" alt="Chip Finder Badge" class="badge">
-    <p>Right-click to save your official access medallion. Wear it with pride. Display it with purpose.</p>
-  </section>
-
-  <section>
-    <h2>🎧 Secret Audio Channel Unlocked</h2>
-    <p>Tap into the sounds of <strong>Commodore Timedrifter</strong>:</p>
-    <a href="https://hyperfollow.com/rendizio" target="_blank">https://hyperfollow.com/rendizio</a>
-    <p>Your vibe shaped the vision. This soundtrack fuels the future.</p>
-  </section>
-
-  <section>
-    <h2>💥 Next-Level Access (Now Open!)</h2>
-    <p>You've earned the right to join the Watchlist. We'll notify you with:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li>🔥 Early access to merch drops</li>
-      <li>🤖 Secret invites to our robot test lab</li>
-      <li>🧪 The chance to name a sauce</li>
-      <li>💾 Digital collectibles that unlock hidden content</li>
-    </ul>
-    <p>
-      👉 <a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html" target="_blank">Sign up here</a>
-    </p>
+    <h2>🌶️ Random Sauce Name Generator</h2>
+    <button onclick="generateSauce()">Generate Sauce</button>
+    <div id="sauce-output"></div>
+    <div style="margin-top: 2rem;">
+      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" alt="We proudly use MSG" style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00);">
+      <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
+    </div>
   </section>
 
   <footer>
-    <p>Stay saucy. Stay sharp. <strong>High Five Forever. 🖐️♾️</strong></p>
-    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/">Return to Homepage</a></p>
-<p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
-  &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
-</p>
-
+    <p>Stay saucy. Stay sharp. 
+      <a href="https://timedrifter.github.io/BrazillyPhilly-Site/Brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+        <span id="emoji">🖐️</span>
+      </a> ♾️
+    </p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
+    <p><a href="https://hyperfollow.com/rendizio">Music by Timedrifter</a></p>
+    <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
+      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
+    </p>
   </footer>
-<script>
-  window.addEventListener("load", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("chip") === "unlocked") {
-      setTimeout(() => {
-        if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
-          window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/?chip=unlocked";
-        }
-      }, 1500);
-    }
-  });
-</script>
 
+  <script>
+    const emoji = document.getElementById('emoji');
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+      emoji.textContent = '✨';
+    });
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+      emoji.textContent = '🖐️';
+    });
+  </script>
+
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+
+    const sauceNames = [
+      "Midnight Mango Blaze",
+      "Cyber Cilantro Crunch",
+      "Neon Pepper Jolt",
+      "Yakuza Garlic Heat",
+      "Quantum Lime Burst",
+      "Electric Açai Drizzle",
+      "Philly Flame Zing",
+      "Brazilliance Heatwave",
+      "Time Drip Tango",
+      "Slippery Samurai Drip",
+      "Tokyo Teriyaki Thunder",
+      "Roman Basil Heatwave",
+      "Munich Mustard Smash",
+      "Spicy Sichuan Slipstream",
+      "El Diablo Verde",
+      "Slippery Garlic Avalanche",
+      "Sloppy Napoli",
+      "Parisian Pepper Kiss",
+      "Spicy Soy Mirage",
+      "Bombay Heat Harmony",
+      "Berlin BBQ Bolt",
+      "Rio Rocket Sauce",
+      "Midnight Mole Madness",
+      "Seoul Fire Glaze",
+      "French Firecrack Dijon",
+      "Slippery Chipotle Vortex",
+      "Chi-Town Chimichurri Rush",
+      "Dragonfire Sesame Zing",
+      "Slippery Jalapeño Groove",
+      "Mediterranean Mango Fizz",
+      "Random Fire Bloom",
+      "Wasabi Whiplash",
+      "Crimson Curry Flicker",
+      "Neon Tandoori Tango",
+      "Slippery Sweet Heat Samba",
+      "Bavarian Blaze Cream",
+      "Bangkok Burner Sauce",
+      "Slippery Tomato Typhoon"
+    ];
+
+    function generateSauce() {
+      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+      document.getElementById("sauce-output").innerText = random;
+    }
+  </script>
 </body>
 </html>
