@@ -117,6 +117,18 @@
 </p>
 
   </footer>
+<script>
+  window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("chip") === "unlocked") {
+      setTimeout(() => {
+        if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
+          window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/chip.html";
+        }
+      }, 1500);
+    }
+  });
+</script>
 
 </body>
 </html>
