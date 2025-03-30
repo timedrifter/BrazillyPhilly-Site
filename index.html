@@ -179,7 +179,18 @@
     }
   </script>
   <!-- Brolumination Pixel Tracker -->
-<img src="https://timedrifter.github.io/BrazillyPhilly-Site/chip_finder_badge.png" alt="Brolumination Pixel" width="1" height="1" style="display: none;" />
+<script>
+  window.addEventListener("load", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("chip") === "unlocked") {
+      setTimeout(() => {
+        if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
+          window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/chip.html";
+        }
+      }, 1500);
+    }
+  });
+</script>
 
 </body>
 </html>
