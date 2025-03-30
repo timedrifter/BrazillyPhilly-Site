@@ -53,6 +53,14 @@
   </header>
 
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeguTG_nCrGlGRsuM3yMu3kpDYQcZ2lyIz5U_BMDysdGAESgA/viewform?embedded=true" allowfullscreen></iframe>
+<script>
+  const formIframe = document.querySelector("iframe");
+  formIframe.addEventListener("load", function () {
+    if (formIframe.contentWindow.location.href.includes("formResponse")) {
+      window.location.href = "form-success.html";
+    }
+  });
+</script>
 
 </body>
 </html>
