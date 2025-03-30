@@ -73,6 +73,17 @@
       background: transparent;
       pointer-events: none;
     }
+
+    .emoji-link {
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .emoji-link:hover {
+      transform: rotate(20deg) scale(1.3);
+    }
   </style>
 </head>
 <body>
@@ -97,19 +108,28 @@
   </section>
 
   <footer>
-    <p>Stay saucy. Stay sharp. <strong>High Five Forever. 🖐️♾️</strong></p>
+    <p>Stay saucy. Stay sharp. 
+      <a href="?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+        <span id="emoji">🖐️</span>
+      </a> ♾️
+    </p>
     <p><a href="https://hyperfollow.com/rendizio">Music by Timedrifter</a></p>
     <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
       &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
     </p>
   </footer>
 
-  <!-- Secret Pixel Tracker -->
-  <a href="?chip=unlocked">
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/chip_finder_badge.png" width="1" height="1" style="display:none;" alt="secret chip" />
-  </a>
+  <script>
+    // Emoji swap
+    const emoji = document.getElementById('emoji');
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+      emoji.textContent = '✨';
+    });
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+      emoji.textContent = '🖐️';
+    });
+  </script>
 
-  <!-- Secret Unlock Script -->
   <script>
     window.addEventListener("load", () => {
       const urlParams = new URLSearchParams(window.location.search);
