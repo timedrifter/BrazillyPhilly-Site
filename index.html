@@ -98,33 +98,32 @@
     <h1>🔥 Welcome to Brazilly Philly</h1>
     <p>The revolution has a flavor – and you're on the list.</p>
     <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html">Join the Watchlist</a></p>
-    
   </section>
 
   <section>
     <h2>🌶️ Random Sauce Name Generator</h2>
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
+    <div style="margin-top: 2rem;">
+      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" alt="We proudly use MSG" style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00);">
+      <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
+    </div>
   </section>
 
   <footer>
-    <p>Stay saucy. Stay sharp. <strong>High Five Forever.</strong></p>
-      <a href="?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+    <p>Stay saucy. Stay sharp. 
+      <a href="https://timedrifter.github.io/BrazillyPhilly-Site/Brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
         <span id="emoji">🖐️</span>
       </a> ♾️
     </p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
     <p><a href="https://hyperfollow.com/rendizio">Music by Timedrifter</a></p>
     <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
       &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
     </p>
-  <div style="margin-top: 2rem;">
-  <img src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" alt="We proudly use MSG" style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00);">
-  <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
-</div>
-</footer>
+  </footer>
 
   <script>
-    // Emoji swap
     const emoji = document.getElementById('emoji');
     document.querySelector('.emoji-link').addEventListener('mouseover', () => {
       emoji.textContent = '✨';
@@ -140,7 +139,7 @@
       if (urlParams.get("chip") === "unlocked") {
         setTimeout(() => {
           if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
-            window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/?clip=unlocked";
+            window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/index.html";
           }
         }, 1500);
       }
@@ -204,45 +203,45 @@
     animate();
 
     const sauceNames = [
-  "Midnight Mango Blaze",
-  "Cyber Cilantro Crunch",
-  "Neon Pepper Jolt",
-  "Yakuza Garlic Heat",
-  "Quantum Lime Burst",
-  "Electric Açai Drizzle",
-  "Philly Flame Zing",
-  "Brazilliance Heatwave",
-  "Time Drip Tango",
-  "Slippery Samurai Drip",
-  "Tokyo Teriyaki Thunder",
-  "Roman Basil Heatwave",
-  "Munich Mustard Smash",
-  "Spicy Sichuan Slipstream",
-  "El Diablo Verde",
-  "Slippery Garlic Avalanche",
-  "Sloppy Napoli",
-  "Parisian Pepper Kiss",
-  "Spicy Soy Mirage",
-  "Bombay Heat Harmony",
-  "Berlin BBQ Bolt",
-  "Rio Rocket Sauce",
-  "Midnight Mole Madness",
-  "Seoul Fire Glaze",
-  "French Firecrack Dijon",
-  "Slippery Chipotle Vortex",
-  "Chi-Town Chimichurri Rush",
-  "Dragonfire Sesame Zing",
-  "Slippery Jalapeño Groove",
-  "Mediterranean Mango Fizz",
-  "Random Fire Bloom",
-  "Wasabi Whiplash",
-  "Crimson Curry Flicker",
-  "Neon Tandoori Tango",
-  "Slippery Sweet Heat Samba",
-  "Bavarian Blaze Cream",
-  "Bangkok Burner Sauce",
-  "Slippery Tomato Typhoon"
-];
+      "Midnight Mango Blaze",
+      "Cyber Cilantro Crunch",
+      "Neon Pepper Jolt",
+      "Yakuza Garlic Heat",
+      "Quantum Lime Burst",
+      "Electric Açai Drizzle",
+      "Philly Flame Zing",
+      "Brazilliance Heatwave",
+      "Time Drip Tango",
+      "Slippery Samurai Drip",
+      "Tokyo Teriyaki Thunder",
+      "Roman Basil Heatwave",
+      "Munich Mustard Smash",
+      "Spicy Sichuan Slipstream",
+      "El Diablo Verde",
+      "Slippery Garlic Avalanche",
+      "Sloppy Napoli",
+      "Parisian Pepper Kiss",
+      "Spicy Soy Mirage",
+      "Bombay Heat Harmony",
+      "Berlin BBQ Bolt",
+      "Rio Rocket Sauce",
+      "Midnight Mole Madness",
+      "Seoul Fire Glaze",
+      "French Firecrack Dijon",
+      "Slippery Chipotle Vortex",
+      "Chi-Town Chimichurri Rush",
+      "Dragonfire Sesame Zing",
+      "Slippery Jalapeño Groove",
+      "Mediterranean Mango Fizz",
+      "Random Fire Bloom",
+      "Wasabi Whiplash",
+      "Crimson Curry Flicker",
+      "Neon Tandoori Tango",
+      "Slippery Sweet Heat Samba",
+      "Bavarian Blaze Cream",
+      "Bangkok Burner Sauce",
+      "Slippery Tomato Typhoon"
+    ];
 
     function generateSauce() {
       const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
