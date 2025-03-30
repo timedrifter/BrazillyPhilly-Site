@@ -2,77 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brazilly Philly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brazilly Philly – Home of the Brolumination</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      text-align: center;
       margin: 0;
       padding: 0;
-      background-color: #0d1117;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      overflow-x: hidden;
     }
 
-    .logo {
+    header img.logo {
       max-width: 300px;
-      margin-top: 60px;
+      width: 90%;
+      filter: drop-shadow(0 0 10px #00ffc3);
+      animation: pulse 2s infinite;
+      margin-top: 2rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 20px 0 10px;
-      color: #00ffae;
+    h1, h2 {
+      color: #00ffc3;
     }
 
-    h2 {
-      font-size: 1.3rem;
-      font-weight: normal;
-      color: #cccccc;
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
-
-    .coming-soon {
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: 2px solid #00ffae;
-      background-color: transparent;
-      color: #00ffae;
-      border-radius: 8px;
-      cursor: default;
+    a {
+      color: #00ffc3;
+      text-decoration: none;
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+
+    button {
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    #sauce-output {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 5px #00ffc3); }
+      50% { filter: drop-shadow(0 0 20px #00ffc3); }
+      100% { filter: drop-shadow(0 0 5px #00ffc3); }
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: transparent;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
 
-  <img class="logo" src="https://raw.githubusercontent.com/timedrifter/BrazillyPhilly-Site/main/logo-placeholder.png" alt="Brazilly Philly Logo" />
+  <header>
+    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
+    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
+  </header>
 
-  <h1>Brazilly Philly</h1>
-  <h2>Where Philly Meets Picanha.<br/>Bold flavors, AI robots, and the future of fast-casual — coming soon.</h2>
+  <section>
+    <h1>🔥 Welcome to Brazilly Philly</h1>
+    <p>The revolution has a flavor – and you're on the list.</p>
+    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html">Join the Watchlist</a></p>
+    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form-success.html">Already Joined?</a></p>
+  </section>
 
-  <div class="coming-soon">Launching soon on Kickstarter</div>
+  <section>
+    <h2>🎧 Ambient Sound Toggle</h2>
+    <button onclick="toggleAudio()">Toggle Vibe</button>
+    <audio id="bg-audio" loop>
+      <source src="https://timedrifter.github.io/BrazillyPhilly-Site/ambient.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <section>
+    <h2>🌶️ Random Sauce Name Generator</h2>
+    <button onclick="generateSauce()">Generate Sauce</button>
+    <div id="sauce-output"></div>
+  </section>
 
   <footer>
-    &copy; 2025 Brazilly Philly. All rights reserved.
-<!-- Founder’s Hidden Chip -->
-<a href="https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/" 
-   title="Founder’s Chip"
-   style="position: fixed; bottom: 4px; right: 4px; width: 12px; height: 12px; background-color: transparent; z-index: 9999; display: block;"
-   onclick="alert('🖐️ You found the Founder’s Chip! High Five Forever.'); return true;">
-   <img src="https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/" alt="." style="width: 1px; height: 1px; opacity: 0;">
-</a>
-
+    <p>Stay saucy. Stay sharp. <strong>High Five Forever. 🖐️♾️</strong></p>
+    <p><a href="https://hyperfollow.com/rendizio">Music by Timedrifter</a></p>
   </footer>
 
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+
+    const audio = document.getElementById('bg-audio');
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    const sauceNames = [
+      "Midnight Mango Blaze",
+      "Cyber Cilantro Crunch",
+      "Neon Pepper Jolt",
+      "Yakuza Garlic Heat",
+      "Quantum Lime Burst",
+      "Electric Açai Drizzle",
+      "Philly Flame Zing",
+      "Brazilliance Heatwave",
+      "Time Drip Tango"
+    ];
+
+    function generateSauce() {
+      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+      document.getElementById("sauce-output").innerText = random;
+    }
+  </script>
 </body>
 </html>
