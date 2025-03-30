@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Founder’s Chip – Brolumination</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,6 +43,24 @@
       margin-top: 3rem;
     }
 
+    button {
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    #sauce-output {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
+
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ffc3); }
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
@@ -77,46 +94,17 @@
   </section>
 
   <section>
-    <h2>💡 What You Just Did</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>✅ You're observant</li>
-      <li>✅ You're committed</li>
-      <li>✅ You're now <em>officially</em> part of the inner circle</li>
-    </ul>
+    <h2>🎵 Ambient Sound Toggle</h2>
+    <button onclick="toggleAudio()">Toggle Vibe</button>
+    <audio id="bg-audio" loop>
+      <source src="https://timedrifter.github.io/BrazillyPhilly-Site/ambient.mp3" type="audio/mpeg">
+    </audio>
   </section>
 
   <section>
-    <h2>🧠 From the Desk of Commodore Timedrifter</h2>
-    <blockquote>
-      “If you made it here, you're one of us. You see past the ordinary. You feel the sauce before it sizzles. You hear the robot humming in the kitchen. Welcome home.”
-    </blockquote>
-  </section>
-
-  <section>
-    <h2>🧢 Claim Your Chip Finder Badge</h2>
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/chip_finder_badge.png" alt="Chip Finder Badge" class="badge">
-    <p>Right-click to save your official access medallion. Wear it with pride. Display it with purpose.</p>
-  </section>
-
-  <section>
-    <h2>🎧 Secret Audio Channel Unlocked</h2>
-    <p>Tap into the sounds of <strong>Commodore Timedrifter</strong>:</p>
-    <a href="https://hyperfollow.com/rendizio" target="_blank">https://hyperfollow.com/rendizio</a>
-    <p>Your vibe shaped the vision. This soundtrack fuels the future.</p>
-  </section>
-
-  <section>
-    <h2>💥 Next-Level Access (Now Open!)</h2>
-    <p>You've earned the right to join the Watchlist. We'll notify you with:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li>🔥 Early access to merch drops</li>
-      <li>🤖 Secret invites to our robot test lab</li>
-      <li>🧪 The chance to name a sauce</li>
-      <li>💾 Digital collectibles that unlock hidden content</li>
-    </ul>
-    <p>
-      👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeguTG_nCrGlGRsuM3yMu3kpDYQcZ2lyIz5U_BMDysdGAESgA/viewform?embedded=true" target="_blank">Sign up here</a>
-    </p>
+    <h2>🌶️ Random Sauce Name Generator</h2>
+    <button onclick="generateSauce()">Generate Sauce</button>
+    <div id="sauce-output"></div>
   </section>
 
   <footer>
@@ -179,6 +167,32 @@
 
     initParticles();
     animate();
+
+    const audio = document.getElementById('bg-audio');
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    const sauceNames = [
+      "Midnight Mango Blaze",
+      "Cyber Cilantro Crunch",
+      "Neon Pepper Jolt",
+      "Yakuza Garlic Heat",
+      "Quantum Lime Burst",
+      "Electric Açai Drizzle",
+      "Philly Flame Zing",
+      "Brazilliance Heatwave",
+      "Time Drip Tango"
+    ];
+
+    function generateSauce() {
+      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+      document.getElementById("sauce-output").innerText = random;
+    }
   </script>
 </body>
 </html>
