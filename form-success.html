@@ -1,46 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're In – Brolumination Watchlist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder’s Chip – Brolumination</title>
+
   <style>
     body {
+      font-family: Arial, sans-serif;
       background-color: #0a0a0a;
-      color: #ffffff;
-      font-family: 'Arial', sans-serif;
+      color: #e0e0e0;
+      text-align: center;
       margin: 0;
       padding: 0;
-      text-align: center;
+      overflow-x: hidden;
     }
 
-    header {
-      padding: 2rem 1rem 0 1rem;
-    }
-
-    header img {
+    header img.logo {
       max-width: 300px;
       width: 90%;
       filter: drop-shadow(0 0 10px #00ffc3);
       animation: pulse 2s infinite;
+      margin-top: 2rem;
     }
 
-    h1 {
+    h1, h2 {
       color: #00ffc3;
-      margin-top: 1rem;
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
     }
 
     a {
       color: #00ffc3;
       text-decoration: none;
-      font-weight: bold;
+    }
+
+    .badge {
+      width: 200px;
+      margin: 1rem auto;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 3rem;
     }
 
     @keyframes pulse {
@@ -48,17 +49,136 @@
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: transparent;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
 
   <header>
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo">
-    <h1>You're In!</h1>
-    <p>Welcome to the Brolumination Watchlist.</p>
-    <p>Stay tuned for exclusive access, sauce drops, and top-secret robot ops.</p>
-    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/">Return to the Home Page</a></p>
+    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
+    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
   </header>
 
+  <section>
+    <h1>🖐️ You Found the Founder's Chip</h1>
+    <p>Welcome to the <strong>secret zone</strong> of the Brolumination.</p>
+    <p>Only the curious, the bold, and the pixel-sniffers find their way here.</p>
+  </section>
+
+  <section>
+    <h2>💡 What You Just Did</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>✅ You're observant</li>
+      <li>✅ You're committed</li>
+      <li>✅ You're now <em>officially</em> part of the inner circle</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧠 From the Desk of Commodore Timedrifter</h2>
+    <blockquote>
+      “If you made it here, you're one of us. You see past the ordinary. You feel the sauce before it sizzles. You hear the robot humming in the kitchen. Welcome home.”
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>🧢 Claim Your Chip Finder Badge</h2>
+    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/chip_finder_badge.png" alt="Chip Finder Badge" class="badge">
+    <p>Right-click to save your official access medallion. Wear it with pride. Display it with purpose.</p>
+  </section>
+
+  <section>
+    <h2>🎧 Secret Audio Channel Unlocked</h2>
+    <p>Tap into the sounds of <strong>Commodore Timedrifter</strong>:</p>
+    <a href="https://hyperfollow.com/rendizio" target="_blank">https://hyperfollow.com/rendizio</a>
+    <p>Your vibe shaped the vision. This soundtrack fuels the future.</p>
+  </section>
+
+  <section>
+    <h2>💥 Next-Level Access (Now Open!)</h2>
+    <p>You've earned the right to join the Watchlist. We'll notify you with:</p>
+    <ul style="list-style: none; padding: 0;">
+      <li>🔥 Early access to merch drops</li>
+      <li>🤖 Secret invites to our robot test lab</li>
+      <li>🧪 The chance to name a sauce</li>
+      <li>💾 Digital collectibles that unlock hidden content</li>
+    </ul>
+    <p>
+      👉 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeguTG_nCrGlGRsuM3yMu3kpDYQcZ2lyIz5U_BMDysdGAESgA/viewform?embedded=true" target="_blank">Sign up here</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>Stay saucy. Stay sharp. <strong>High Five Forever. 🖐️♾️</strong></p>
+    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/">Return to Homepage</a></p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  </script>
 </body>
 </html>
