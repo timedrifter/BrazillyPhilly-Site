@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>🖐️ Founder's Chip – Brazilly Philly</title>
   <style>
+canvas#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: transparent;
+  pointer-events: none;
+}
+
     body {
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
@@ -54,7 +65,7 @@
   </style>
 </head>
 <body>
-
+<canvas id="particles"></canvas>
   <header>
     <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
     <p style="font-size: 1.5rem; font-weight: bold;">Where Philly Meets Picanha</p>
