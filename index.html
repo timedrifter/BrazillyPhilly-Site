@@ -276,19 +276,76 @@
     }
   </script>
 </div>
+<style>
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    transition: 0.3s ease;
+    animation: pop-in 0.5s ease forwards;
+    opacity: 0;
+  }
+
+  .social-icon.youtube {
+    filter: drop-shadow(0 0 4px #FF0000); /* Red glow */
+    animation-delay: 0.1s;
+  }
+
+  .social-icon.instagram {
+    filter: drop-shadow(0 0 4px #FF00FF); /* Magenta glow */
+    animation-delay: 0.2s;
+  }
+
+  .social-icon.tiktok {
+    filter: drop-shadow(0 0 4px #00fff7); /* Aqua/cyan glow */
+    animation-delay: 0.3s;
+  }
+
+  .social-icon.facebook {
+    filter: drop-shadow(0 0 4px #1877F2); /* Facebook blue */
+    animation-delay: 0.4s;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #00fff7);
+  }
+
+  @keyframes glowPulse {
+    0% { filter: drop-shadow(0 0 4px var(--glow)); }
+    50% { filter: drop-shadow(0 0 8px var(--glow)); }
+    100% { filter: drop-shadow(0 0 4px var(--glow)); }
+  }
+
+  @keyframes pop-in {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
 <div style="text-align: center; margin-top: 20px;">
-  <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="youtube.png" alt="YouTube" width="40" height="40">
+  <a href="https://youtube.com/@BrazillyPhilly" target="_blank">
+    <img src="youtube.png" alt="YouTube" class="social-icon youtube" style="--glow: #FF0000; animation: glowPulse 3s infinite;">
   </a>
-  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="instagram.png" alt="Instagram" width="40" height="40">
+
+  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank">
+    <img src="instagram.png" alt="Instagram" class="social-icon instagram" style="--glow: #FF00FF; animation: glowPulse 3s infinite;">
   </a>
-  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-    <img src="tiktok.png" alt="TikTok" width="40" height="40">
+
+  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank">
+    <img src="tiktok.png" alt="TikTok" class="social-icon tiktok" style="--glow: #00fff7; animation: glowPulse 3s infinite;">
   </a>
-  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-    <img src="Facebook.png" alt="Facebook" width="40" height="40">
+
+  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank">
+    <img src="Facebook.png" alt="Facebook" class="social-icon facebook" style="--glow: #1877F2; animation: glowPulse 3s infinite;">
   </a>
 </div>
+
 </body>
 </html>
