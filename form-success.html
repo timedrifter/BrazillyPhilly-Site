@@ -91,16 +91,45 @@
     <p>The revolution has a flavor – and you're on the list.</p>
   </section>
   <section>
-    <h2>🌶️ Random Sauce Name Generator</h2>
+   <h2>🌶️ Random Sauce Name Generator</h2>
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
+    <div style="margin-top: 2rem;">
+      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" alt="We proudly use MSG" style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00);">
+      <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
+    </div>
   </section>
 
   <footer>
-    <p>Stay saucy. Stay sharp. <strong>High Five Forever. 🖐️♾️</strong></p>
-    <p><a href="https://hyperfollow.com/rendizio">Music by Timedrifter</a></p>
+    <p>Stay saucy. Stay sharp. 
+      <a href="https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+        <span id="emoji">🖐️</span>
+      </a> ♾️
+    </p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
   </footer>
 
+  <script>
+    const emoji = document.getElementById('emoji');
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+      emoji.textContent = '✨';
+    });
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+      emoji.textContent = '🖐️';
+    });
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get("chip") === "unlocked") {
+        setTimeout(() => {
+          if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
+            window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/index.html";
+          }
+        }, 1500);
+      }
+    });
+  </script>
   <script>
     const canvas = document.getElementById("particles");
     const ctx = canvas.getContext("2d");
@@ -157,16 +186,7 @@
     initParticles();
     animate();
 
-    const audio = document.getElementById('bg-audio');
-    function toggleAudio() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-
-      const sauceNames = [
+    const sauceNames = [
       "Midnight Mango Blaze",
       "Cyber Cilantro Crunch",
       "Neon Pepper Jolt",
@@ -212,5 +232,23 @@
       document.getElementById("sauce-output").innerText = random;
     }
   </script>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
+    <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+  </a>
+  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
+    <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+  </a>
+  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
+    <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
+    <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+  </a>
+</div>
+ <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
+      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
+    </p>
 </body>
 </html>
