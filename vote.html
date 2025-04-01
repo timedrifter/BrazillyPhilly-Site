@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +12,29 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       text-align: center;
+      padding: 20px;
     }
     h1 {
       font-size: 1.8rem;
-      margin-bottom: 10px;
       color: #00ffa3;
     }
+    img {
+      width: 150px;
+      border-radius: 12px;
+      margin: 10px;
+    }
+    .vote-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 20px;
+    }
     .vote-btn {
-      font-size: 1.2rem;
-      padding: 15px 30px;
-      margin: 15px;
+      font-size: 1rem;
+      padding: 10px 20px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
@@ -39,38 +48,89 @@
       background-color: #ff4f4f;
     }
     #results {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 1.2rem;
       color: #00d0ff;
+    }
+    .bar {
+      height: 20px;
+      background-color: #00ffa3;
+      margin: 5px 0;
+      transition: width 0.4s ease;
+      border-radius: 10px;
+    }
+    .bar.red {
+      background-color: #ff4f4f;
+    }
+    .bar-container {
+      width: 300px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px auto;
     }
   </style>
 </head>
 <body>
 
   <h1>Would you like to see a<br>Pão de Queijo (Brazilian Cheese Bread)<br>Cheesesteak Roll at Brazilly Philly?</h1>
-  
-  <div>
-    <button id="yesBtn" class="vote-btn" onclick="vote('yes')">YES — That sounds delicious!</button>
-    <button id="noBtn" class="vote-btn" onclick="vote('no')">NO — Keep it classic.</button>
+
+  <div class="vote-container">
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Cheesesteak_with_provolone_and_onions.jpg/320px-Cheesesteak_with_provolone_and_onions.jpg" alt="Cheesesteak Roll">
+      <button id="yesBtn" class="vote-btn" onclick="vote('yes')">YES — That sounds delicious!</button>
+    </div>
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Pao_de_queijo2.jpg/320px-Pao_de_queijo2.jpg" alt="Pão de Queijo">
+      <button id="noBtn" class="vote-btn" onclick="vote('no')">NO — Keep it classic.</button>
+    </div>
   </div>
-  
+
   <div id="results">
     YES: <span id="yesCount">0</span> | NO: <span id="noCount">0</span>
+    <div class="bar-container">
+      <div id="yesBar" class="bar" style="width: 0%;"></div>
+    </div>
+    <div class="bar-container">
+      <div id="noBar" class="bar red" style="width: 0%;"></div>
+    </div>
   </div>
 
   <script>
-    let yesVotes = 0;
-    let noVotes = 0;
+    let yesVotes = parseInt(localStorage.getItem('yesVotes')) || 0;
+    let noVotes = parseInt(localStorage.getItem('noVotes')) || 0;
+    let voted = localStorage.getItem('voted') || '';
 
-    function vote(option) {
-      if (option === 'yes') {
-        yesVotes++;
-      } else {
-        noVotes++;
-      }
+    function updateDisplay() {
+      const total = yesVotes + noVotes;
+      const yesPercent = total > 0 ? (yesVotes / total * 100).toFixed(1) : 0;
+      const noPercent = total > 0 ? (noVotes / total * 100).toFixed(1) : 0;
+
       document.getElementById('yesCount').textContent = yesVotes;
       document.getElementById('noCount').textContent = noVotes;
+      document.getElementById('yesBar').style.width = yesPercent + '%';
+      document.getElementById('noBar').style.width = noPercent + '%';
     }
+
+    function vote(option) {
+      if (voted) {
+        alert("You’ve already voted from this device!");
+        return;
+      }
+
+      if (option === 'yes') {
+        yesVotes++;
+        localStorage.setItem('yesVotes', yesVotes);
+      } else {
+        noVotes++;
+        localStorage.setItem('noVotes', noVotes);
+      }
+
+      localStorage.setItem('voted', 'true');
+      updateDisplay();
+    }
+
+    updateDisplay();
   </script>
 
 </body>
