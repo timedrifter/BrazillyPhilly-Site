@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brazilly Philly – Menu</title>
-  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brazilly Philly – Home of the Flavor Revelation</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.ico">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,47 +29,16 @@
       pointer-events: none;
     }
 
-    h1, h2, h3 {
+    header img.logo {
+      max-width: 300px;
+      width: 90%;
+      filter: drop-shadow(0 0 10px #00ffc3);
+      animation: pulse 2s infinite;
+      margin-top: 2rem;
+    }
+
+    h1, h2 {
       color: #00ffc3;
-    }
-
-    section#menu {
-      margin: 3rem auto;
-      max-width: 800px;
-      padding: 1rem;
-    }
-
-    .menu-item {
-      margin-bottom: 2rem;
-    }
-
-    .menu-item h3 {
-      color: #ffcc00;
-    }
-
-    .menu-item p {
-      margin: 0.5rem 0;
-    }
-
-    .menu-item img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 0.5rem;
-      box-shadow: 0 0 8px #00ffc3;
-    }
-
-    .msg-section img {
-      width: 125px;
-      height: 125px;
-      filter: drop-shadow(0 0 6px #ffcc00);
-      margin: 2rem auto 0.5rem;
-    }
-
-    .msg-section p {
-      font-size: 0.9rem;
-      color: #ffcc00;
-      font-weight: bold;
-      margin-top: 0.5rem;
     }
 
     a {
@@ -80,15 +49,18 @@
     footer {
       font-size: 0.85rem;
       color: #888;
-      margin: 2rem 0;
+      margin: 2rem 0 0.5rem;
     }
 
-    header img.logo {
-      max-width: 300px;
-      width: 90%;
-      filter: drop-shadow(0 0 10px #00ffc3);
-      animation: pulse 2s infinite;
-      margin-top: 2rem;
+    button {
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
     }
 
     #sauce-output {
@@ -103,71 +75,74 @@
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
+
+    .emoji-link {
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .emoji-link:hover {
+      transform: rotate(20deg) scale(1.3);
+    }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
-
   <header>
-    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
-    <h1>Brazilly Philly Menu</h1>
-    <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets Picanha</p>
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
+    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
   </header>
 
-  <section id="menu">
-    <div class="menu-item">
-      <h3>Brazilly Philly Sandwich</h3>
-      <p>Picanha steak. Melted provolone. Sautéed peppers & onions. Topped with our legendary Brazilian vinagrete. Served with attitude.</p>
-      <img src="sandwich.png" alt="Brazilly Philly Sandwich" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🔥 Brazilian-Style Fries</h3>
-      <p>Golden. Crispy. Cooked with love. Option to add sauces or seasonings while cooking or after — your fry, your rules.</p>
-      <img src="fries.png" alt="Brazilian Fries" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🍅 Brazilian Vinagrete</h3>
-      <p>Our essential topping. Bright. Tangy. Packed with green, red, yellow, and orange peppers — it's the heartbeat of the Brazilly Philly experience.</p>
-      <img src="vinigrette-logo.png" alt="Brazilian Vinagrete" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🧪 Sauces & Seasonings</h3>
-      <p>Customize anything. Choose from Silly Sauce and an arsenal of flavor-enhancing seasonings. Add during cooking or as a finishing touch.</p>
-      <img src="sauce-seasoning.png" alt="Sauce Selection" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🥤 Drinks</h3>
-      <p>Guaraná (our flagship soda), Snapple Mango & Peach, fountain sodas, and triple-filtered water for dine-in only.</p>
-      <img src="drinks.png" alt="Drinks" />
+  <section>
+    <h1>🔥 Welcome to Brazilly Philly</h1>
+    <p>The revelation has flavor – and you found the gateway list!</p>
+    <p><a href="form.html">Join the Watchlist</a></p>
+    <div class="kickstarter-glow" style="margin: 2rem auto; padding: 1rem 2rem; border: 2px solid #00ffc3; color: #00ffc3; font-weight: bold; font-size: 1.2rem; text-align: center; border-radius: 12px; width: 300px; text-shadow: 0 0 10px #00ffc3; animation: pulseGlow 2s infinite;">
+      KICKSTARTER LAUNCHING SOON
     </div>
   </section>
+
+  <div style="max-width: 360px; margin: 2rem auto;">
+    <iframe 
+      width="360" 
+      height="640" 
+      src="https://www.youtube.com/embed/VtTPAnSzDLY" 
+      title="Brazilly Philly Teaser"
+      frameborder="0" 
+      allowfullscreen 
+      style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;">
+    </iframe>
+  </div>
 
   <section>
     <h2>🌶️ Random Sauce Name Generator</h2>
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
-  </section>
-
-  <section class="msg-section">
-    <img src="msg_badge_updated.png" alt="We proudly use MSG" />
-    <p>We proudly use MSG – flavor that slaps! 🥢💥</p>
+    <div style="margin-top: 2rem;">
+      <img src="msg_badge_updated.png" alt="We proudly use MSG" style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00);">
+      <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
+    </div>
   </section>
 
   <div style="text-align: center; margin: 2rem 0;">
     <a href="comicbook.html">
       <img src="comicbook_button.png" alt="Read the Comic" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
     </a>
+    <a href="menu.html">
+      <img src="menu_button.png" alt="View Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
+    </a>
   </div>
 
   <footer>
-    <p><a href="index.html">⬅️ Back to Home</a></p>
-    <p>Stay saucy. Stay sharp. 🖐️ HIGH FIVE FOREVER ♾️</p>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
-    <div style="text-align: center; margin-top: 20px;">
+    <p>Stay saucy. Stay sharp. 
+      <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+        <span id="emoji">🕐</span>
+      </a> ♾️
+    </p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
+    <div style="margin-top: 20px;">
       <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
         <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
       </a>
@@ -181,9 +156,20 @@
         <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
       </a>
     </div>
+    <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
+      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
+    </p>
   </footer>
 
   <script>
+    const emoji = document.getElementById('emoji');
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+      emoji.textContent = '✨';
+    });
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+      emoji.textContent = '🕐';
+    });
+
     const canvas = document.getElementById("particles");
     const ctx = canvas.getContext("2d");
     let particles = [];
@@ -243,47 +229,20 @@
       "Midnight Mango Blaze",
       "Cyber Cilantro Crunch",
       "Anthony's Philly Sauce",
-      "Giovanni's Cali Sauce",
       "Valter's Brasil Sauce",
       "Neon Pepper Jolt",
       "Yakuza Garlic Heat",
       "Quantum Lime Burst",
-      "Electric Açai Drizzle",
+      "Electric Açaí Drizzle",
       "Philly Flame Zing",
-      "Brazilliance Heatwave",
-      "Primo Freddy's Sauce",
       "Time Drip Tango",
-      "Slippery Samurai Drip",
       "Tokyo Teriyaki Thunder",
-      "Chelsea's Bell Sauce",
-      "Roman Basil Heatwave",
-      "Munich Mustard Smash",
-      "Spicy Sichuan Slipstream",
-      "El Diablo Verde",
-      "Slippery Garlic Avalanche",
-      "Sweet Basil Napoli",
-      "Parisian Pepper Kiss",
-      "Spicy Soy Mirage",
-      "Bombay Heat Harmony",
-      "Berlin BBQ Bolt",
-      "Rio Rocket Sauce",
-      "Midnight Mole Madness",
-      "Seoul Fire Glaze",
-      "French Firecrack Dijon",
-      "Sadie's Crazy Sauce",
       "Slippery Chipotle Vortex",
       "Chi-Town Chimichurri Rush",
       "Dragonfire Sesame Zing",
-      "Slippery Jalapeño Groove",
-      "Mediterranean Mango Fizz",
-      "Random Fire Bloom",
-      "Wasabi Whiplash",
-      "Crimson Curry Flicker",
       "Neon Tandoori Tango",
       "Slippery Sweet Heat Samba",
-      "Bavarian Blaze Cream",
-      "Bangkok Burner Sauce",
-      "Slippery Tomato Typhoon"
+      "Bangkok Burner Sauce"
     ];
 
     function generateSauce() {
