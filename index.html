@@ -104,11 +104,11 @@
     </div>
   </section>
 
-  <div style="max-width: 360px; margin: 2rem auto;">
+  <div style="max-width: 560px; margin: 2rem auto;">
     <iframe 
-      width="360" 
-      height="640" 
-      src="https://www.youtube.com/shorts/VbDp5bV4zxA"
+      width="100%" 
+      height="315" 
+      src="https://www.youtube.com/embed/VbDp5bV4zxA" 
       title="Brazilly Philly Teaser"
       frameborder="0" 
       allowfullscreen 
@@ -127,127 +127,8 @@
   </section>
 
   <div style="text-align: center; margin: 2rem 0;">
-    <a href="comicbook.html">
-      <img src="comicbook_button.png" alt="Read the Comic" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
- <a href="menu.html">
-  <img src="menu_button.png" alt="View Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
-  <noscript><span style="color:#00ffc3;">View Menu</span></noscript>
-</a>
-  </div>
-  <footer>
-    <p>Stay saucy. Stay sharp. 
-      <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
-        <span id="emoji">🕐</span>
-      </a> ♾️
-    </p>
-    <p><strong>HIGH FIVE FOREVER</strong></p>
-    <div style="margin-top: 20px;">
-      <a href="https://.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src=".png" alt="" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-        <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-        <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-    </div>
-    <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
-      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
-    </p>
-  </footer>
-
-  <script>
-    const emoji = document.getElementById('emoji');
-    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-      emoji.textContent = '✨';
-    });
-    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
-      emoji.textContent = '🕐';
-    });
-
-    const canvas = document.getElementById("particles");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedY = Math.random() * 0.5 + 0.2;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-      }
-      update() {
-        this.y += this.speedY;
-        if (this.y > canvas.height) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
-    }
-
-    function initParticles(count = 60) {
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-      requestAnimationFrame(animate);
-    }
-
-    initParticles();
-    animate();
-
-    const sauceNames = [
-      "Midnight Mango Blaze",
-      "Cyber Cilantro Crunch",
-      "Anthony's Philly Sauce",
-      "Valter's Brasil Sauce",
-      "Neon Pepper Jolt",
-      "Yakuza Garlic Heat",
-      "Quantum Lime Burst",
-      "Electric Açaí Drizzle",
-      "Philly Flame Zing",
-      "Time Drip Tango",
-      "Tokyo Teriyaki Thunder",
-      "Slippery Chipotle Vortex",
-      "Chi-Town Chimichurri Rush",
-      "Dragonfire Sesame Zing",
-      "Neon Tandoori Tango",
-      "Slippery Sweet Heat Samba",
-      "Bangkok Burner Sauce"
-    ];
-
-    function generateSauce() {
-      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-      document.getElementById("sauce-output").innerText = random;
-    }
-  </script>
-</body>
-</html>
+    <a href="comicbook.html" style="margin-right: 20px;">
+      <img src="comicbook_button.png" alt="Visit Comic Book Page" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
+    </a>
+    <a href="menu.html">
+      <img
