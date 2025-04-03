@@ -15,6 +15,18 @@
       text-align: center;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: transparent;
+      pointer-events: none;
     }
 
     h1, h2, h3 {
@@ -56,12 +68,27 @@
       color: #888;
       margin: 2rem 0;
     }
+
+    header img.logo {
+      max-width: 300px;
+      width: 90%;
+      filter: drop-shadow(0 0 10px #00ffc3);
+      animation: pulse 2s infinite;
+      margin-top: 2rem;
+    }
+
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 5px #00ffc3); }
+      50% { filter: drop-shadow(0 0 20px #00ffc3); }
+      100% { filter: drop-shadow(0 0 5px #00ffc3); }
+    }
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
 
   <header>
-    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" style="max-width: 300px; margin-top: 2rem; filter: drop-shadow(0 0 10px #00ffc3);" />
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
     <h1>🥪 Brazilly Philly Menu</h1>
     <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets Picanha</p>
     <p><a href="index.html">⬅️ Back to Home</a></p>
@@ -104,6 +131,61 @@
     <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
   </footer>
 
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  </script>
 </body>
 </html>
-
