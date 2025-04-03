@@ -91,13 +91,6 @@
       margin-top: 2rem;
     }
 
-    #sauce-output {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #ffcc00;
-      font-size: 1.2rem;
-    }
-
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ffc3); }
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
@@ -118,38 +111,32 @@
     <div class="menu-item">
       <h3>Brazilly Philly Sandwich</h3>
       <p>Picanha steak. Melted provolone. Sautéed peppers & onions. Topped with our legendary Brazilian vinagrete. Served with attitude.</p>
-      <img src="sandwich.png" alt="Brazilly Philly Sandwich" />
+      <img src="sandwich_image_placeholder.png" alt="Brazilly Philly Sandwich" />
     </div>
 
     <div class="menu-item">
       <h3>🔥 Brazilian-Style Fries</h3>
       <p>Golden. Crispy. Cooked with love. Option to add sauces or seasonings while cooking or after — your fry, your rules.</p>
-      <img src="fries.png" alt="Brazilian Fries" />
+      <img src="fries_image_placeholder.png" alt="Brazilian Fries" />
     </div>
 
     <div class="menu-item">
       <h3>🍅 Brazilian Vinagrete</h3>
       <p>Our essential topping. Bright. Tangy. Packed with green, red, yellow, and orange peppers — it's the heartbeat of the Brazilly Philly experience.</p>
-      <img src="vinigrette-logo.png" alt="Brazilian Vinagrete" />
+      <img src="vinagrete_image_placeholder.png" alt="Brazilian Vinagrete" />
     </div>
 
     <div class="menu-item">
       <h3>🧪 Sauces & Seasonings</h3>
       <p>Customize anything. Choose from Silly Sauce and an arsenal of flavor-enhancing seasonings. Add during cooking or as a finishing touch.</p>
-      <img src="sauce-seasoning.png" alt="Sauce Selection" />
+      <img src="sauces_image_placeholder.png" alt="Sauce Selection" />
     </div>
 
     <div class="menu-item">
       <h3>🥤 Drinks</h3>
       <p>Guaraná (our flagship soda), Snapple Mango & Peach, fountain sodas, and triple-filtered water for dine-in only.</p>
-      <img src="drinks.png" alt="Drinks" />
+      <img src="guarana_image_placeholder.png" alt="Guaraná Drink" />
     </div>
-  </section>
-
-  <section>
-    <h2>🌶️ Random Sauce Name Generator</h2>
-    <button onclick="generateSauce()">Generate Sauce</button>
-    <div id="sauce-output"></div>
   </section>
 
   <section class="msg-section">
@@ -157,30 +144,10 @@
     <p>We proudly use MSG – flavor that slaps! 🥢💥</p>
   </section>
 
-  <div style="text-align: center; margin: 2rem 0;">
-    <a href="comicbook.html">
-      <img src="comicbook_button.png" alt="Read the Comic" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
-    </a>
-  </div>
-
   <footer>
-    <p><a href="index.html">⬅️ Back to Home</a></p>
     <p>Stay saucy. Stay sharp. 🖐️ HIGH FIVE FOREVER ♾️</p>
     <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-        <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-        <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-      </a>
-    </div>
+    <p><a href="index.html">⬅️ Back to Home</a></p>
   </footer>
 
   <script>
@@ -238,58 +205,6 @@
 
     initParticles();
     animate();
-
-    const sauceNames = [
-      "Midnight Mango Blaze",
-      "Cyber Cilantro Crunch",
-      "Anthony's Philly Sauce",
-      "Giovanni's Cali Sauce",
-      "Valter's Brasil Sauce",
-      "Neon Pepper Jolt",
-      "Yakuza Garlic Heat",
-      "Quantum Lime Burst",
-      "Electric Açai Drizzle",
-      "Philly Flame Zing",
-      "Brazilliance Heatwave",
-      "Primo Freddy's Sauce",
-      "Time Drip Tango",
-      "Slippery Samurai Drip",
-      "Tokyo Teriyaki Thunder",
-      "Chelsea's Bell Sauce",
-      "Roman Basil Heatwave",
-      "Munich Mustard Smash",
-      "Spicy Sichuan Slipstream",
-      "El Diablo Verde",
-      "Slippery Garlic Avalanche",
-      "Sweet Basil Napoli",
-      "Parisian Pepper Kiss",
-      "Spicy Soy Mirage",
-      "Bombay Heat Harmony",
-      "Berlin BBQ Bolt",
-      "Rio Rocket Sauce",
-      "Midnight Mole Madness",
-      "Seoul Fire Glaze",
-      "French Firecrack Dijon",
-      "Sadie's Crazy Sauce",
-      "Slippery Chipotle Vortex",
-      "Chi-Town Chimichurri Rush",
-      "Dragonfire Sesame Zing",
-      "Slippery Jalapeño Groove",
-      "Mediterranean Mango Fizz",
-      "Random Fire Bloom",
-      "Wasabi Whiplash",
-      "Crimson Curry Flicker",
-      "Neon Tandoori Tango",
-      "Slippery Sweet Heat Samba",
-      "Bavarian Blaze Cream",
-      "Bangkok Burner Sauce",
-      "Slippery Tomato Typhoon"
-    ];
-
-    function generateSauce() {
-      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-      document.getElementById("sauce-output").innerText = random;
-    }
   </script>
 </body>
 </html>
