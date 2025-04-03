@@ -63,7 +63,44 @@
   </style>
 </head>
 <body>
+<section>
+  <style>
+    .kickstarter-glow {
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border: 2px solid #00ffc3;
+      color: #00ffc3;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 12px;
+      width: 300px;
+      text-shadow: 0 0 10px #00ffc3;
+      animation: pulseGlow 2s infinite;
+    }
 
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 8px #00ffc3; }
+      50% { box-shadow: 0 0 24px #00ffc3; }
+      100% { box-shadow: 0 0 8px #00ffc3; }
+    }
+    .kickstarter-glow a {
+      color: #00ffc3;
+      text-decoration: none;
+    }
+    .kickstarter-glow a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <div class="kickstarter-glow">
+    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+      🚀 KICKSTARTER PRE-LAUNCH PAGE
+    </a>
+  </div>
+</section>
+
+  
   <!-- Graphic Section -->
   <img id="graphic" src="BP-vote.png" alt="Voting Graphic">
 
