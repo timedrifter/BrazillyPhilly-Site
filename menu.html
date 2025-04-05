@@ -17,6 +17,36 @@
       padding: 0;
       overflow-x: hidden;
     }
+    
+  .kickstarter-glow {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border: 2px solid #00ffc3;
+    color: #00ffc3;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 12px;
+    width: 300px;
+    text-shadow: 0 0 10px #00ffc3;
+    animation: pulseGlow 2s infinite;
+    display: block;
+    background: #000;
+    text-decoration: none;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px #00ffc3;
+    }
+    50% {
+      box-shadow: 0 0 20px #00ffc3;
+    }
+    100% {
+      box-shadow: 0 0 5px #00ffc3;
+    }
+  }
+
 
     canvas#particles {
       position: fixed;
@@ -226,9 +256,9 @@
     <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets Picanha</p>
 
     <!-- Kickstarter badge -->
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-      <img src="kickstarter_badge.png" alt="Kickstarter Badge" class="badge" style="animation: pulse 2s infinite;">
-    </a>
+   <a href="https://www.kickstarter.com/projects/brazillyphilly" target="_blank" class="kickstarter-glow">
+  🚀 KICKSTARTER PRE-LAUNCH<br>PAGE
+</a>
   </header>
 
   <section id="menu">
