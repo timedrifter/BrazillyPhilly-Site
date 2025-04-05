@@ -228,6 +228,34 @@
     .mobile-nav.show {
       display: flex;
     }
+      .kickstarter-glow {
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border: 2px solid #00ffc3;
+      color: #00ffc3;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 12px;
+      width: 300px;
+      text-shadow: 0 0 10px #00ffc3;
+      animation: pulseGlow 2s infinite;
+    }
+
+    .kickstarter-glow a {
+      color: #00ffc3;
+      text-decoration: none;
+    }
+
+    .kickstarter-glow a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 8px #00ffc3; }
+      50% { box-shadow: 0 0 24px #00ffc3; }
+      100% { box-shadow: 0 0 8px #00ffc3; }
+    }
   </style>
 </head>
 <body>
@@ -239,18 +267,30 @@
     <a href="comicbook.html">📚 Comic Book</a>
     <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a>
   </nav>
-  <nav class="main-nav">
-    <a href="index.html">🏠 Home</a>
-    <a href="menu.html">🥪 Menu</a>
-    <a href="comicbook.html">📚 Comic</a>
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a>
-  </nav>
+  
   <canvas id="particles"></canvas>
+
+  <!-- Kickstarter Glow Box -->
+  <section>
+    <div class="kickstarter-glow">
+      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+        🚀 KICKSTARTER PRE-LAUNCH PAGE
+      </a>
+    </div>
+  </section>
   <div class="secret-trigger" title="Flavor Secret"></div>
   <header>
     <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
     <h1>Brazilly Philly Menu</h1>
-    <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets Picanha</p>
+    <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets</p>
+  <section>
+    <div class="kickstarter-glow">
+      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+        🚀 KICKSTARTER PRE-LAUNCH PAGE
+      </a>
+    </div>
+  </section>
+  <p style="color: #00ffcc; font-size: 1.1rem;">Picanha</p>
   </header>
 
   <section id="menu">
