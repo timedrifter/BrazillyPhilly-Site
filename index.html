@@ -7,13 +7,25 @@
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon.ico">
+
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
     #nav-menu {
       position: fixed;
       top: 1rem;
       left: 1rem;
       z-index: 999;
     }
+
     #nav-toggle {
       font-size: 2rem;
       cursor: pointer;
@@ -24,9 +36,11 @@
       box-shadow: 0 0 8px #00ffc3;
       transition: transform 0.2s ease;
     }
+
     #nav-toggle:hover {
       transform: scale(1.15);
     }
+
     #nav-links {
       list-style: none;
       padding: 0.5rem;
@@ -37,49 +51,18 @@
       box-shadow: 0 0 12px #00ffc3;
       display: none;
     }
+
     #nav-links li {
       margin: 0.5rem 0;
     }
+
     #nav-links a {
       text-decoration: none;
       color: #00ffc3;
       font-weight: bold;
       font-size: 1rem;
     }
-    .kickstarter-glow {
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 2px solid #00ffc3;
-      color: #00ffc3;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-align: center;
-      border-radius: 12px;
-      width: 300px;
-      text-shadow: 0 0 10px #00ffc3;
-      animation: pulseGlow 2s infinite;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 8px #00ffc3; }
-      50% { box-shadow: 0 0 24px #00ffc3; }
-      100% { box-shadow: 0 0 8px #00ffc3; }
-    }
-    .kickstarter-glow a {
-      color: #00ffc3;
-      text-decoration: none;
-    }
-    .kickstarter-glow a:hover {
-      text-decoration: underline;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0a0a0a;
-      color: #e0e0e0;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+
     header img.logo {
       max-width: 300px;
       width: 90%;
@@ -87,18 +70,22 @@
       animation: pulse 2s infinite;
       margin-top: 2rem;
     }
+
     h1, h2 {
       color: #00ffc3;
     }
+
     a {
       color: #00ffc3;
       text-decoration: none;
     }
+
     footer {
       font-size: 0.85rem;
       color: #888;
       margin-top: .5rem;
     }
+
     button {
       background: #00ffc3;
       color: #0a0a0a;
@@ -109,17 +96,53 @@
       border-radius: 8px;
       margin-top: 1rem;
     }
+
     #sauce-output {
       margin-top: 1rem;
       font-weight: bold;
       color: #ffcc00;
       font-size: 1.2rem;
     }
+
+    .emoji-link {
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .emoji-link:hover {
+      transform: rotate(20deg) scale(1.3);
+    }
+
+    .badge {
+      width: 125px;
+      height: 125px;
+      filter: drop-shadow(0 0 6px #00ffc3);
+      transition: transform 0.3s ease;
+      margin: 2rem auto 0.5rem;
+    }
+
+    .badge:hover {
+      transform: scale(1.2);
+    }
+
+    .pulse-glow {
+      animation: pulse 2s infinite;
+    }
+
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ffc3); }
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 8px #00ffc3; }
+      50% { box-shadow: 0 0 24px #00ffc3; }
+      100% { box-shadow: 0 0 8px #00ffc3; }
+    }
+
     canvas#particles {
       position: fixed;
       top: 0;
@@ -130,20 +153,11 @@
       background: transparent;
       pointer-events: none;
     }
-    .emoji-link {
-      font-size: 1.5rem;
-      display: inline-block;
-      transition: transform 0.2s ease-in-out;
-      cursor: pointer;
-    }
-    .emoji-link:hover {
-      transform: rotate(20deg) scale(1.3);
-    }
   </style>
 </head>
 <body>
   <nav id="nav-menu">
-    <div id="nav-toggle">☰</div>
+    <div id="nav-toggle" onclick="toggleMenu()">☰</div>
     <ul id="nav-links">
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="menu.html">🥩 Menu</a></li>
@@ -166,14 +180,20 @@
     <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html">Join the Watchlist</a></p>
   </section>
 
-  <section>
-    <div class="kickstarter-glow">
-      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-        🚀 KICKSTARTER PRE-LAUNCH PAGE
-      </a>
-    </div>
+  <section class="kickstarter-glow" style="animation: pulseGlow 2s infinite;">
+    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+      🚀 KICKSTARTER PRE-LAUNCH PAGE
+    </a>
   </section>
 
-<!-- rest of your existing content remains unchanged -->
-</body>
-</html>
+  <!-- Teaser Video -->
+  <div style="max-width: 360px; margin: 2rem auto;">
+    <iframe width="360" height="640" src="https://www.youtube.com/embed/VbDp5bV4zxA" title="Brazilly Philly Teaser"
+      frameborder="0" allowfullscreen
+      style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;"></iframe>
+  </div>
+
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="menu.html">
+      <img src="menu_link.png" alt="View Our Menu"
+        style="width: 125px; max-width:
