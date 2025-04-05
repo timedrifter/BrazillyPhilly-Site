@@ -104,6 +104,36 @@
       color: #ffcc00;
       font-size: 1.2rem;
     }
+    .main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.main-nav a {
+  color: #00ffc3;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 10px #00ffc3;
+}
+
+.main-nav a:hover {
+  background: rgba(0, 255, 195, 0.1);
+  box-shadow: 0 0 12px #00ffc3;
+}
+.main-nav {
+  position: sticky;
+  top: 0;
+  background: #0a0a0a;
+  z-index: 999;
+  padding: 1rem 0;
+}
+
   </style>
 </head>
 <body>
@@ -113,6 +143,13 @@
     <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
     <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
   </header>
+  <nav class="main-nav">
+  <a href="index.html">🏠 Home</a>
+  <a href="menu.html">🥪 Menu</a>
+  <a href="comicbook.html">📚 Comic</a>
+  <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a>
+</nav>
+
 
   <section class="section">
     <h1>⚡ FREE ENERGY REVELATION ⚡</h1>
