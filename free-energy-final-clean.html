@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Energy – Brazilly Philly</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
+      margin-top: 1rem;
+    }
+    p {
+      max-width: 600px;
+      margin: 0.5rem auto;
+    }
+    .glow {
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
+    }
+    .highlight {
+      color: #ffcc00;
+    }
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .badge-container img {
+      width: 125px;
+      height: 125px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 6px #00ffc3);
+    }
+    .badge-container img:hover {
+      transform: scale(1.2);
+    }
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .button {
+      margin: 1.5rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00ffc3;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .socials a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .socials img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 4px #00ffff);
+      transition: 0.3s;
+    }
+    #nav-menu {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+    }
+    #nav-toggle {
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: #00ffc3;
+      color: #0a0a0a;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #00ffc3;
+      transition: transform 0.2s ease;
+    }
+    #nav-toggle:hover {
+      transform: scale(1.15);
+    }
+    #nav-links {
+      list-style: none;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      background-color: #111;
+      border: 1px solid #00ffc3;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #00ffc3;
+      display: none;
+    }
+    #nav-links li {
+      margin: 0.5rem 0;
+    }
+    #nav-links a {
+      text-decoration: none;
+      color: #00ffc3;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav id="nav-menu">
+    <div id="nav-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="menu.html">🥩 Menu</a></li>
+      <li><a href="free-energy.html">⚡ Free Energy</a></li>
+      <li><a href="comicbook.html">📚 Comic Book</a></li>
+      <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
+    </ul>
+  </nav>
+
+  <canvas id="particles"></canvas>
+
+  <header>
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" style="max-width: 300px; width: 90%; margin-top: 2rem;" />
+    <h1>⚡ FREE ENERGY REVELATION ⚡</h1>
+    <p>Powering Flavor. Electrifying the Future.</p>
+    <img src="free_energy_image.png" alt="Free Energy" style="max-width: 500px; width: 90%; margin: 2rem auto; filter: drop-shadow(0 0 12px #00ffc3);" />
+  </header>
+
+  <section>
+    <p>What if your sandwich was served in a space where energy never runs out?</p>
+    <p>At Brazilly Philly, we’re testing the boundaries of what’s possible—by showcasing real-world free energy concepts and futuristic tech that could one day power our kitchens.</p>
+    <p>This isn’t just food—it’s flavor fueled by the future. Welcome to the next evolution of sustainable swag. This is more than a vibe—it’s a revelation.</p>
+  </section>
+
+  <div class="badge-container">
+    <a href="free-energy.html">
+      <img src="free_energy_tech.png" alt="Free Energy Tech Badge" />
+    </a>
+    <a href="comicbook.html">
+      <img src="comicbook_badge.png" alt="Comic Book Badge" />
+    </a>
+    <img src="msg_badge_updated.png" alt="MSG Badge" />
+  </div>
+
+  <div>
+    <a href="index.html" class="button">⬅️ Return to Home</a>
+  </div>
+
+  <footer>
+    <p>Stay saucy. Stay sharp. 🖐️ ♾️</p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
+    <div class="socials">
+      <a href="https://youtube.com/@BrazillyPhilly" target="_blank">
+        <img src="youtube.png" alt="YouTube" />
+      </a>
+      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank">
+        <img src="instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank">
+        <img src="tiktok.png" alt="TikTok" />
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank">
+        <img src="Facebook.png" alt="Facebook" />
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    }
+
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  </script>
+</body>
+</html>
