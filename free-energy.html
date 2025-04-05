@@ -1,10 +1,9 @@
-<!-- FILE NAME: secret-caipirinha-glacier-badge.png -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brazilly Philly – Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brazilly Philly – Free Energy</title>
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="favicon.ico" />
@@ -30,166 +29,7 @@
       pointer-events: none;
     }
 
-    h1, h2, h3 {
-      text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
-      color: #00ffc3;
-    }
-
-    section#menu {
-      margin: 3rem auto;
-      max-width: 800px;
-      padding: 1rem;
-    }
-
-    .menu-item {
-      margin-bottom: 2rem;
-    }
-
-    .menu-item h3 {
-      color: #ffcc00;
-    }
-
-    .menu-item p {
-      margin: 0.5rem 0;
-    }
-
-    .menu-item img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 0.5rem;
-      box-shadow: 0 0 8px #00ffc3;
-    }
-
-    .msg-section img {
-      width: 125px;
-      height: 125px;
-      filter: drop-shadow(0 0 6px #ffcc00);
-      margin: 2rem auto 0.5rem;
-    }
-
-    .msg-section p {
-      font-size: 0.9rem;
-      color: #ffcc00;
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
-
-    a {
-      color: #00ffc3;
-      text-decoration: none;
-    }
-    button {
-      background: #00ffc3;
-      color: #0a0a0a;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-    #sauce-output {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #ffcc00;
-      font-size: 1.2rem;
-    }
-
-    footer {
-      font-size: 0.85rem;
-      color: #888;
-      margin: 2rem 0;
-    }
-
-    header img.logo {
-      max-width: 300px;
-      width: 90%;
-      filter: drop-shadow(0 0 10px #00ffc3);
-      animation: pulse 2s infinite;
-      margin-top: 2rem;
-    }
-
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 5px #00ffc3); }
-      50% { filter: drop-shadow(0 0 20px #00ffc3); }
-      100% { filter: drop-shadow(0 0 5px #00ffc3); }
-    }
-
-    .water-ice-banner img,
-    .water-ice-flavors img {
-      box-shadow: 0 0 30px #00ffc3;
-      border-radius: 12px;
-      transition: transform 0.3s ease, opacity 0.6s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    .animate-visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-
-    .water-ice-flavors img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 40px #00ffc3;
-    }
-
-    .water-ice-flavors p {
-      color: #00ffaa;
-      font-size: 1.2em;
-      margin-top: 20px;
-      text-shadow: 0 0 6px #00ffaa, 0 0 12px #00ffaa;
-      font-weight: bold;
-    }
-
-    .download-link {
-      color: #00ffc3;
-      text-decoration: underline;
-      display: block;
-      margin-top: 1rem;
-    }
-
-    .secret-trigger {
-      width: 40px;
-      height: 40px;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-image: url('favicon.ico');
-      background-size: cover;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #00ffc3;
-      cursor: pointer;
-      z-index: 1000;
-    }
-      .main-nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-      font-size: 1.1rem;
-      font-weight: bold;
-      position: sticky;
-      top: 0;
-      background: #0a0a0a;
-      z-index: 999;
-      padding: 1rem 0;
-    }
-
-    .main-nav a {
-      color: #00ffc3;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
-      text-shadow: 0 0 10px #00ffc3;
-    }
-
-    .main-nav a:hover {
-      background: rgba(0, 255, 195, 0.1);
-      box-shadow: 0 0 12px #00ffc3;
-    }
-      .hamburger {
+    .hamburger {
       position: fixed;
       top: 20px;
       left: 20px;
@@ -228,7 +68,20 @@
     .mobile-nav.show {
       display: flex;
     }
-      .kickstarter-glow {
+
+    h1 {
+      margin-top: 6rem;
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
+    }
+
+    h2 {
+      color: #00ffc3;
+      margin-top: 1rem;
+      text-shadow: 0 0 8px #00ffc3;
+    }
+
+    .kickstarter-glow {
       margin: 2rem auto;
       padding: 1rem 2rem;
       border: 2px solid #00ffc3;
@@ -259,6 +112,8 @@
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
+
   <div class="hamburger" onclick="toggleMenu()">☰</div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">🏠 Home</a>
@@ -267,10 +122,10 @@
     <a href="comicbook.html">📚 Comic Book</a>
     <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a>
   </nav>
-  
-  <canvas id="particles"></canvas>
 
-  <!-- Kickstarter Glow Box -->
+  <h1>Free Energy Vision</h1>
+  <h2>Powered by Curiosity, Built for the Future</h2>
+
   <section>
     <div class="kickstarter-glow">
       <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
@@ -278,197 +133,63 @@
       </a>
     </div>
   </section>
-  <div class="secret-trigger" title="Flavor Secret"></div>
-  <header>
-    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
-    <h1>Brazilly Philly Menu</h1>
-    <p style="color: #00ffcc; font-size: 1.1rem;">Where Philly Meets</p>
-  <section>
-    <div class="kickstarter-glow">
-      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-        🚀 KICKSTARTER PRE-LAUNCH PAGE
-      </a>
-    </div>
-  </section>
-  <p style="color: #00ffcc; font-size: 1.1rem;">Picanha</p>
-  </header>
 
-  <section id="menu">
-    <div class="menu-item">
-      <h3>Brazilly Philly Sandwich</h3>
-      <p>Picanha steak. Melted provolone. Sautéed peppers & onions. Topped with our legendary Brazilian vinagrete. Served with attitude.</p>
-      <img src="sandwich_image_placeholder.png" alt="Brazilly Philly Sandwich" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🔥 Brazilian-Style Fries</h3>
-      <p>Golden. Crispy. Cooked with love. Option to add sauces or seasonings while cooking or after — your fry, your rules.</p>
-      <img src="fries_image_placeholder.png" alt="Brazilian Fries" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🍅 Brazilian Vinagrete</h3>
-      <p>Our essential topping. Bright. Tangy. Packed with green, red, yellow, and orange peppers — it's the heartbeat of the Brazilly Philly experience.</p>
-      <img src="vinagrete_image_placeholder.png" alt="Brazilian Vinagrete" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🧪 Sauces & Seasonings</h3>
-      <p>Customize anything. Choose from Silly Sauce and an arsenal of flavor-enhancing seasonings. Add during cooking or as a finishing touch.</p>
-      <img src="sauces_image_placeholder.png" alt="Sauce Selection" />
-    </div>
-
-    <div class="menu-item">
-      <h3>🥤 Drinks</h3>
-      <p>Guaraná (our flagship soda), Snapple Mango & Peach, fountain sodas, and triple-filtered water for dine-in only.</p>
-      <img src="guarana_image_placeholder.png" alt="Guaraná Drink" />
-    </div>
-  </section>
-
-  <!-- PHILLY WATER ICE SECTION (Italian Ice) -->
-  <section id="philly-water-ice" class="menu-section">
-  <div class="menu-item">
-    <h3 class="glow">🍧 Philly Water Ice</h3>
-    <p>NYC Italian Ice meets Brazilian flavors in a lineup that pops with color, fruit, and Guaraná magic.</p>
-  </div>
-  <div class="water-ice-banner">
-    <img src="philly-water-ice-banner.png" class="reveal-on-scroll" alt="Philly Water Ice (Italian Ice)" style="width:100%; max-width:900px; display:block; margin:20px auto;" />
-  </div>
-  <div class="water-ice-flavors">
-    <img src="philly-water-ice-flavors.png" class="reveal-on-scroll" alt="Water Ice Flavor Lineup - Cherry, Lemon, Guaraná, Açaí" style="width:100%; max-width:900px; display:block; margin:0 auto 10px auto;" />
-      <a href="philly-water-ice-flavors.png" download class="download-link">Download Water Ice Flavor Poster</a>
-    </div>
-  </section>
-
-<!-- Comic Book Button -->
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="comicbook.html">
-    <img src="comicbook_button.png" alt="Read the Comic" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
-  </a>
-</div>
-
-<!-- MSG + Comic Badge Section -->
-<section class="msg-section" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-  <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <div>
-      <img src="msg_badge_updated.png" alt="We proudly use MSG" title="We proudly use MSG – flavor that slaps! 🥢💥" />
-      <p>We proudly use MSG – flavor that slaps! 🥢💥</p>
-    </div>
-    <div>
-      <a href="comicbook.html">
-        <img src="comicbook_button.png" alt="Read the Comic" title="Tap to read the Brazilly Philly robot comic!" style="width: 125px; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
-      <p style="color: #00ffa3; font-weight: bold; margin-top: 0.5rem; text-shadow: 0 0 6px #00ffa3;">Read the Comic Book!</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sauce Generator -->
-<section>
-  <h2>🌶️ Random Sauce Name Generator</h2>
-  <button onclick="generateSauce()">Generate Sauce</button>
-  <div id="sauce-output"></div>
-</section>
-
-<!-- Back to Home Footer -->
-<footer>
-  <p>Stay saucy. Stay sharp. 🖐️ HIGH FIVE FOREVER ♾️</p>
-  <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
-  <p><a href="index.html">⬅️ Back to Home</a></p>
-</footer>
-
-<!-- Secret Flavor Badge Reveal -->
-  <div id="secretFlavorBadge" style="display:none; margin-top:40px;">
-    <img src="secret-caipirinha-glacier-badge.png" alt="Secret Flavor Caipirinha Glacier Badge" style="width:100%; max-width:500px; box-shadow:0 0 20px #00ffc3; border-radius:12px;" />
-  </div>
+  <footer>
+    <p style="font-size: 0.85rem; color: #888; margin-top: 3rem;">&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
+  </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+    function toggleMenu() {
+      document.getElementById("mobileNav").classList.toggle("show");
+    }
 
-    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-      observer.observe(el);
-    });
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
 
-    // Secret flavor unlock trigger
-    document.querySelector('.secret-trigger').addEventListener('click', () => {
-      alert('🎉 Secret Flavor Unlocked: Caipirinha Glacier! Ask for it at the counter!');
-      document.getElementById('secretFlavorBadge').style.display = 'block';
-    });
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
   </script>
-<script>
-  const sauceNames = [
-    "Dawn's Destiny Sauce",
-    "Raquel's Family Heat",
-    "Raquel's Garden Fire",
-    "Midnight Mango Blaze",
-    "Cyber Cilantro Crunch",
-    "Valter's Hard Work Sauce",
-    "Anthony's Philly Sauce",
-    "Giovanni's Cali Sauce",
-    "Christopher's Simple Sauce",
-    "Neon Pepper Jolt",
-    "Yakuza Garlic Heat",
-    "Quantum Lime Burst",
-    "Cleane's Curiousity Sauce",
-    "Chelsea's Bell Sauce",
-    "Sadie's Carzy Sauce",
-    "Electric Açai Drizzle",
-    "Philly Flame Zing",
-    "Brazilliance Heatwave",
-    "Time Drip Tango",
-    "Slippery Samurai Drip",
-    "Tokyo Teriyaki Thunder",
-    "Roman Basil Heatwave",
-    "Munich Mustard Smash",
-    "Spicy Sichuan Slipstream",
-    "El Diablo Verde",
-    "Slippery Garlic Avalanche",
-    "Sweet Basil Napoli",
-    "Parisian Pepper Kiss",
-    "Spicy Soy Mirage",
-    "Bombay Heat Harmony",
-    "Berlin BBQ Bolt",
-    "Rio Rocket Sauce",
-    "Midnight Mole Madness",
-    "Seoul Fire Glaze",
-    "French Firecrack Dijon",
-    "Slippery Chipotle Vortex",
-    "Chi-Town Chimichurri Rush",
-    "Dragonfire Sesame Zing",
-    "Slippery Jalapeño Groove",
-    "Mediterranean Mango Fizz",
-    "Random Fire Bloom",
-    "Wasabi Whiplash",
-    "Crimson Curry Flicker",
-    "Neon Tandoori Tango",
-    "Slippery Sweet Heat Samba",
-    "Bavarian Blaze Cream",
-    "Bangkok Burner Sauce",
-    "Slippery Tomato Typhoon",
-    "Broblivion Burn",
-    "Funkmaster Fire Dip",
-    "Mint Condition Meltdown",
-    "Brotiger BBQ Tamer",
-    "Caipirinha Glacier Drizzle",
-    "Cosmic Cilantro Meteor"
-  ];
-
-  function generateSauce() {
-    const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-    document.getElementById("sauce-output").innerText = random;
-  }
-</script>
-<script>
-  function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("show");
-  }
-</script>
 </body>
 </html>
