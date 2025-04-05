@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brazilly Philly – Free Energy</title>
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -29,121 +29,175 @@
       pointer-events: none;
     }
 
-    .hamburger {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      background: #00ffc3;
+    h1, h2 {
+      text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+      color: #00ffc3;
+    }
+
+    .logo {
+      max-width: 300px;
+      width: 90%;
+      filter: drop-shadow(0 0 10px #00ffc3);
+      animation: pulse 2s infinite;
+      margin-top: 2rem;
+    }
+
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 5px #00ffc3); }
+      50% { filter: drop-shadow(0 0 20px #00ffc3); }
+      100% { filter: drop-shadow(0 0 5px #00ffc3); }
+    }
+
+    .glow-badge {
+      width: 125px;
+      height: 125px;
+      margin: 1rem;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 8px #00ffc3);
+    }
+
+    .glow-badge:hover {
+      transform: scale(1.2);
+    }
+
+    .btn {
+      background-color: #00ffc3;
       color: #000;
-      padding: 12px 18px;
-      font-size: 1.5rem;
+      border: none;
       border-radius: 12px;
-      box-shadow: 0 0 20px #00ffc3;
+      padding: 0.75rem 1.5rem;
+      margin: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
       cursor: pointer;
-      z-index: 1001;
+      box-shadow: 0 0 12px #00ffc3;
+      display: inline-block;
+      text-decoration: none;
     }
 
-    .mobile-nav {
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      filter: drop-shadow(0 0 4px #00ffff);
+      transition: 0.3s ease;
+    }
+
+    #nav-menu {
       position: fixed;
-      top: 70px;
-      left: 20px;
-      background: #000;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00ffc3;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+    }
+
+    #nav-toggle {
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: #00ffc3;
+      color: #0a0a0a;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #00ffc3;
+      transition: transform 0.2s ease;
+    }
+
+    #nav-toggle:hover {
+      transform: scale(1.15);
+    }
+
+    #nav-links {
+      list-style: none;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      background-color: #111;
+      border: 1px solid #00ffc3;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #00ffc3;
       display: none;
-      flex-direction: column;
-      gap: 1rem;
-      z-index: 1000;
     }
 
-    .mobile-nav a {
-      color: #00ffc3;
+    #nav-links li {
+      margin: 0.5rem 0;
+    }
+
+    #nav-links a {
       text-decoration: none;
-      font-weight: bold;
-      text-shadow: 0 0 8px #00ffc3;
-      display: block;
-    }
-
-    .mobile-nav.show {
-      display: flex;
-    }
-
-    h1 {
-      margin-top: 6rem;
-      color: #00ffc3;
-      text-shadow: 0 0 10px #00ffc3;
-    }
-
-    h2 {
-      color: #00ffc3;
-      margin-top: 1rem;
-      text-shadow: 0 0 8px #00ffc3;
-    }
-
-    .kickstarter-glow {
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 2px solid #00ffc3;
       color: #00ffc3;
       font-weight: bold;
-      font-size: 1.2rem;
-      text-align: center;
-      border-radius: 12px;
-      width: 300px;
-      text-shadow: 0 0 10px #00ffc3;
-      animation: pulseGlow 2s infinite;
-    }
-
-    .kickstarter-glow a {
-      color: #00ffc3;
-      text-decoration: none;
-    }
-
-    .kickstarter-glow a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 8px #00ffc3; }
-      50% { box-shadow: 0 0 24px #00ffc3; }
-      100% { box-shadow: 0 0 8px #00ffc3; }
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <canvas id="particles"></canvas>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="index.html">🏠 Home</a>
-    <a href="fmenu.html">🥩 Food Menu</a>
-    <a href="free-energy.html">⚡ Free Energy</a>
-    <a href="comicbook.html">📚 Comic Book</a>
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a>
+  <nav id="nav-menu">
+    <div id="nav-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="menu.html">🥩 Menu</a></li>
+      <li><a href="free-energy.html">⚡ Free Energy</a></li>
+      <li><a href="comicbook.html">📚 Comic Book</a></li>
+      <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
+    </ul>
   </nav>
 
-  <h1>Free Energy Vision</h1>
-  <h2>Powered by Curiosity, Built for the Future</h2>
+  <canvas id="particles"></canvas>
 
-  <section>
-    <div class="kickstarter-glow">
-      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-        🚀 KICKSTARTER PRE-LAUNCH PAGE
-      </a>
-    </div>
+  <header>
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
+    <h2>⚡ FREE ENERGY REVELATION ⚡</h2>
+    <p style="color: #ccc;">Powering Flavor. Electrifying the Future.</p>
+  </header>
+
+  <section style="margin: 2rem auto;">
+    <img src="free_energy_image.png" alt="Free Energy" style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 20px #00ffc3;" />
+    <p style="margin: 1.5rem auto; max-width: 600px;">
+      What if your sandwich was served in a space where energy never runs out?
+      <br><br>
+      At Brazilly Philly, we’re testing the boundaries of what’s possible—by showcasing real-world free energy concepts and futuristic tech that could one day power our kitchens.
+      <br><br>
+      This isn’t just food—it’s flavor fueled by the future. Welcome to the next evolution of sustainable swag. This is more than a vibe—it’s a revelation.
+    </p>
   </section>
 
-  <footer>
-    <p style="font-size: 0.85rem; color: #888; margin-top: 3rem;">&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
+  <!-- Badge Trio Section -->
+  <section style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+    <a href="free-energy.html">
+      <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="glow-badge">
+    </a>
+    <a href="comicbook.html">
+      <img src="comicbook_badge.png" alt="Comic Book Badge" class="glow-badge">
+    </a>
+    <img src="msg_badge_updated.png" alt="MSG Badge" class="glow-badge">
+  </section>
+
+  <section>
+    <a href="index.html" class="btn">⬅️ Return to Home</a>
+  </section>
+
+  <footer style="margin-top: 3rem;">
+    <p style="font-size: 0.9rem;">Stay saucy. Stay sharp. 🖐️ ♾️</p>
+    <p><strong>HIGH FIVE FOREVER</strong></p>
+    <div class="social-icons" style="margin: 1.5rem 0;">
+      <a href="https://youtube.com/@BrazillyPhilly" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank"><img src="Facebook.png" alt="Facebook"></a>
+    </div>
+    <p style="margin-bottom: 1rem; font-size: 0.75rem; color: #555;">
+      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
+    </p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("mobileNav").classList.toggle("show");
+      const navLinks = document.getElementById('nav-links');
+      navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
     }
 
-    const canvas = document.getElementById("particles");
+    // Particle background
+    const canvas = document.createElement("canvas");
+    canvas.id = "particles";
+    document.body.prepend(canvas);
     const ctx = canvas.getContext("2d");
     let particles = [];
     const colors = ["#00ffc3", "#00ffee", "#00ff88"];
@@ -157,7 +211,9 @@
     resizeCanvas();
 
     class Particle {
-      constructor() { this.reset(); }
+      constructor() {
+        this.reset();
+      }
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -179,17 +235,22 @@
 
     function initParticles(count = 60) {
       particles = [];
-      for (let i = 0; i < count; i++) particles.push(new Particle());
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
     }
 
-    function animate() {
+    function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-      requestAnimationFrame(animate);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
     }
 
     initParticles();
-    animate();
+    animateParticles();
   </script>
 </body>
 </html>
