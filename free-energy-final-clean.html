@@ -127,6 +127,24 @@
       font-weight: bold;
       font-size: 1rem;
     }
+    .logo {
+  max-width: 300px;
+  width: 90%;
+  filter: drop-shadow(0 0 10px #00ffc3);
+  animation: pulse 2s infinite;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%   { filter: drop-shadow(0 0 5px #00ffc3); }
+  50%  { filter: drop-shadow(0 0 20px #00ffc3); }
+  100% { filter: drop-shadow(0 0 5px #00ffc3); }
+}
+
   </style>
 </head>
 <body>
