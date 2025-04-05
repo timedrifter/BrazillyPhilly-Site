@@ -76,7 +76,7 @@
       color: #00ffc3;
       text-decoration: none;
     }
-  button {
+    button {
       background: #00ffc3;
       color: #0a0a0a;
       border: none;
@@ -87,11 +87,11 @@
       margin-top: 1rem;
     }
     #sauce-output {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #ffcc00;
-  font-size: 1.2rem;
-}
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.2rem;
+    }
 
     footer {
       font-size: 0.85rem;
@@ -112,11 +112,24 @@
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
+
+    .water-ice-banner img,
+    .water-ice-flavors img {
+      box-shadow: 0 0 20px #00ffc3;
+      border-radius: 12px;
+    }
+
+    .water-ice-flavors p {
+      color: #00ffaa;
+      font-size: 1.2em;
+      margin-top: 20px;
+      text-shadow: 0 0 6px #00ffaa, 0 0 12px #00ffaa;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <canvas id="particles"></canvas>
-
   <header>
     <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" />
     <h1>Brazilly Philly Menu</h1>
@@ -154,174 +167,16 @@
       <img src="guarana_image_placeholder.png" alt="Guaraná Drink" />
     </div>
   </section>
-<!-- PHILLY WATER ICE SECTION (Italian Ice) -->
 
-<section id="philly-water-ice" class="menu-section">
-  <div class="water-ice-banner">
-    <img src="/philly-water-ice-banner.png" alt="Philly Water Ice (Italian Ice)" style="width:100%; max-width:900px; display:block; margin:40px auto 20px auto;" />
-  </div>
-  <div class="water-ice-flavors">
-    <img src="philly-water-ice-flavors.png" alt="Water Ice Flavor Lineup - Cherry, Lemon, Guaraná, Açaí" style="width:100%; max-width:900px; display:block; margin:0 auto 10px auto;" />
-    <p style="
-      color: #00ffaa;
-      font-size: 1.2em;
-      margin-top: 10px;
-      text-shadow: 0 0 6px #00ffaa, 0 0 12px #00ffaa;
-      font-weight: bold;
-    ">
-      Philly Water Ice (NYC Italian Ice) meets Brazil flavors.
-    </p>
-  </div>
-</section>
-
-  <section class="msg-section">
-    <img src="msg_badge_updated.png" alt="We proudly use MSG" />
-    <p>We proudly use MSG – flavor that slaps! 🥢💥</p>
+  <!-- PHILLY WATER ICE SECTION (Italian Ice) -->
+  <section id="philly-water-ice" class="menu-section">
+    <div class="water-ice-banner">
+      <img src="philly-water-ice-banner.png" alt="Philly Water Ice (Italian Ice)" style="width:100%; max-width:900px; display:block; margin:40px auto 20px auto;" />
+    </div>
+    <div class="water-ice-flavors">
+      <img src="philly-water-ice-flavors.png" alt="Water Ice Flavor Lineup - Cherry, Lemon, Guaraná, Açaí" style="width:100%; max-width:900px; display:block; margin:0 auto 10px auto;" />
+      <p>Philly Water Ice (NYC Italian Ice) meets Brazil flavors.</p>
+    </div>
   </section>
- <section>
-    <h2>🌶️ Random Sauce Name Generator</h2>
-    <button onclick="generateSauce()">Generate Sauce</button>
-    <div id="sauce-output"></div>
-  </section>
-
-  <div style="text-align: center; margin: 2rem 0;">
-  <a href="comicbook.html">
-    <img src="comicbook_button.png" alt="Read the Comic" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
-  </a>
-</div>
-
-  <footer>
-    <p>Stay saucy. Stay sharp. 🖐️ HIGH FIVE FOREVER ♾️</p>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
-    <p><a href="index.html">⬅️ Back to Home</a></p>
-  </footer>
-
-  <script>
-    const canvas = document.getElementById("particles");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedY = Math.random() * 0.5 + 0.2;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-      }
-      update() {
-        this.y += this.speedY;
-        if (this.y > canvas.height) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
-    }
-
-    function initParticles(count = 60) {
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-      requestAnimationFrame(animate);
-    }
-
-    initParticles();
-    animate();
-
-    const sauceNames = [
-     "Midnight Mango Blaze",
-      "Cyber Cilantro Crunch",
-      "Valter's Hard Work Sauce",
-      "Anthony's Philly Sauce",
-      "Giovanni's Cali Sauce",
-      "Christopher's Simple Sauce",
-      "Neon Pepper Jolt",
-      "Yakuza Garlic Heat",
-      "Quantum Lime Burst",
-      "Cleane's Curiousity Sauce",
-      "Chelsea's Bell Sauce",
-      "Sadie's Carzy Sauce",
-      "Electric Açai Drizzle",
-      "Philly Flame Zing",
-      "Brazilliance Heatwave",
-      "Time Drip Tango",
-      "Slippery Samurai Drip",
-      "Tokyo Teriyaki Thunder",
-      "Roman Basil Heatwave",
-      "Munich Mustard Smash",
-      "Spicy Sichuan Slipstream",
-      "El Diablo Verde",
-      "Slippery Garlic Avalanche",
-      "Sweet Basil Napoli",
-      "Parisian Pepper Kiss",
-      "Spicy Soy Mirage",
-      "Bombay Heat Harmony",
-      "Berlin BBQ Bolt",
-      "Rio Rocket Sauce",
-      "Midnight Mole Madness",
-      "Seoul Fire Glaze",
-      "French Firecrack Dijon",
-      "Slippery Chipotle Vortex",
-      "Chi-Town Chimichurri Rush",
-      "Dragonfire Sesame Zing",
-      "Slippery Jalapeño Groove",
-      "Mediterranean Mango Fizz",
-      "Random Fire Bloom",
-      "Wasabi Whiplash",
-      "Crimson Curry Flicker",
-      "Neon Tandoori Tango",
-      "Slippery Sweet Heat Samba",
-      "Bavarian Blaze Cream",
-      "Bangkok Burner Sauce",
-      "Slippery Tomato Typhoon"
-    ];
-
-    function generateSauce() {
-      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-      document.getElementById("sauce-output").innerText = random;
-    }
-  </script>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-  <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-    <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-    <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-</div>
- <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
-      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
-    </p>
 </body>
 </html>
