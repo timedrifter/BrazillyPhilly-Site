@@ -4,55 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brazilly Philly – Home of the Flavor Revelation</title>
-<link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="favicon.ico">
-
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.ico">
   <style>
     #nav-menu {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 999;
-}
-
-#nav-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: #00ffc3;
-  color: #0a0a0a;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  box-shadow: 0 0 8px #00ffc3;
-  transition: transform 0.2s ease;
-}
-
-#nav-toggle:hover {
-  transform: scale(1.15);
-}
-
-#nav-links {
-  list-style: none;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: #111;
-  border: 1px solid #00ffc3;
-  border-radius: 8px;
-  box-shadow: 0 0 12px #00ffc3;
-  display: none;
-}
-
-#nav-links li {
-  margin: 0.5rem 0;
-}
-
-#nav-links a {
-  text-decoration: none;
-  color: #00ffc3;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 999;
+    }
+    #nav-toggle {
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: #00ffc3;
+      color: #0a0a0a;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #00ffc3;
+      transition: transform 0.2s ease;
+    }
+    #nav-toggle:hover {
+      transform: scale(1.15);
+    }
+    #nav-links {
+      list-style: none;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      background-color: #111;
+      border: 1px solid #00ffc3;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #00ffc3;
+      display: none;
+    }
+    #nav-links li {
+      margin: 0.5rem 0;
+    }
+    #nav-links a {
+      text-decoration: none;
+      color: #00ffc3;
+      font-weight: bold;
+      font-size: 1rem;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
@@ -62,7 +55,6 @@
       padding: 0;
       overflow-x: hidden;
     }
-
     header img.logo {
       max-width: 300px;
       width: 90%;
@@ -70,22 +62,18 @@
       animation: pulse 2s infinite;
       margin-top: 2rem;
     }
-
     h1, h2 {
       color: #00ffc3;
     }
-
     a {
       color: #00ffc3;
       text-decoration: none;
     }
-
     footer {
       font-size: 0.85rem;
       color: #888;
       margin-top: .5rem;
     }
-
     button {
       background: #00ffc3;
       color: #0a0a0a;
@@ -96,20 +84,17 @@
       border-radius: 8px;
       margin-top: 1rem;
     }
-
     #sauce-output {
       margin-top: 1rem;
       font-weight: bold;
       color: #ffcc00;
       font-size: 1.2rem;
     }
-
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ffc3); }
       50% { filter: drop-shadow(0 0 20px #00ffc3); }
       100% { filter: drop-shadow(0 0 5px #00ffc3); }
     }
-
     canvas#particles {
       position: fixed;
       top: 0;
@@ -120,14 +105,12 @@
       background: transparent;
       pointer-events: none;
     }
-
     .emoji-link {
       font-size: 1.5rem;
       display: inline-block;
       transition: transform 0.2s ease-in-out;
       cursor: pointer;
     }
-
     .emoji-link:hover {
       transform: rotate(20deg) scale(1.3);
     }
@@ -135,15 +118,15 @@
 </head>
 <body>
   <nav id="nav-menu">
-  <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-  <ul id="nav-links">
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="menu.html">🥩 Menu</a></li>
-    <li><a href="free-energy.html">⚡ Free Energy</a></li>
-    <li><a href="comicbook.html">📚 Comic Book</a></li>
-    <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
-  </ul>
-</nav>
+    <div id="nav-toggle">☰</div>
+    <ul id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="menu.html">🥩 Menu</a></li>
+      <li><a href="free-energy.html">⚡ Free Energy</a></li>
+      <li><a href="comicbook.html">📚 Comic Book</a></li>
+      <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
+    </ul>
+  </nav>
 
   <canvas id="particles"></canvas>
 
@@ -158,104 +141,74 @@
     <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html">Join the Watchlist</a></p>
   </section>
 
-<section>
-  <style>
-    .kickstarter-glow {
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 2px solid #00ffc3;
-      color: #00ffc3;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-align: center;
-      border-radius: 12px;
-      width: 300px;
-      text-shadow: 0 0 10px #00ffc3;
-      animation: pulseGlow 2s infinite;
-    }
+  <section>
+    <div class="kickstarter-glow">
+      <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+        🚀 KICKSTARTER PRE-LAUNCH PAGE
+      </a>
+    </div>
+  </section>
 
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 8px #00ffc3; }
-      50% { box-shadow: 0 0 24px #00ffc3; }
-      100% { box-shadow: 0 0 8px #00ffc3; }
-    }
-    .kickstarter-glow a {
-      color: #00ffc3;
-      text-decoration: none;
-    }
-    .kickstarter-glow a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <div style="max-width: 360px; margin: 2rem auto;">
+    <iframe 
+      width="360" 
+      height="640" 
+      src="https://www.youtube.com/embed/VbDp5bV4zxA" 
+      title="Brazilly Philly Teaser"
+      frameborder="0" 
+      allowfullscreen 
+      style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;">
+    </iframe>
+  </div>
 
-  <div class="kickstarter-glow">
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-      🚀 KICKSTARTER PRE-LAUNCH PAGE
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="menu.html">
+      <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
     </a>
   </div>
-</section>
 
-  
-  <!-- Teaser Video Embed -->
-<div style="max-width: 360px; margin: 2rem auto;">
-  <iframe 
-    width="360" 
-    height="640" 
-    src="https://www.youtube.com/embed/VbDp5bV4zxA" 
-    title="Brazilly Philly Teaser"
-    frameborder="0" 
-    allowfullscreen 
-    style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;">
-  </iframe>
-</div>
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="menu.html">
-    <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;">
-  </a>
-</div>
   <section>
     <h2>🌶️ Random Sauce Name Generator</h2>
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
     <div style="margin-top: 2rem;">
       <img 
-  src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" 
-  alt="We proudly use MSG" 
-  style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00); transition: transform 0.3s ease;"
-  onmouseover="this.style.transform='scale(1.2)'"
-  onmouseout="this.style.transform='scale(1)'"
-    />
+        src="https://timedrifter.github.io/BrazillyPhilly-Site/msg_badge_updated.png" 
+        alt="We proudly use MSG" 
+        style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00); transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.2)'"
+        onmouseout="this.style.transform='scale(1)'"
+      />
       <p style="font-size: 0.9rem; color: #ffcc00; font-weight: bold; margin-top: 0.5rem;">We proudly use MSG – flavor that slaps! 🥢💥</p>
     </div>
   </section>
 
-<!-- Comic Book Button -->
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="comicbook.html">
-  <img 
-    src="comicbook_button.png" 
-    alt="Read the Comic" 
-    style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-    onmouseover="this.style.transform='scale(1.2)'"
-    onmouseout="this.style.transform='scale(1)'"
-  >
-</a>
+  <div style="text-align: center; margin: 2rem 0;">
+    <a href="comicbook.html">
+      <img 
+        src="comicbook_button.png" 
+        alt="Read the Comic" 
+        style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.2)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+    </a>
+  </div>
 
-</div>
-<div style="margin-top: 2rem;">
-  <a href="free-energy.html">
-    <img 
-      src="free_energy_tech.png" 
-      alt="Free Energy Tech Badge" 
-      style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #00ffc3); transition: transform 0.3s ease;"
-      onmouseover="this.style.transform='scale(1.2)'"
-      onmouseout="this.style.transform='scale(1)'"
-    >
-  </a>
-  <p style="font-size: 0.9rem; color: #00ffc3; font-weight: bold; margin-top: 0.5rem;">
-    Tech that powers the flavor 🌌⚡
-  </p>
-</div>
+  <div style="margin-top: 2rem;">
+    <a href="free-energy.html">
+      <img 
+        src="free_energy_tech.png" 
+        alt="Free Energy Tech Badge" 
+        style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #00ffc3); transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.2)'"
+        onmouseout="this.style.transform='scale(1)'"
+      >
+    </a>
+    <p style="font-size: 0.9rem; color: #00ffc3; font-weight: bold; margin-top: 0.5rem;">
+      Tech that powers the flavor 🌌⚡
+    </p>
+  </div>
 
   <footer>
     <p>Stay saucy. Stay sharp. 
@@ -267,168 +220,83 @@
   </footer>
 
   <script>
-    const emoji = document.getElementById('emoji');
-    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-      emoji.textContent = '✨';
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
     });
-    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
-      emoji.textContent = '🖐️';
-    });
-  </script>
-  <script>
-    window.addEventListener("load", () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("chip") === "unlocked") {
-        setTimeout(() => {
-          if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
-            window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/index.html";
-          }
-        }, 1500);
-      }
-    });
-  </script>
-  <script>
-    const canvas = document.getElementById("particles");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedY = Math.random() * 0.5 + 0.2;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-      }
-      update() {
-        this.y += this.speedY;
-        if (this.y > canvas.height) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
-    }
-
-    function initParticles(count = 60) {
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-      requestAnimationFrame(animate);
-    }
-
-    initParticles();
-    animate();
-
-    const sauceNames = [
-    "Dawn's Destiny Sauce",
-  "Raquel's Family Heat",
-  "Raquel's Garden Fire",
-  "Midnight Mango Blaze",
-  "Cyber Cilantro Crunch",
-  "Valter's Hard Work Sauce",
-  "Anthony's Philly Sauce",
-  "Giovanni's Cali Sauce",
-  "Christopher's Simple Sauce",
-  "Neon Pepper Jolt",
-  "Yakuza Garlic Heat",
-  "Quantum Lime Burst",
-  "Cleane's Curiousity Sauce",
-  "Chelsea's Bell Sauce",
-  "Sadie's Carzy Sauce",
-  "Electric Açai Drizzle",
-  "Philly Flame Zing",
-  "Brazilliance Heatwave",
-  "Time Drip Tango",
-  "Slippery Samurai Drip",
-  "Tokyo Teriyaki Thunder",
-  "Roman Basil Heatwave",
-  "Munich Mustard Smash",
-  "Spicy Sichuan Slipstream",
-  "El Diablo Verde",
-  "Slippery Garlic Avalanche",
-  "Sweet Basil Napoli",
-  "Parisian Pepper Kiss",
-  "Spicy Soy Mirage",
-  "Bombay Heat Harmony",
-  "Berlin BBQ Bolt",
-  "Rio Rocket Sauce",
-  "Midnight Mole Madness",
-  "Seoul Fire Glaze",
-  "French Firecrack Dijon",
-  "Slippery Chipotle Vortex",
-  "Chi-Town Chimichurri Rush",
-  "Dragonfire Sesame Zing",
-  "Slippery Jalapeño Groove",
-  "Mediterranean Mango Fizz",
-  "Random Fire Bloom",
-  "Wasabi Whiplash",
-  "Crimson Curry Flicker",
-  "Neon Tandoori Tango",
-  "Slippery Sweet Heat Samba",
-  "Bavarian Blaze Cream",
-  "Bangkok Burner Sauce",
-  "Slippery Tomato Typhoon",
-  "Broblivion Burn",
-  "Funkmaster Fire Dip",
-  "Mint Condition Meltdown",
-  "Brotiger BBQ Tamer",
-  "Caipirinha Glacier Drizzle",
-  "Cosmic Cilantro Meteor"
-  "Corey's Lotus Heat"
-    ];
 
     function generateSauce() {
+      const sauceNames = [
+        "Dawn's Destiny Sauce", "Raquel's Family Heat", "Raquel's Garden Fire", "Midnight Mango Blaze",
+        "Cyber Cilantro Crunch", "Valter's Hard Work Sauce", "Anthony's Philly Sauce", "Giovanni's Cali Sauce",
+        "Christopher's Simple Sauce", "Neon Pepper Jolt", "Yakuza Garlic Heat", "Quantum Lime Burst",
+        "Cleane's Curiousity Sauce", "Chelsea's Bell Sauce", "Sadie's Carzy Sauce", "Electric Açai Drizzle",
+        "Philly Flame Zing", "Brazilliance Heatwave", "Time Drip Tango", "Slippery Samurai Drip",
+        "Tokyo Teriyaki Thunder", "Roman Basil Heatwave", "Munich Mustard Smash", "Spicy Sichuan Slipstream",
+        "El Diablo Verde", "Slippery Garlic Avalanche", "Sweet Basil Napoli", "Parisian Pepper Kiss",
+        "Spicy Soy Mirage", "Bombay Heat Harmony", "Berlin BBQ Bolt", "Rio Rocket Sauce",
+        "Midnight Mole Madness", "Seoul Fire Glaze", "French Firecrack Dijon", "Slippery Chipotle Vortex",
+        "Chi-Town Chimichurri Rush", "Dragonfire Sesame Zing", "Slippery Jalapeño Groove",
+        "Mediterranean Mango Fizz", "Random Fire Bloom", "Wasabi Whiplash", "Crimson Curry Flicker",
+        "Neon Tandoori Tango", "Slippery Sweet Heat Samba", "Bavarian Blaze Cream", "Bangkok Burner Sauce",
+        "Slippery Tomato Typhoon", "Broblivion Burn", "Funkmaster Fire Dip", "Mint Condition Meltdown",
+        "Brotiger BBQ Tamer", "Caipirinha Glacier Drizzle", "Cosmic Cilantro Meteor", "Corey's Lotus Heat"
+      ];
       const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
       document.getElementById("sauce-output").innerText = random;
     }
-   
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-  }
 
+    window.onload = () => {
+      const canvas = document.getElementById("particles");
+      const ctx = canvas.getContext("2d");
+      let particles = [];
+      const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      class Particle {
+        constructor() { this.reset(); }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 1;
+          this.speedY = Math.random() * 0.5 + 0.2;
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+        update() {
+          this.y += this.speedY;
+          if (this.y > canvas.height) this.reset();
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      function initParticles(count = 60) {
+        particles = [];
+        for (let i = 0; i < count; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(animate);
+      }
+
+      initParticles();
+      animate();
+    }
   </script>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-  <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-    <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-    <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-</div>
- <p style="margin-top: 1rem; font-size: 0.75rem; color: #555;">
-      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ – All Rights Reserved.
-    </p>
 </body>
 </html>
