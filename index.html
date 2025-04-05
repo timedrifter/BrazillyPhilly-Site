@@ -19,13 +19,13 @@
       overflow-x: hidden;
     }
 
+    /* Nav Menu */
     #nav-menu {
       position: fixed;
       top: 1rem;
       left: 1rem;
       z-index: 999;
     }
-
     #nav-toggle {
       font-size: 2rem;
       cursor: pointer;
@@ -36,11 +36,9 @@
       box-shadow: 0 0 8px #00ffc3;
       transition: transform 0.2s ease;
     }
-
     #nav-toggle:hover {
       transform: scale(1.15);
     }
-
     #nav-links {
       list-style: none;
       padding: 0.5rem;
@@ -51,11 +49,9 @@
       box-shadow: 0 0 12px #00ffc3;
       display: none;
     }
-
     #nav-links li {
       margin: 0.5rem 0;
     }
-
     #nav-links a {
       text-decoration: none;
       color: #00ffc3;
@@ -83,7 +79,7 @@
     footer {
       font-size: 0.85rem;
       color: #888;
-      margin-top: .5rem;
+      margin-top: 1rem;
     }
 
     button {
@@ -104,31 +100,30 @@
       font-size: 1.2rem;
     }
 
-    .emoji-link {
-      font-size: 1.5rem;
-      display: inline-block;
-      transition: transform 0.2s ease-in-out;
-      cursor: pointer;
-    }
-
-    .emoji-link:hover {
-      transform: rotate(20deg) scale(1.3);
-    }
-
     .badge {
       width: 125px;
       height: 125px;
       filter: drop-shadow(0 0 6px #00ffc3);
       transition: transform 0.3s ease;
-      margin: 2rem auto 0.5rem;
+      margin: 1rem auto;
     }
 
     .badge:hover {
       transform: scale(1.2);
     }
 
-    .pulse-glow {
-      animation: pulse 2s infinite;
+    .kickstarter-glow {
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      border: 2px solid #00ffc3;
+      color: #00ffc3;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 12px;
+      width: 300px;
+      text-shadow: 0 0 10px #00ffc3;
+      animation: pulseGlow 2s infinite;
     }
 
     @keyframes pulse {
@@ -153,6 +148,17 @@
       background: transparent;
       pointer-events: none;
     }
+
+    .emoji-link {
+      font-size: 1.5rem;
+      display: inline-block;
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .emoji-link:hover {
+      transform: rotate(20deg) scale(1.3);
+    }
   </style>
 </head>
 <body>
@@ -170,35 +176,31 @@
   <canvas id="particles"></canvas>
 
   <header>
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
     <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
   </header>
 
   <section>
     <h1>🔥 Welcome to Brazilly Philly</h1>
     <p>The Flavor Revelation – and you found the gateway!</p>
-    <p><a href="https://timedrifter.github.io/BrazillyPhilly-Site/form.html">Join the Watchlist</a></p>
+    <p><a href="form.html">Join the Watchlist</a></p>
   </section>
 
-  <section class="kickstarter-glow" style="animation: pulseGlow 2s infinite;">
+  <section class="kickstarter-glow">
     <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
       🚀 KICKSTARTER PRE-LAUNCH PAGE
     </a>
   </section>
 
-  <!-- Teaser Video -->
   <div style="max-width: 360px; margin: 2rem auto;">
-    <iframe width="360" height="640" src="https://www.youtube.com/embed/VbDp5bV4zxA" title="Brazilly Philly Teaser"
-      frameborder="0" allowfullscreen
+    <iframe width="360" height="640" src="https://www.youtube.com/embed/VbDp5bV4zxA" title="Brazilly Philly Teaser" frameborder="0" allowfullscreen
       style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;"></iframe>
   </div>
 
   <div style="text-align: center; margin: 2rem 0;">
     <a href="menu.html">
-      <img src="menu_link.png" alt="View Our Menu"
-        style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.2)'"
-        onmouseout="this.style.transform='scale(1)'">
+      <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
+        onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
     </a>
   </div>
 
@@ -207,25 +209,26 @@
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
 
-    <div>
-      <img src="msg_badge_updated.png" alt="We proudly use MSG" class="badge">
-      <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
-    </div>
+    <!-- MSG Badge -->
+    <img src="msg_badge_updated.png" alt="We proudly use MSG" class="badge">
+    <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
 
+    <!-- Comic Badge -->
     <a href="comicbook.html">
       <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
     </a>
     <p style="color: #00ffa3;">Read the Comic – Powered by Robots</p>
 
+    <!-- Free Energy Badge -->
     <a href="free-energy.html">
-      <img src="free_energy_tech.png" alt="Free Energy Badge" class="badge">
+      <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="badge">
     </a>
     <p style="color: #00ffc3;">Tech that powers the flavor 🌌⚡</p>
   </section>
 
   <footer>
-    <p>Stay saucy. Stay sharp. 
-      <a href="https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
+    <p>Stay saucy. Stay sharp.
+      <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination">
         <span id="emoji">🖐️</span>
       </a> ♾️
     </p>
@@ -247,15 +250,11 @@
     });
 
     const sauceNames = [
-      "Dawn's Destiny Sauce", "Raquel's Family Heat", "Raquel's Garden Fire",
-      "Midnight Mango Blaze", "Cyber Cilantro Crunch", "Valter's Hard Work Sauce",
-      "Anthony's Philly Sauce", "Giovanni's Cali Sauce", "Christopher's Simple Sauce",
-      "Neon Pepper Jolt", "Yakuza Garlic Heat", "Quantum Lime Burst",
-      "Electric Açai Drizzle", "Philly Flame Zing", "Brazilliance Heatwave",
-      "Time Drip Tango", "Slippery Samurai Drip", "Tokyo Teriyaki Thunder",
-      "Corey's Lotus Heat", "Broblivion Burn", "Funkmaster Fire Dip"
+      "Raquel's Garden Fire", "Midnight Mango Blaze", "Cyber Cilantro Crunch",
+      "Quantum Lime Burst", "Electric Açai Drizzle", "Philly Flame Zing",
+      "Time Drip Tango", "Slippery Samurai Drip", "Corey's Lotus Heat",
+      "Broblivion Burn", "Funkmaster Fire Dip", "Caipirinha Glacier Drizzle"
     ];
-
     function generateSauce() {
       const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
       document.getElementById("sauce-output").innerText = random;
@@ -266,7 +265,7 @@
       if (urlParams.get("chip") === "unlocked") {
         setTimeout(() => {
           if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
-            window.location.href = "https://timedrifter.github.io/BrazillyPhilly-Site/brolumination/index.html";
+            window.location.href = "brolumination/index.html";
           }
         }, 1500);
       }
@@ -286,9 +285,7 @@
     resizeCanvas();
 
     class Particle {
-      constructor() {
-        this.reset();
-      }
+      constructor() { this.reset(); }
       reset() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -310,17 +307,12 @@
 
     function initParticles(count = 60) {
       particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
+      for (let i = 0; i < count; i++) particles.push(new Particle());
     }
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
+      particles.forEach(p => { p.update(); p.draw(); });
       requestAnimationFrame(animate);
     }
 
