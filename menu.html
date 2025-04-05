@@ -115,8 +115,21 @@
 
     .water-ice-banner img,
     .water-ice-flavors img {
-      box-shadow: 0 0 20px #00ffc3;
+      box-shadow: 0 0 30px #00ffc3;
       border-radius: 12px;
+      transition: transform 0.3s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .animate-visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    .water-ice-flavors img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px #00ffc3;
     }
 
     .water-ice-flavors p {
@@ -125,6 +138,13 @@
       margin-top: 20px;
       text-shadow: 0 0 6px #00ffaa, 0 0 12px #00ffaa;
       font-weight: bold;
+    }
+
+    .download-link {
+      color: #00ffc3;
+      text-decoration: underline;
+      display: block;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -171,12 +191,35 @@
   <!-- PHILLY WATER ICE SECTION (Italian Ice) -->
   <section id="philly-water-ice" class="menu-section">
     <div class="water-ice-banner">
-      <img src="philly-water-ice-banner.png" alt="Philly Water Ice (Italian Ice)" style="width:100%; max-width:900px; display:block; margin:40px auto 20px auto;" />
+      <img src="philly-water-ice-banner.png" class="reveal-on-scroll" alt="Philly Water Ice (Italian Ice)" style="width:100%; max-width:900px; display:block; margin:40px auto 20px auto;" />
     </div>
     <div class="water-ice-flavors">
-      <img src="philly-water-ice-flavors.png" alt="Water Ice Flavor Lineup - Cherry, Lemon, Guaraná, Açaí" style="width:100%; max-width:900px; display:block; margin:0 auto 10px auto;" />
+      <img src="philly-water-ice-flavors.png" class="reveal-on-scroll" alt="Water Ice Flavor Lineup - Cherry, Lemon, Guaraná, Açaí" style="width:100%; max-width:900px; display:block; margin:0 auto 10px auto;" />
       <p>Philly Water Ice (NYC Italian Ice) meets Brazil flavors.</p>
+      <a href="philly-water-ice-flavors.png" download class="download-link">Download Water Ice Flavor Poster</a>
     </div>
   </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Secret flavor unlock Easter egg
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === '🍧') {
+        alert('🎉 Secret Flavor Unlocked: Caipirinha Glacier! Ask for it at the counter!');
+      }
+    });
+  </script>
 </body>
 </html>
