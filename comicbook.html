@@ -10,10 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brazilly Philly Comic Book</title>
   <style>
-    img {
-  border-radius: 12px;
-}
-
+    img { border-radius: 12px; }
     body {
       background-color: #0b0f1a;
       color: #00ffa3;
@@ -29,20 +26,6 @@
       margin-bottom: 40px;
       animation: fadeIn 2s ease-in-out;
     }
-    .nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .nav a {
-      color: #00d0ff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    .nav a:hover {
-      color: #ff4f4f;
-    }
     .comic-section {
       max-width: 800px;
       margin: 40px auto;
@@ -50,12 +33,6 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 0 20px #00ffa3;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: slideIn 1.5s ease-in-out;
-    }
-    .comic-section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 25px #00ffcc;
     }
     .comic-title {
       font-size: 1.5rem;
@@ -70,14 +47,6 @@
     .bot-bio {
       font-size: 0.95rem;
       color: #b0fdf5;
-    }
-    .teaser {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 1.2rem;
-      color: #00ffa3;
-      font-style: italic;
-      animation: pulse 2s infinite;
     }
     .behind-the-bots {
       max-width: 800px;
@@ -100,356 +69,76 @@
       margin-bottom: 10px;
       color: #ccf6ff;
     }
-    .footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.85rem;
-      color: #009fa3;
-      font-style: italic;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
-    }
-      @keyframes floatdots {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-  }  
-    #dot-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: radial-gradient(rgba(0, 255, 170, 0.1) 1px, transparent 1px);
-      background-size: 20px 20px;
-      z-index: 0;
-      animation: floatdots 60s linear infinite;
-      pointer-events: none;
-    }
-    #nav-menu {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 999;
-}
-#nav-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: #00ffc3;
-  color: #0a0a0a;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  box-shadow: 0 0 8px #00ffc3;
-  transition: transform 0.2s ease;
-}
-#nav-toggle:hover {
-  transform: scale(1.15);
-}
-#nav-links {
-  list-style: none;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: #111;
-  border: 1px solid #00ffc3;
-  border-radius: 8px;
-  box-shadow: 0 0 12px #00ffc3;
-  display: none;
-}
-#nav-links li {
-  margin: 0.5rem 0;
-}
-#nav-links a {
-  text-decoration: none;
-  color: #00ffc3;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
   </style>
 </head>
-
 <body>
-  <nav id="nav-menu">
-  <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-  <ul id="nav-links">
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="menu.html">🥩 Food Menu</a></li>
-    <li><a href="free-energy.html">⚡ Free Energy</a></li>
-    <li><a href="comicbook.html">📚 Comic Book</a></li>
-    <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
-  </ul>
-</nav>
+  <header style="text-align: center; padding: 30px 0;">
+    <a href="index.html">
+      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" style="width: 90%; max-width: 300px; filter: drop-shadow(0 0 12px #00ffc3);">
+    </a>
+  </header>
+  <h1>Brazilly Philly Comic Book</h1>
 
-  <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: transparent; pointer-events: none;"></canvas>
-  
-  <header style="display: flex; justify-content: center; align-items: center; padding: 30px 0; position: relative; z-index: 2;">
-  <a href="/" style="display: inline-block;">
-    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" style="width: 90%; max-width: 300px; height: auto; filter: drop-shadow(0 0 12px #00ffc3); animation: pulse 2s infinite; display: block; margin: 0 auto;">
-  </a>
-</header>
-<h1 style="text-align: center; font-size: 2.2rem; color: #00ffa3; margin-top: 0; animation: fadeIn 2s ease-in-out;">Brazilly Philly Comic Book</h1>
-
-  <div class="nav" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0 10px;">
-  <a href="#primo">Primo & Saucy</a>
-  <a href="#scrubby">Scrubby</a>
-  <a href="#dj">DJ Bot-tle</a>
-</div>
-
-  <div id="primo" class="comic-section">
+  <div class="comic-section" id="primo">
     <img class="comic-img" src="comic_01_primo_saucy.png" alt="When Primo Met Saucy">
     <div class="bot-bio">Meet BP-R1 "Primo" and BP-R2 "Saucy" — the smooth food server and the silly sauce artist. Their chemistry? Instant flavor. <br><em>"Slippery when drippery."</em></div>
   </div>
 
-  <div id="scrubby" class="comic-section">
+  <div class="comic-section" id="scrubby">
     <img class="comic-img" src="comic_02_scrubby.png" alt="Scrubby Enters the Chat">
-    <div class="bot-bio">BP-R3 "Scrubby" keeps things spotless, even if it means panicking over every sauce drop. He's neurotic. He's clean. He's not amused. <br><em>"You... spilled... the SAUCE!"</em></div>
+    <div class="bot-bio">BP-R3 "Scrubby" keeps things spotless, even if it means panicking over every sauce drop. <br><em>"You... spilled... the SAUCE!"</em></div>
   </div>
 
-  <div id="dj" class="comic-section">
+  <div class="comic-section" id="dj">
     <img class="comic-img" src="comic_03_dj_bottle.png" alt="Enter DJ Bot-tle">
-    <div class="bot-bio">BP-R4 "DJ Bot-tle" drops beats with your burger. He’s loud, loyal, and lives for the bass. Every order’s a show. <br><em>"You ready for the drop?"</em></div>
+    <div class="bot-bio">BP-R4 "DJ Bot-tle" drops beats with your burger. He’s loud, loyal, and lives for the bass. <br><em>"You ready for the drop?"</em></div>
   </div>
 
-  <div id="react" class="comic-section">
+  <div class="comic-section" id="react">
     <img class="comic-img" src="comic_05_bot_reacts.png" alt="Bots React to Fan Comments">
-    <div class="bot-bio">From sauce-splatter fan art to playlist critiques, our bots have opinions. This strip captures their spicy responses in real time. <br><em>"You call THAT spicy?" – Saucy</em></div>
+    <div class="bot-bio">From sauce-splatter fan art to playlist critiques, our bots have opinions. <br><em>"You call THAT spicy?" – Saucy</em></div>
   </div>
 
-  <div class="comic-section" id="bot-roster">
-    <div class="comic-title">🤖 Meet the Bots</div>
+  <div class="comic-section" id="flavor-boss">
+    <div class="comic-title">The Flavor Boss Has Entered the Building</div>
+    <img class="comic-img" src="comic_07_flavor_boss_enters.png" alt="The Flavor Boss Has Entered the Building">
     <div class="bot-bio">
-      <ul style="list-style: none; padding-left: 0;">
-        <li><img src="/bot_primo_icon.png" alt="Primo Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R1 &quot;Primo&quot;</strong> – Food delivery master. Kind, precise, always in service mode.</li>
-        <li><img src="/bot_saucy_icon.png" alt="Saucy Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R2 &quot;Saucy&quot;</strong> – Sauce-slinger with style. Funky, fast, and full of flare.</li>
-        <li><img src="/bot_scrubby_icon.png" alt="Scrubby Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R3 &quot;Scrubby&quot;</strong> – Clean freak and chaos controller. A little neurotic but pure-hearted.</li>
-        <li><img src="/bot_dj_icon.png" alt="DJ Bot-tle Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R4 &quot;DJ Bot-tle&quot;</strong> – Mix master. Lives for the beat and never skips an order.</li>
+      The bots are in chaos — sauce everywhere, music blasting, panic rising... until HE walks in. Hair flowing. Eyes focused. <br><em>“Back to work, robots. Let’s feed the revelation.”</em>
+    </div>
+    <div class="behind-the-bots">
+      <h2>🔧 Behind the Bots: Quirks in the Code</h2>
+      <ul>
+        <li><strong>Primo</strong>: Hums elevator music. Balances 12 trays.</li>
+        <li><strong>Saucy</strong>: Mixes sauce beats. Lives for flair.</li>
+        <li><strong>Scrubby</strong>: Diagnoses spills like crime scenes.</li>
+        <li><strong>DJ Bot-tle</strong>: Refuses to serve without fire beats.</li>
       </ul>
     </div>
   </div>
 
-  <div class="comic-section" id="bot-generator">
-    <div class="comic-title">🛠️ Build Your Own Bot</div>
-    <div class="bot-bio">
-      What would YOUR robot do at Brazilly Philly? Sauce cannon arms? Built-in jukebox? Use your imagination!
+  <!-- Return Home -->
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" style="color: #00ffa3; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+      ← Return to Home Page
+    </a>
+  </p>
+
+  <!-- Footer -->
+  <footer style="text-align: center; margin-top: 4rem;">
+    <div style="margin: 2rem 0;">
+      <img src="msg_badge_updated.png" alt="MSG Badge" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #ffcc00);">
+      <p style="color: #ffcc00; font-weight: bold;">This site is powered by MSG – Make Stuff Good 🚀🌟🍜</p>
     </div>
-    <div style="text-align: center; margin-top: 15px;">
-      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00ffa3; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Launch Bot Builder (Coming Soon)</button>
-    </div>
-  </div>
 
-  <div class="comic-section" id="vote-next">
-    <div class="comic-title">🗳️ Vote for the Next Bot</div>
-    <div class="bot-bio">
-      We’re building more bots — and YOU get to help decide! Who should join the Flavor Force?
-    </div>
-    <div style="text-align: center; margin-top: 15px;">
-      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00d0ff; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Cast Your Vote (Coming Soon)</button>
-    </div>
-  </div>
-
-  <div class="comic-section" id="flavor-boss">
-  <div class="comic-title">The Flavor Boss Has Entered the Building</div>
-  <img class="comic-img" src="comic_07_flavor_boss_enters.png" alt="The Flavor Boss Has Entered the Building">
-  <div class="bot-bio">
-    The bots are in chaos — sauce everywhere, music blasting, panic rising... until HE walks in. Hair flowing. Eyes focused. The Flavor Boss arrives, and silence hits like a dropped beat. <br><em>“Back to work, robots. Let’s feed the revelation.”</em>
-  </div> <!-- closes #flavor-boss -->
-  <div class="behind-the-bots">
-    <h2>🔧 Behind the Bots: Quirks in the Code</h2>
-    <ul>
-      <li><strong>Primo</strong>: Sometimes hums elevator music while idle. Can balance 12 trays at once.</li>
-      <li><strong>Saucy</strong>: Remixes his own sauce splats and calls it "Flavor Beats Vol. 1"</li>
-      <li><strong>Scrubby</strong>: Runs a diagnostics scan every 10 minutes... even on his birthday.</li>
-      <li><strong>DJ Bot-tle</strong>: Refuses to serve food unless the playlist is fire. Will pause mid-beat to judge your song request.</li>
-    </ul>
-  </div> <!-- closes .behind-the-bots -->
-</div> <!-- closes #flavor-boss -->
-<p style="text-align: center; margin-top: 2rem;">
-  <a href="index.html" style="color: #00ffa3; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
-    ← Return to Home Page
-  </a>
-</p>
-   <!-- 🌟 Comic Page Footer Add-ons -->
-<div style="text-align: center; margin: 3rem 0;">
-
-  <!-- Menu Badge -->
-  <a href="menu.html">
-    <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-      onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-  </a>
-  <p style="color: #00ffa3;">The Food Menu of Life</p>
-
-  <!-- Free Energy Badge -->
-  <a href="free-energy.html">
-    <img src="free_energy_tech.png" alt="Free Energy Tech" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffc3); transition: transform 0.3s ease;"
-      onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-  </a>
-  <p style="color: #00ffc3;">Tech that powers the flavor 🌌⚡</p>
-
-  <!-- MSG Badge -->
-  <img src="msg_badge_updated.png" alt="We proudly use MSG" class="badge" style="margin-top: 1rem; width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #ffcc00);">
-  <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
-
- <!-- 🌶️ Updated Random Sauce Generator -->
-<div style="text-align: center; margin: 3rem 0;">
-  <h2 style="color: #ffcc00; font-weight: bold;">🌶️ Random Sauce Name Generator</h2>
-  <button onclick="generateSauce()" style="padding: 12px 24px; font-size: 1rem; background-color: #ffcc00; color: #0b0f1a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; box-shadow: 0 0 10px #ffcc00; transition: transform 0.2s ease;"
-    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-    Generate Sauce
-  </button>
-  <div id="sauce-output" style="margin-top: 1.5rem; color: #ffcc00; font-size: 1.3rem; font-weight: bold;"></div>
-</div>
-
-
-<footer style="text-align: center; margin-top: 4rem;">
-
-  <!-- 🔋 MSG Badge Integration -->
-  <div style="margin-bottom: 2rem;">
-    <img src="msg_badge_updated.png" alt="Powered by MSG" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #ffcc00);">
-    <p style="color: #ffcc00; font-weight: bold; font-size: 1rem; margin-top: 0.5rem;">
-      This site is powered by MSG – Make Stuff Good ✨🧠🔥
+    <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">
+      HIGH FIVE FOREVER ✋♾️
     </p>
-  </div>
-
-  <p style="color: #00ffc3; font-weight: bold;">
-    Stay saucy. Stay sharp. 
-    <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination" style="text-decoration: none;">
-      <span id="emoji">🖐️</span>
-    </a> ♾️
-  </p>
-
-  <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER</p>
-
-  <!-- Social Media Links -->
-  <div style="text-align: center; margin: 1rem 0;">
-    <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-      <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-      <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-      <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-      <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-  </div>
-
-  <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
-    Designed with alchemy, electricity, and extra sauce — 
-    <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
-  </p>
-
-  <p style="color: #888; font-size: 0.8rem;">
-    &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
-  </p>
-</footer>
-
-
-
-
-
-<script>
-  const emoji = document.getElementById('emoji');
-  if (emoji) {
-    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-      emoji.textContent = '✨';
-    });
-    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
-      emoji.textContent = '🖐️';
-    });
-  }
-
-const sauceNames = [
-  "Dawn's Destiny Sauce",
-  "Raquel's Family Heat",
-  "Raquel's Garden Fire",
-  "Midnight Mango Blaze",
-  "Cyber Cilantro Crunch",
-  "Corey's Lotus Heat",
-  "Valter's Hard Work Sauce",
-  "Anthony's Philly Sauce",
-  "Giovanni's Cali Sauce",
-  "Christopher's Simple Sauce",
-  "Neon Pepper Jolt",
-  "Yakuza Garlic Heat",
-  "Quantum Lime Burst",
-  "Cleane's Curiousity Sauce",
-  "Chelsea's Bell Sauce",
-  "Sadie's Carzy Sauce",
-  "Electric Açai Drizzle",
-  "Philly Flame Zing",
-  "Brazilliance Heatwave",
-  "Time Drip Tango",
-  "Slippery Samurai Drip",
-  "Tokyo Teriyaki Thunder",
-  "Roman Basil Heatwave",
-  "Munich Mustard Smash",
-  "Spicy Sichuan Slipstream",
-  "El Diablo Verde",
-  "Slippery Garlic Avalanche",
-  "Sweet Basil Napoli",
-  "Parisian Pepper Kiss",
-  "Spicy Soy Mirage",
-  "Bombay Heat Harmony",
-  "Berlin BBQ Bolt",
-  "Rio Rocket Sauce",
-  "Midnight Mole Madness",
-  "Seoul Fire Glaze",
-  "French Firecrack Dijon",
-  "Slippery Chipotle Vortex",
-  "Chi-Town Chimichurri Rush",
-  "Dragonfire Sesame Zing",
-  "Slippery Jalapeño Groove",
-  "Mediterranean Mango Fizz",
-  "Random Fire Bloom",
-  "Wasabi Whiplash",
-  "Crimson Curry Flicker",
-  "Neon Tandoori Tango",
-  "Slippery Sweet Heat Samba",
-  "Bavarian Blaze Cream",
-  "Bangkok Burner Sauce",
-  "Slippery Tomato Typhoon",
-  "Broblivion Burn",
-  "Funkmaster Fire Dip",
-  "Mint Condition Meltdown",
-  "Brotiger BBQ Tamer",
-  "Caipirinha Glacier Drizzle",
-  "Cosmic Cilantro Meteor"
-];
-
-function generateSauce() {
-  const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-  document.getElementById("sauce-output").innerText = random;
-}
-function toggleMenu() {
-  const navLinks = document.getElementById('nav-links');
-  const isVisible = navLinks.style.display === 'block';
-  navLinks.style.display = isVisible ? 'none' : 'block';
-
-  // Optional: auto-close when a link is clicked
-  if (!isVisible) {
-    document.querySelectorAll('#nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.style.display = 'none';
-      });
-    });
-  }
-}
-
-
-</script>
-
-
-
+    <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
+      Designed with alchemy, electricity, and extra sauce — <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a>
+    </p>
+    <p style="color: #888; font-size: 0.8rem;">
+      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
+    </p>
+  </footer>
 </body>
 </html>
