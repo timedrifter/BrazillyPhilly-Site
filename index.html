@@ -277,13 +277,8 @@
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-    }
-
-    const emoji = document.getElementById('emoji');
-    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-      emoji.textContent = '✨';
-    });
-    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => 
+      {
       emoji.textContent = '🖐️';
     });
 
