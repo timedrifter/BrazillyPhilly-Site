@@ -4,28 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brazilly Philly Comic Book</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       background-color: #0b0f1a;
       color: #00ffa3;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       overflow-x: hidden;
     }
-    h1 {
+    header, footer {
       text-align: center;
-      font-size: 2.5rem;
-      color: #00ffa3;
-      animation: fadeIn 2s ease-in-out;
+      padding: 20px;
     }
-    img {
-      border-radius: 12px;
+    .logo {
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      filter: drop-shadow(0 0 12px #00ffc3);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
     }
     .comic-section {
       max-width: 800px;
@@ -35,57 +38,16 @@
       padding: 20px;
       box-shadow: 0 0 20px #00ffa3;
     }
-    .comic-title {
-      font-size: 1.5rem;
-      color: #00d0ff;
-      margin-bottom: 10px;
-    }
     .comic-img {
       width: 100%;
-      margin-bottom: 10px;
+      border-radius: 8px;
     }
     .bot-bio {
       font-size: 0.95rem;
       color: #b0fdf5;
+      margin-top: 10px;
     }
-    .behind-the-bots {
-      background-color: #07233b;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 18px #00ff88;
-      margin-top: 2rem;
-    }
-    .behind-the-bots h2 {
-      color: #00e5ff;
-    }
-    .behind-the-bots ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .behind-the-bots li {
-      color: #ccf6ff;
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer img {
-      width: 120px;
-      margin: 20px auto;
-      display: block;
-      filter: drop-shadow(0 0 8px #ffcc00);
-    }
-    .social-icons a img {
-      width: 40px;
-      margin: 0 10px;
-      filter: drop-shadow(0 0 4px #00ffff);
-      transition: 0.3s;
-    }
-    .social-icons {
-      margin: 1rem 0;
-    }
-    #nav-menu {
+    .nav {
       position: fixed;
       top: 1rem;
       left: 1rem;
@@ -103,24 +65,39 @@
     #nav-links {
       list-style: none;
       padding: 0.5rem;
+      margin-top: 0.5rem;
       background-color: #111;
       border: 1px solid #00ffc3;
       border-radius: 8px;
-      display: none;
       box-shadow: 0 0 12px #00ffc3;
-    }
-    #nav-links li {
-      margin: 0.5rem 0;
+      display: none;
     }
     #nav-links a {
       text-decoration: none;
       color: #00ffc3;
       font-weight: bold;
     }
+    #dot-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: radial-gradient(rgba(0, 255, 170, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+      animation: floatdots 60s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes floatdots {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
   </style>
 </head>
 <body>
-  <nav id="nav-menu">
+  <div id="dot-background"></div>
+  <nav class="nav" id="nav-menu">
     <div id="nav-toggle" onclick="toggleMenu()">☰</div>
     <ul id="nav-links">
       <li><a href="index.html">🏠 Home</a></li>
@@ -131,56 +108,51 @@
     </ul>
   </nav>
 
-  <h1>Brazilly Philly Comic Book</h1>
-
-  <div class="comic-section">
-    <div class="comic-title">Primo & Saucy</div>
-    <img class="comic-img" src="comic_01_primo_saucy.png" alt="Primo & Saucy">
-    <div class="bot-bio">BP-R1 "Primo" and BP-R2 "Saucy" — smooth food delivery and chaotic sauce drops. Dynamic duo with dripping charisma.</div>
-  </div>
-
-  <div class="comic-section">
-    <div class="comic-title">Scrubby</div>
-    <img class="comic-img" src="comic_02_scrubby.png" alt="Scrubby">
-    <div class="bot-bio">BP-R3 "Scrubby" — always cleaning, always stressing. A germ-free perfectionist in a sauce-filled world.</div>
-  </div>
-
-  <div class="comic-section">
-    <div class="comic-title">DJ Bot-tle</div>
-    <img class="comic-img" src="comic_03_dj_bottle.png" alt="DJ Bot-tle">
-    <div class="bot-bio">BP-R4 "DJ Bot-tle" — turns every meal into a show. Drops beats, not buns. Hype machine of the kitchen.</div>
-  </div>
-
-  <div class="comic-section behind-the-bots">
-    <h2>🔧 Behind the Bots: Quirks in the Code</h2>
-    <ul>
-      <li><strong>Primo</strong>: Hums elevator music. Balances 12 trays.</li>
-      <li><strong>Saucy</strong>: Mixes sauce beats. Lives for flair.</li>
-      <li><strong>Scrubby</strong>: Diagnoses spills like crime scenes.</li>
-      <li><strong>DJ Bot-tle</strong>: Refuses to serve without fire beats.</li>
-    </ul>
-  </div>
-
-  <p style="text-align: center; margin-top: 2rem;">
-    <a href="index.html" style="color: #00ffa3; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
-      ← Return to Home Page
+  <header>
+    <a href="index.html">
+      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
     </a>
-  </p>
+  </header>
 
-  <footer>
-    <img src="msg_badge_updated.png" alt="MSG Badge">
-    <p style="color: gold; font-weight: bold;">This site is powered by MSG — Make Stuff Good 🚀✨🍼</p>
+  <main>
+    <h1 style="text-align:center">Brazilly Philly Comic Book</h1>
 
-    <div class="social-icons">
-      <a href="https://youtube.com/@BrazillyPhilly" target="_blank"><img src="youtube.png" alt="YouTube"></a>
-      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
-      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank"><img src="Facebook.png" alt="Facebook"></a>
+    <div class="comic-section">
+      <img src="comic_01_primo_saucy.png" alt="Primo & Saucy" class="comic-img">
+      <div class="bot-bio">Primo & Saucy meet! Instant flavor. "Slippery when drippery." 🍔💧</div>
     </div>
 
-    <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER 👋♾</p>
+    <div class="comic-section">
+      <img src="comic_02_scrubby.png" alt="Scrubby" class="comic-img">
+      <div class="bot-bio">Scrubby: "You... spilled... the SAUCE!" 🧼🌀</div>
+    </div>
+
+    <div class="comic-section">
+      <img src="comic_03_dj_bottle.png" alt="DJ Bot-tle" class="comic-img">
+      <div class="bot-bio">DJ Bot-tle drops beats with burgers. "You ready for the drop?" 🎵🍟</div>
+    </div>
+
+    <div class="comic-section">
+      <h2 style="color:#00d0ff">🌶️ Random Sauce Name Generator</h2>
+      <button onclick="generateSauce()" style="padding:10px 20px; font-size:1rem; background-color:#00ffc3; color:#0a0a0a; border:none; border-radius:8px; cursor:pointer;">Generate Sauce</button>
+      <div id="sauce-output" style="margin-top:1rem; font-weight:bold; color:#ffcc00; font-size:1.2rem;"></div>
+    </div>
+
+    <p style="text-align:center; margin-top: 2rem;">
+      <a href="index.html" style="color: #00ffa3; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+        ← Return to Home Page
+      </a>
+    </p>
+  </main>
+
+  <footer>
+    <p style="color: #00ffc3; font-weight: bold;">
+      This site is powered by MSG – Make Stuff Good 🍜⚡✨
+    </p>
+    <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER 🖐️♾️</p>
     <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
-      Designed with alchemy, electricity, and extra sauce — <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
+      Designed with alchemy, electricity, and extra sauce — 
+      <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
     </p>
     <p style="color: #888; font-size: 0.8rem;">
       &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
@@ -188,18 +160,30 @@
   </footer>
 
   <script>
+    const sauceNames = [
+      "Dawn's Destiny Sauce", "Midnight Mango Blaze", "Cyber Cilantro Crunch",
+      "Corey's Lotus Heat", "Valter's Hard Work Sauce", "Anthony's Philly Sauce",
+      "Giovanni's Cali Sauce", "Neon Pepper Jolt", "Yakuza Garlic Heat",
+      "Quantum Lime Burst", "Electric Açai Drizzle", "Philly Flame Zing",
+      "Time Drip Tango", "Slippery Samurai Drip", "El Diablo Verde",
+      "Slippery Garlic Avalanche", "Parisian Pepper Kiss", "Bombay Heat Harmony",
+      "Berlin BBQ Bolt", "Rio Rocket Sauce", "Seoul Fire Glaze",
+      "Slippery Chipotle Vortex", "Chi-Town Chimichurri Rush", "Dragonfire Sesame Zing",
+      "Slippery Jalapeño Groove", "Wasabi Whiplash", "Neon Tandoori Tango",
+      "Slippery Sweet Heat Samba", "Bangkok Burner Sauce", "Slippery Tomato Typhoon",
+      "Broblivion Burn", "Funkmaster Fire Dip", "Caipirinha Glacier Drizzle",
+      "Cosmic Cilantro Meteor"
+    ];
+
+    function generateSauce() {
+      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+      document.getElementById("sauce-output").innerText = random;
+    }
+
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       const isVisible = navLinks.style.display === 'block';
       navLinks.style.display = isVisible ? 'none' : 'block';
-
-      if (!isVisible) {
-        document.querySelectorAll('#nav-links a').forEach(link => {
-          link.addEventListener('click', () => {
-            navLinks.style.display = 'none';
-          });
-        });
-      }
     }
   </script>
 </body>
