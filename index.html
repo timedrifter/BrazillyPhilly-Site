@@ -407,6 +407,13 @@
 
     initParticles();
     animate();
+  const emoji = document.getElementById('emoji');
+  document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+    emoji.textContent = '✨';
+  });
+  document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+    emoji.textContent = '🖐️';
+  });
   </script>
   <!-- Return Link + Footer -->
 <div style="text-align: center; margin-top: 3rem;">
