@@ -295,72 +295,69 @@
   </div>
 
 <script>
-  const canvas = document.getElementById("particles");
-  const ctx = canvas.getContext("2d");
-  let particles = [];
-  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+const sauceNames = [
+  "Dawn's Destiny Sauce",
+  "Raquel's Family Heat",
+  "Raquel's Garden Fire",
+  "Midnight Mango Blaze",
+  "Cyber Cilantro Crunch",
+  "Corey's Lotus Heat",
+  "Valter's Hard Work Sauce",
+  "Anthony's Philly Sauce",
+  "Giovanni's Cali Sauce",
+  "Christopher's Simple Sauce",
+  "Neon Pepper Jolt",
+  "Yakuza Garlic Heat",
+  "Quantum Lime Burst",
+  "Cleane's Curiousity Sauce",
+  "Chelsea's Bell Sauce",
+  "Sadie's Carzy Sauce",
+  "Electric Açai Drizzle",
+  "Philly Flame Zing",
+  "Brazilliance Heatwave",
+  "Time Drip Tango",
+  "Slippery Samurai Drip",
+  "Tokyo Teriyaki Thunder",
+  "Roman Basil Heatwave",
+  "Munich Mustard Smash",
+  "Spicy Sichuan Slipstream",
+  "El Diablo Verde",
+  "Slippery Garlic Avalanche",
+  "Sweet Basil Napoli",
+  "Parisian Pepper Kiss",
+  "Spicy Soy Mirage",
+  "Bombay Heat Harmony",
+  "Berlin BBQ Bolt",
+  "Rio Rocket Sauce",
+  "Midnight Mole Madness",
+  "Seoul Fire Glaze",
+  "French Firecrack Dijon",
+  "Slippery Chipotle Vortex",
+  "Chi-Town Chimichurri Rush",
+  "Dragonfire Sesame Zing",
+  "Slippery Jalapeño Groove",
+  "Mediterranean Mango Fizz",
+  "Random Fire Bloom",
+  "Wasabi Whiplash",
+  "Crimson Curry Flicker",
+  "Neon Tandoori Tango",
+  "Slippery Sweet Heat Samba",
+  "Bavarian Blaze Cream",
+  "Bangkok Burner Sauce",
+  "Slippery Tomato Typhoon",
+  "Broblivion Burn",
+  "Funkmaster Fire Dip",
+  "Mint Condition Meltdown",
+  "Brotiger BBQ Tamer",
+  "Caipirinha Glacier Drizzle",
+  "Cosmic Cilantro Meteor"
+];
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+function generateSauce() {
+  const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+  document.getElementById("sauce-output").innerText = random;
+}
 
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 1;
-      this.speedY = Math.random() * 0.5 + 0.2;
-      this.color = colors[Math.floor(Math.random() * colors.length)];
-    }
-    update() {
-      this.y += this.speedY;
-      if (this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-  }
-
-  function initParticles(count = 60) {
-    particles = [];
-    for (let i = 0; i < count; i++) {
-      particles.push(new Particle());
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-    requestAnimationFrame(animate);
-  }
-
-  initParticles();
-  animate();
-    <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-  }
-    const emoji = document.getElementById('emoji');
-  document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-    emoji.textContent = '✨';
-  });
-  document.querySelector('.emoji-link').addEventListener('mouseout', () => {
-    emoji.textContent = '🖐️';
-  });
 </script>
 
 
