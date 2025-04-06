@@ -180,6 +180,7 @@
 
   </style>
 </head>
+
 <body>
   <nav id="nav-menu">
   <div id="nav-toggle" onclick="toggleMenu()">☰</div>
@@ -356,6 +357,10 @@ const sauceNames = [
 function generateSauce() {
   const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
   document.getElementById("sauce-output").innerText = random;
+}
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
 }
 
 </script>
