@@ -394,8 +394,19 @@ function generateSauce() {
 }
 function toggleMenu() {
   const navLinks = document.getElementById('nav-links');
-  navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+  const isVisible = navLinks.style.display === 'block';
+  navLinks.style.display = isVisible ? 'none' : 'block';
+
+  // Optional: auto-close when a link is clicked
+  if (!isVisible) {
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.style.display = 'none';
+      });
+    });
+  }
 }
+
 
 </script>
 
