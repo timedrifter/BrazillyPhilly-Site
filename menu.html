@@ -335,25 +335,46 @@
     <div id="sauce-output"></div>
   </section>
 
-  <footer>
-    <p>Stay saucy. Stay sharp. 🖐️ HIGH FIVE FOREVER ♾️</p>
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™</p>
-    <p><a href="index.html">⬅️ Back to Home</a></p>
-    <div style="text-align: center; margin-top: 20px;">
-  <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-    <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-    <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-    <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-  </a>
-</div>
-  </footer>
+  <footer style="text-align: center; margin-top: 4rem;">
+  <p style="color: #00ffc3; font-weight: bold;">
+    Stay saucy. Stay sharp. 
+    <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination" style="text-decoration: none;">
+      <span id="emoji">🖐️</span>
+    </a> ♾️
+  </p>
+
+  <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER</p>
+
+  <p style="margin: 1rem 0;">
+    <a href="index.html" style="color: #00ffc3; font-weight: bold; text-decoration: none;">← Return to Homepage</a>
+  </p>
+
+  <!-- Social Media Links -->
+  <div style="text-align: center; margin: 1rem 0;">
+    <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
+      <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+    </a>
+    <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
+      <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+    </a>
+    <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
+      <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
+      <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+    </a>
+  </div>
+
+  <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
+    Designed with alchemy, electricity, and extra sauce — 
+    <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
+  </p>
+
+  <p style="color: #888; font-size: 0.8rem;">
+    &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
+  </p>
+</footer>
+
 
   <div id="secretFlavorBadge" style="display:none; margin-top:40px;">
     <img src="secret-caipirinha-glacier-badge.png" alt="Secret Flavor" style="width:100%; max-width:500px; box-shadow:0 0 20px #00ffc3; border-radius:12px;" />
@@ -496,6 +517,15 @@
 
     initParticles();
     animate();
+    const emoji = document.getElementById('emoji');
+  if (emoji) {
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => {
+      emoji.textContent = '✨';
+    });
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => {
+      emoji.textContent = '🖐️';
+    });
+  }
   </script>
 </body>
 </html>
