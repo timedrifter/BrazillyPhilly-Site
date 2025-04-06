@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brazilly Philly Comic Book</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       background-color: #0b0f1a;
       color: #00ffa3;
       font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       overflow-x: hidden;
     }
-    header, footer {
+    h1 {
       text-align: center;
-      padding: 20px;
+      color: #00ffa3;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease-in-out;
     }
-    .logo {
-      width: 90%;
-      max-width: 300px;
-      height: auto;
-      filter: drop-shadow(0 0 12px #00ffc3);
-      animation: pulse 2s infinite;
+    .nav {
+      text-align: center;
+      margin-bottom: 30px;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
+    .nav a {
+      color: #00d0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover {
+      color: #ff4f4f;
     }
     .comic-section {
       max-width: 800px;
@@ -37,45 +46,82 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 0 20px #00ffa3;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideIn 1.5s ease-in-out;
+    }
+    .comic-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 25px #00ffcc;
+    }
+    .comic-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #00d0ff;
     }
     .comic-img {
       width: 100%;
       border-radius: 8px;
+      margin-bottom: 10px;
     }
     .bot-bio {
       font-size: 0.95rem;
       color: #b0fdf5;
-      margin-top: 10px;
     }
-    .nav {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 999;
+    .teaser {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 1.2rem;
+      color: #00ffa3;
+      font-style: italic;
+      animation: pulse 2s infinite;
     }
-    #nav-toggle {
-      font-size: 2rem;
-      cursor: pointer;
-      background-color: #00ffc3;
-      color: #0a0a0a;
-      padding: 0.3rem 0.6rem;
-      border-radius: 6px;
-      box-shadow: 0 0 8px #00ffc3;
+    .behind-the-bots {
+      max-width: 800px;
+      margin: 60px auto 0;
+      background-color: #112233;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #0099ff;
     }
-    #nav-links {
+    .behind-the-bots h2 {
+      color: #00d0ff;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    .behind-the-bots ul {
       list-style: none;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      background-color: #111;
-      border: 1px solid #00ffc3;
-      border-radius: 8px;
-      box-shadow: 0 0 12px #00ffc3;
-      display: none;
+      padding-left: 0;
     }
-    #nav-links a {
-      text-decoration: none;
-      color: #00ffc3;
-      font-weight: bold;
+    .behind-the-bots li {
+      margin-bottom: 10px;
+      color: #ccf6ff;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: #009fa3;
+      font-style: italic;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+      @keyframes floatdots {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+      @keyframes floatdots {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
     }
     #dot-background {
       position: fixed;
@@ -89,102 +135,160 @@
       animation: floatdots 60s linear infinite;
       pointer-events: none;
     }
-    @keyframes floatdots {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
   </style>
 </head>
 <body>
-  <div id="dot-background"></div>
-  <nav class="nav" id="nav-menu">
-    <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="menu.html">🥩 Food Menu</a></li>
-      <li><a href="free-energy.html">⚡ Free Energy</a></li>
-      <li><a href="comicbook.html">📚 Comic Book</a></li>
-      <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
+  <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: transparent; pointer-events: none;"></canvas>
+  
+  <header style="display: flex; justify-content: center; align-items: center; padding: 30px 0; position: relative; z-index: 2;">
+  <a href="/" style="display: inline-block;">
+    <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" style="width: 90%; max-width: 300px; height: auto; filter: drop-shadow(0 0 12px #00ffc3); animation: pulse 2s infinite; display: block; margin: 0 auto;">
+  </a>
+</header>
+<h1 style="text-align: center; font-size: 2.2rem; color: #00ffa3; margin-top: 0; animation: fadeIn 2s ease-in-out;">Brazilly Philly Comic Book</h1>
+
+  <div class="nav" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0 10px;">
+  <a href="#primo">Primo & Saucy</a>
+  <a href="#scrubby">Scrubby</a>
+  <a href="#dj">DJ Bot-tle</a>
+</div>
+
+  <div id="primo" class="comic-section">
+    <div class="comic-title">When Primo Met Saucy</div>
+    <img class="comic-img" src="comic_01_primo_saucy.png" alt="When Primo Met Saucy">
+    <div class="bot-bio">Meet BP-R1 "Primo" and BP-R2 "Saucy" — the smooth food server and the silly sauce artist. Their chemistry? Instant flavor. <br><em>"Slippery when drippery."</em></div>
+  </div>
+
+  <div id="scrubby" class="comic-section">
+    <div class="comic-title">Scrubby Enters the Chat</div>
+    <img class="comic-img" src="comic_02_scrubby.png" alt="Scrubby Enters the Chat">
+    <div class="bot-bio">BP-R3 "Scrubby" keeps things spotless, even if it means panicking over every sauce drop. He's neurotic. He's clean. He's not amused. <br><em>"You... spilled... the SAUCE!"</em></div>
+  </div>
+
+  <div id="dj" class="comic-section">
+    <div class="comic-title">Enter DJ Bot-tle</div>
+    <img class="comic-img" src="comic_03_dj_bottle.png" alt="Enter DJ Bot-tle">
+    <div class="bot-bio">BP-R4 "DJ Bot-tle" drops beats with your burger. He’s loud, loyal, and lives for the bass. Every order’s a show. <br><em>"You ready for the drop?"</em></div>
+  </div>
+
+  <div id="react" class="comic-section">
+    <div class="comic-title">Bots React to Fan Comments</div>
+    <img class="comic-img" src="comic_05_bot_reacts.png" alt="Bots React to Fan Comments">
+    <div class="bot-bio">From sauce-splatter fan art to playlist critiques, our bots have opinions. This strip captures their spicy responses in real time. <br><em>"You call THAT spicy?" – Saucy</em></div>
+  </div>
+
+  <div class="comic-section" id="bot-roster">
+    <div class="comic-title">🤖 Meet the Bots</div>
+    <div class="bot-bio">
+      <ul style="list-style: none; padding-left: 0;">
+        <li><img src="/bot_primo_icon.png" alt="Primo Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R1 &quot;Primo&quot;</strong> – Food delivery master. Kind, precise, always in service mode.</li>
+        <li><img src="/bot_saucy_icon.png" alt="Saucy Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R2 &quot;Saucy&quot;</strong> – Sauce-slinger with style. Funky, fast, and full of flare.</li>
+        <li><img src="/bot_scrubby_icon.png" alt="Scrubby Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R3 &quot;Scrubby&quot;</strong> – Clean freak and chaos controller. A little neurotic but pure-hearted.</li>
+        <li><img src="/bot_dj_icon.png" alt="DJ Bot-tle Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R4 &quot;DJ Bot-tle&quot;</strong> – Mix master. Lives for the beat and never skips an order.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="comic-section" id="bot-generator">
+    <div class="comic-title">🛠️ Build Your Own Bot</div>
+    <div class="bot-bio">
+      What would YOUR robot do at Brazilly Philly? Sauce cannon arms? Built-in jukebox? Use your imagination!
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00ffa3; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Launch Bot Builder (Coming Soon)</button>
+    </div>
+  </div>
+
+  <div class="comic-section" id="vote-next">
+    <div class="comic-title">🗳️ Vote for the Next Bot</div>
+    <div class="bot-bio">
+      We’re building more bots — and YOU get to help decide! Who should join the Flavor Force?
+    </div>
+    <div style="text-align: center; margin-top: 15px;">
+      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00d0ff; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Cast Your Vote</button>
+    </div>
+  </div>
+
+  <div class="comic-section" id="flavor-boss">
+  <div class="comic-title">The Flavor Boss Has Entered the Building</div>
+  <img class="comic-img" src="comic_07_flavor_boss_enters.png" alt="The Flavor Boss Has Entered the Building">
+  <div class="bot-bio">
+    The bots are in chaos — sauce everywhere, music blasting, panic rising... until HE walks in. Hair flowing. Eyes focused. The Flavor Boss arrives, and silence hits like a dropped beat. <br><em>“Back to work, robots. Let’s feed the revelation.”</em>
+  </div>
+</div>
+
+$1
+
+  <div class="behind-the-bots">
+    <h2>🔧 Behind the Bots: Quirks in the Code</h2>
+    <ul>
+      <li><strong>Primo</strong>: Sometimes hums elevator music while idle. Can balance 12 trays at once.</li>
+      <li><strong>Saucy</strong>: Remixes his own sauce splats and calls it "Flavor Beats Vol. 1"</li>
+      <li><strong>Scrubby</strong>: Runs a diagnostics scan every 10 minutes... even on his birthday.</li>
+      <li><strong>DJ Bot-tle</strong>: Refuses to serve food unless the playlist is fire. Will pause mid-beat to judge your song request.</li>
     </ul>
-  </nav>
+  </div>
 
-  <header>
-    <a href="index.html">
-      <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
-    </a>
-  </header>
+  <div class="footer">
+    <a href="/" style="display: inline-block; color: #00ffa3; text-decoration: none; margin-bottom: 8px; font-weight: bold;">← Return to Homepage</a><br>
+    Designed with alchemy, electricity, and extra sauce — BrazillyPhilly.com ✨
+  </div>
 
-  <main>
-    <h1 style="text-align:center">Brazilly Philly Comic Book</h1>
+<script>
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
 
-    <div class="comic-section">
-      <img src="comic_01_primo_saucy.png" alt="Primo & Saucy" class="comic-img">
-      <div class="bot-bio">Primo & Saucy meet! Instant flavor. "Slippery when drippery." 🍔💧</div>
-    </div>
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
 
-    <div class="comic-section">
-      <img src="comic_02_scrubby.png" alt="Scrubby" class="comic-img">
-      <div class="bot-bio">Scrubby: "You... spilled... the SAUCE!" 🧼🌀</div>
-    </div>
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
 
-    <div class="comic-section">
-      <img src="comic_03_dj_bottle.png" alt="DJ Bot-tle" class="comic-img">
-      <div class="bot-bio">DJ Bot-tle drops beats with burgers. "You ready for the drop?" 🎵🍟</div>
-    </div>
-
-    <div class="comic-section">
-      <h2 style="color:#00d0ff">🌶️ Random Sauce Name Generator</h2>
-      <button onclick="generateSauce()" style="padding:10px 20px; font-size:1rem; background-color:#00ffc3; color:#0a0a0a; border:none; border-radius:8px; cursor:pointer;">Generate Sauce</button>
-      <div id="sauce-output" style="margin-top:1rem; font-weight:bold; color:#ffcc00; font-size:1.2rem;"></div>
-    </div>
-
-    <p style="text-align:center; margin-top: 2rem;">
-      <a href="index.html" style="color: #00ffa3; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
-        ← Return to Home Page
-      </a>
-    </p>
-  </main>
-
-  <footer>
-    <p style="color: #00ffc3; font-weight: bold;">
-      This site is powered by MSG – Make Stuff Good 🍜⚡✨
-    </p>
-    <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER 🖐️♾️</p>
-    <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
-      Designed with alchemy, electricity, and extra sauce — 
-      <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
-    </p>
-    <p style="color: #888; font-size: 0.8rem;">
-      &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
-    </p>
-  </footer>
-
-  <script>
-    const sauceNames = [
-      "Dawn's Destiny Sauce", "Midnight Mango Blaze", "Cyber Cilantro Crunch",
-      "Corey's Lotus Heat", "Valter's Hard Work Sauce", "Anthony's Philly Sauce",
-      "Giovanni's Cali Sauce", "Neon Pepper Jolt", "Yakuza Garlic Heat",
-      "Quantum Lime Burst", "Electric Açai Drizzle", "Philly Flame Zing",
-      "Time Drip Tango", "Slippery Samurai Drip", "El Diablo Verde",
-      "Slippery Garlic Avalanche", "Parisian Pepper Kiss", "Bombay Heat Harmony",
-      "Berlin BBQ Bolt", "Rio Rocket Sauce", "Seoul Fire Glaze",
-      "Slippery Chipotle Vortex", "Chi-Town Chimichurri Rush", "Dragonfire Sesame Zing",
-      "Slippery Jalapeño Groove", "Wasabi Whiplash", "Neon Tandoori Tango",
-      "Slippery Sweet Heat Samba", "Bangkok Burner Sauce", "Slippery Tomato Typhoon",
-      "Broblivion Burn", "Funkmaster Fire Dip", "Caipirinha Glacier Drizzle",
-      "Cosmic Cilantro Meteor"
-    ];
-
-    function generateSauce() {
-      const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-      document.getElementById("sauce-output").innerText = random;
+  class Particle {
+    constructor() {
+      this.reset();
     }
-
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      const isVisible = navLinks.style.display === 'block';
-      navLinks.style.display = isVisible ? 'none' : 'block';
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.speedY = Math.random() * 0.5 + 0.2;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
     }
-  </script>
+    update() {
+      this.y += this.speedY;
+      if (this.y > canvas.height) this.reset();
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  function initParticles(count = 60) {
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  initParticles();
+  animate();
+</script>
 </body>
 </html>
