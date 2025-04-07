@@ -93,7 +93,8 @@
       filter: drop-shadow(0 0 4px #00ffff);
       transition: 0.3s;
     }
-   #nav-menu {
+
+    #nav-menu {
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -123,15 +124,11 @@
   border: 1px solid #00ffc3;
   border-radius: 8px;
   box-shadow: 0 0 12px #00ffc3;
-  display: none; /* 👈 KEY: Hide by default */
+  display: none;
 }
 
-
-
 #nav-links.show {
-  max-height: 500px; /* Enough to show all links */
-  opacity: 1;
- display: block;
+  display: block;
 }
 
 #nav-links li {
@@ -144,8 +141,10 @@
   font-weight: bold;
   font-size: 1rem;
   text-align: left;
-
+  display: block;
+  padding-left: 10px;
 }
+
 
     .logo {
   max-width: 300px;
@@ -168,16 +167,17 @@
   </style>
 </head>
 <body>
-  <nav id="nav-menu">
-    <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="menu.html">🥩 Food Menu</a></li>
-      <li><a href="free-energy.html">⚡ Free Energy</a></li>
-      <li><a href="comicbook.html">📚 Comic Book</a></li>
-      <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
-    </ul>
-  </nav>
+<nav id="nav-menu">
+  <div id="nav-toggle" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="menu.html">🥩 Food Menu</a></li>
+    <li><a href="free-energy.html">⚡ Free Energy</a></li>
+    <li><a href="comicbook.html">📚 Comic Book</a></li>
+    <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
+  </ul>
+</nav>
+
 
   <canvas id="particles"></canvas>
 
@@ -337,6 +337,7 @@ function toggleMenu() {
   const navLinks = document.getElementById('nav-links');
   navLinks.classList.toggle('show');
 }
+
 
 
   // Particle Canvas Setup
