@@ -55,7 +55,84 @@
   <section>
     <h1>This is a Template Page</h1>
     <p>Use this layout to build and test new pages with a consistent header, footer, and vibe.</p>
-    <img src="free_energy_tech.png" alt="Demo Image" style="width: 300px; box-shadow: 0 0 12px #00ffc3;">
+  <!-- 🥪 Brazilly Philly Fake Review Generator 🥪 -->
+<div id="quote-box" style="
+  background: #333;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin: 40px auto;
+">
+  <div id="quote-text" style="font-size: 1.2rem; margin-bottom: 10px;">
+    Click below to taste the madness.
+  </div>
+  <div id="quote-author" style="font-style: italic;"></div>
+</div>
+<div style="text-align: center;">
+  <button onclick="generateReview()" style="
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  ">Generate Fake Review</button>
+</div>
+
+<script>
+  const reviews = [
+    {
+      text: "It’s so good, I stopped saying ‘D’oh!’",
+      author: "Homer Simpson, Donut Digest"
+    },
+    {
+      text: "We have a Hulk. But we also have picanha.",
+      author: "Tony Stark, Stark Industries Catering Review"
+    },
+    {
+      text: "Set phasers to DELICIOUS.",
+      author: "Captain Kirk, Enterprise Eats"
+    },
+    {
+      text: "This is the way... to flavor.",
+      author: "The Mandalorian, Helmet-Off Cuisine"
+    },
+    {
+      text: "WUBBA LUBBA DELICIOUS!",
+      author: "Rick Sanchez, Food Portal Weekly"
+    },
+    {
+      text: "I came here for science. I stayed for the sandwich.",
+      author: "Neil deGrasse Tyson, probably on a podcast"
+    },
+    {
+      text: "FLAVOR MODE: ACTIVATED.",
+      author: "Optimus Prime, Cybertron Chow Chronicles"
+    },
+    {
+      text: "I’d trade my last Infinity Stone for one more bite.",
+      author: "Thanos, Titan Eats Quarterly"
+    },
+    {
+      text: "It made my day.",
+      author: "Clint Eastwood, Dirty Harry Magazine"
+    },
+    {
+      text: "This sandwich has more charisma than every Saved by the Bell character combined.",
+      author: "Zack M., Time Out Champion"
+    }
+  ];
+
+  function generateReview() {
+    const random = reviews[Math.floor(Math.random() * reviews.length)];
+    document.getElementById('quote-text').innerText = random.text;
+    document.getElementById('quote-author').innerText = `— ${random.author}`;
+  }
+</script>
+
   </section>
 
   <!-- 🧪 Footer (includes Sauce Generator + Social + Rights) -->
