@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brazilly Philly – Template</title>
-  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brazilly Philly – Template Test</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon.ico" />
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,6 +16,15 @@
       padding: 0;
       text-align: center;
       overflow-x: hidden;
+    }
+
+    img {
+      border-radius: 12px;
+    }
+
+    h1, h2 {
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
     }
 
     canvas#particles {
@@ -30,38 +38,42 @@
       pointer-events: none;
     }
 
-    img {
-      border-radius: 12px;
+    button {
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
     }
 
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 5px #00ffc3); }
-      50% { filter: drop-shadow(0 0 20px #00ffc3); }
-      100% { filter: drop-shadow(0 0 5px #00ffc3); }
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 8px #00ffc3; }
-      50% { box-shadow: 0 0 24px #00ffc3; }
-      100% { box-shadow: 0 0 8px #00ffc3; }
+    #sauce-output {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.2rem;
     }
   </style>
 </head>
-<body>
 
+<body>
   <canvas id="particles"></canvas>
 
-  <!-- Header will be injected by header-sauce.js -->
-  
-  <!-- Add your unique page content here -->
-  <main>
-    <h2 style="color:#00ffc3; margin-top: 3rem;">This is your Brazilly Philly template</h2>
-    <p>Use this page as a base for new sections like secret drops, blog posts, or flavor experiments.</p>
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <main style="margin-top: 2rem;">
+    <h1>🔥 Template Test Page</h1>
+    <p>This page is using <code>header-sauce.js</code> and <code>footer-sauce.js</code>.</p>
   </main>
 
-  <!-- Footer will be injected by footer-sauce.js -->
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
 
-  <!-- Scripts -->
+  <!-- LOAD SCRIPTS -->
   <script src="header-sauce.js"></script>
   <script src="footer-sauce.js"></script>
 </body>
