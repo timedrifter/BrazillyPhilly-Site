@@ -162,7 +162,7 @@
 
 #nav-links {
   list-style: none;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   margin-top: 0.5rem;
   background-color: #111;
   border: 1px solid #00ffc3;
@@ -172,6 +172,8 @@
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.4s ease, opacity 0.4s ease;
+  text-align: left; /* ✅ Aligns the text left */
+  min-width: 180px;  /* ✅ Adds consistent width */
 }
 
 #nav-links.show {
@@ -187,7 +189,9 @@
   text-decoration: none;
   color: #00ffc3;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1rem; /* ✅ Adjust as needed (e.g. 1.1rem if homepage is larger) */
+  padding: 0.3rem 0;
+  display: block;
 }
 
   </style>
