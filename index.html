@@ -234,8 +234,29 @@
     <div id="sauce-output"></div>
   </section>
  <!-- MSG Badge -->
-    <img src="msg_badge_updated.png" alt="We proudly use MSG" class="badge">
-    <p style="color: #ffcc00; font-weight: bold;">Brazilly Philly is powered by<br>MSG = Make Stuff Good🥢💥</p>
+ <style>
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 6px #ffcc00);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #ffcc00);
+    }
+    100% {
+      filter: drop-shadow(0 0 6px #ffcc00);
+    }
+  }
+</style>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="msg_badge_updated.png" alt="We proudly use MSG"
+    style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00); transition: transform 0.3s ease; animation: pulse-glow 2s infinite ease-in-out;"
+    onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+
+  <p style="color: #ffcc00; font-weight: bold;">Brazilly Philly is powered by<br>MSG = Make Stuff Good 🥢💥</p>
+</div>
+
+  
 <!-- 🌟 Brazilly Philly Unified Footer with Brolumination -->
 <footer style="text-align: center; margin-top: 4rem;">
 
