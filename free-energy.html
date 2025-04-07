@@ -386,6 +386,10 @@
   document.querySelector('.emoji-link').addEventListener('mouseout', () => {
     emoji.textContent = '🖐️';
   });
+    function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
 </script>
 
 </body>
