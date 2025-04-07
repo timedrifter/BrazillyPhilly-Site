@@ -146,6 +146,16 @@
   text-align: left;
 
 }
+ .badge {
+    width: 96px;
+    height: 96px;
+    filter: drop-shadow(0 0 6px #00ffc3);
+    transition: transform 0.3s ease;
+    margin: 1rem auto;
+  }
+  .badge:hover {
+    transform: scale(1.2);
+  }
 
 
     .logo {
@@ -196,35 +206,14 @@
     <p>This isn’t just food—it’s flavor fueled by the future. Welcome to the next evolution of sustainable swag. This is more than a vibe—it’s a revelation.</p>
   </section>
 
-<section>
-  <div style="text-align: center; margin: 2rem 0;">
-  <!-- Menu Badge -->
-  <a href="menu.html">
-    <img src="menu_link.png" alt="View Our Menu"
-      style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-      onmouseover="this.style.transform='scale(1.2)'" 
-      onmouseout="this.style.transform='scale(1)'">
-  </a>
-     <p style="color: #00ffa3;">The Food Menu of Life</p>
-  <div style="text-align: center; margin: 2rem 0;">
-    </div>
-  <!-- MSG Badge -->
-  <img src="msg_badge_updated.png" alt="We proudly use MSG"
-    style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffcc00); transition: transform 0.3s ease;"
-    onmouseover="this.style.transform='scale(1.2)'" 
-    onmouseout="this.style.transform='scale(1)'">
-  <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
-  <div style="text-align: center; margin: 2rem 0;">
-    </div>
-  <!-- Comic Badge -->
-  <a href="comicbook.html">
-    <img src="comicbook_badge.png" alt="Read the Comic"
-      style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-      onmouseover="this.style.transform='scale(1.2)'" 
-      onmouseout="this.style.transform='scale(1)'">
-  </a>
-  <p style="color: #00ffa3;">Read the Comic – Powered by Robots</p>
 
+  <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="menu.html">
+    <img src="menu_link.png" alt="View Our Menu" class="badge">
+  </a>
+  <a href="comicbook.html">
+    <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
+</div>
 
 <script src="footer-sauce.js"></script>
 
