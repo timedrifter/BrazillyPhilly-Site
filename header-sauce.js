@@ -67,6 +67,20 @@ document.getElementById("header-placeholder").innerHTML = `
         50% { filter: drop-shadow(0 0 20px #00ffc3); }
         100% { filter: drop-shadow(0 0 5px #00ffc3); }
       }
+      .kickstarter-glow {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border: 2px solid #00ffc3;
+  color: #00ffc3;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 12px;
+  width: 300px;
+  text-shadow: 0 0 10px #00ffc3;
+  animation: pulseGlow 2s infinite;
+}
+
     </style>
 
     <!-- Hamburger Menu -->
@@ -92,11 +106,13 @@ document.getElementById("header-placeholder").innerHTML = `
       Where Philly Meets Picanha
     </p>
 
-    <!-- Kickstarter Glow Box -->
-    <a href="https://www.kickstarter.com/projects/brazillyphilly" target="_blank" class="kickstarter-glow"
-      style="background: transparent; display: inline-block; margin-top: 1rem; border: 2px solid #00ffc3; color: #00ffc3; font-weight: bold; font-size: 1.2rem; text-align: center; border-radius: 12px; text-shadow: 0 0 10px #00ffc3; animation: pulseGlow 2s infinite; padding: 1rem 2rem;">
-      🚀 KICKSTARTER PRE-LAUNCH<br>PAGE
-    </a>
+  <!-- Kickstarter Glow Box -->
+<section class="kickstarter-glow">
+  <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+    🚀 KICKSTARTER PRE-LAUNCH PAGE
+  </a>
+</section>
+
   </header>
 `;
 
