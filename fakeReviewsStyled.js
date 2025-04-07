@@ -1,5 +1,5 @@
 
-// Brazilly Philly Styled Fake Review Generator with Blue Glow
+// Brazilly Philly Fake Review Generator — Non-Repeating + Styled
 
 const fullReviewList = [
   { text: "Listening to them convinced me to choose the red pill.", author: "Neo, Matrix Magazine" },
@@ -14,9 +14,11 @@ const fullReviewList = [
   { text: "Tastes like freedom… and the tears of my haters.", author: "Eddie Murphy, Comedy King Quarterly" }
 ];
 
-let reviewPool = [];
+let shuffledIndex = [];
+let currentIndex = 0;
 
-function shuffle(array) {
+function shuffleIndexArray(length) {
+  const array = Array.from({ length }, (_, i) => i);
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -25,11 +27,13 @@ function shuffle(array) {
 }
 
 function generateReview() {
-  if (reviewPool.length === 0) {
-    reviewPool = shuffle([...fullReviewList]);
+  if (shuffledIndex.length === 0 || currentIndex >= shuffledIndex.length) {
+    shuffledIndex = shuffleIndexArray(fullReviewList.length);
+    currentIndex = 0;
   }
 
-  const next = reviewPool.pop();
+  const index = shuffledIndex[currentIndex++];
+  const next = fullReviewList[index];
 
   const quoteBox = document.getElementById('quote-box');
   quoteBox.innerHTML = `
