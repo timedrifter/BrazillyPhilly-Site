@@ -57,4 +57,29 @@
     "Sadie's Carzy Sauce", "Electric Açai Drizzle", "Philly Flame Zing",
     "Brazilliance Heatwave", "Time Drip Tango", "Slippery Samurai Drip",
     "Tokyo Teriyaki Thunder", "Roman Basil Heatwave", "Munich Mustard Smash",
-    "Spicy Sichuan Slipstream", "Silly Hot Verde",
+    "Spicy Sichuan Slipstream", "El Diablo Verde", "Slippery Garlic Avalanche",
+    "Sweet Basil Napoli", "Parisian Pepper Kiss", "Spicy Soy Mirage",
+    "Bombay Heat Harmony", "Berlin BBQ Bolt", "Rio Rocket Sauce",
+    "Midnight Mole Madness", "Seoul Fire Glaze", "French Firecrack Dijon",
+    "Slippery Chipotle Vortex", "Chi-Town Chimichurri Rush",
+    "Dragonfire Sesame Zing", "Slippery Jalapeño Groove",
+    "Mediterranean Mango Fizz", "Random Fire Bloom", "Wasabi Whiplash",
+    "Crimson Curry Flicker", "Neon Tandoori Tango", "Slippery Sweet Heat Samba",
+    "Bavarian Blaze Cream", "Bangkok Burner Sauce", "Slippery Tomato Typhoon",
+    "Broblivion Burn", "Funkmaster Fire Dip", "Mint Condition Meltdown",
+    "Brotiger BBQ Tamer", "Caipirinha Glacier Drizzle", "Cosmic Cilantro Meteor"
+  ];
+
+  function generateSauce() {
+    const output = document.getElementById("sauce-output");
+    const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+    if (output) output.innerText = random;
+  }
+
+  // Emoji Animation
+  const emoji = document.getElementById('emoji');
+  if (emoji) {
+    document.querySelector('.emoji-link').addEventListener('mouseover', () => emoji.textContent = '✨');
+    document.querySelector('.emoji-link').addEventListener('mouseout', () => emoji.textContent = '🖐️');
+  }
+</script>
