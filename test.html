@@ -55,18 +55,18 @@
   <section>
     <h1>This is a Template Page</h1>
     <p>Use this layout to build and test new pages with a consistent header, footer, and vibe.</p>
-<!-- 🌟 Brazilly Philly Fake Review Generator 🌟 -->
+<!-- 🌟 Brazilly Philly Fake Review Generator (Enhanced!) 🌟 -->
 <div id="quote-box" style="
-  background: #000;
-  border: 2px solid #ffcc00;
-  border-radius: 12px;
+  background: #001f00;
+  border: 2px solid #00ff88;
+  border-radius: 16px;
   padding: 20px;
   max-width: 600px;
   text-align: center;
   color: #fff;
   margin: 40px auto;
   font-family: 'Arial', sans-serif;
-  box-shadow: 0 0 30px rgba(255,204,0,0.3);
+  box-shadow: 0 0 25px #00ff88cc;
 ">
   <div id="quote-text" style="font-size: 1.4rem; margin-bottom: 15px;">
     Click below to taste the madness.
@@ -77,18 +77,44 @@
   <button onclick="generateReview()" style="
     padding: 12px 24px;
     font-size: 1rem;
-    background-color: #ffcc00;
+    background-color: #3399ff;
     border: none;
-    border-radius: 5px;
-    color: #000;
+    border-radius: 6px;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(51,153,255,0.5);
   ">Generate Fake Review</button>
 </div>
 
 <script>
-  const reviews = [
-    // Original Classics
+  const fullReviewList = [
+    // (Insert the full review array from before here — omitted for brevity)
+  ];
+
+  // Shuffled non-repeating pool
+  let reviewPool = [];
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  function generateReview() {
+    if (reviewPool.length === 0) {
+      reviewPool = shuffle([...fullReviewList]);
+    }
+
+    const next = reviewPool.pop();
+    document.getElementById('quote-text').innerText = next.text;
+    document.getElementById('quote-author').innerText = `— ${next.author}`;
+  }
+
+  // Initialize full review list
+  const fullReviewList = [
     { text: "Listening to them convinced me to choose the red pill.", author: "Neo, Matrix Magazine" },
     { text: "See how far the rabbit hole goes.", author: "Morpheus, Matrix Magazine" },
     { text: "Vote for them and all your dreams will come true.", author: "Pedro, Napoleon Dynamite Magazine" },
@@ -105,8 +131,6 @@
     { text: "It made my day.", author: "Clint Eastwood, Dirty Harry Magazine" },
     { text: "It was better than Cats.", author: "NYC Broadway Fans, NYC Magazine" },
     { text: "Mikey likes it.", author: "Mikey's Big Brother, Life Cereal Magazine" },
-
-    // Movie + Series Quotes
     { text: "We have a Hulk. But we also have picanha.", author: "Tony Stark, Stark Industries Catering Review" },
     { text: "I could do this all day… if the sandwich keeps coming.", author: "Captain America, Stars & Stripes Eats" },
     { text: "BURRAZZZZZILLYYYYY PHILLYYYYY!", author: "Thor, Sandwich Summoner" },
@@ -118,8 +142,6 @@
     { text: "The Force is strong with this one… especially the sauce.", author: "Yoda, Tiny Food Critic Weekly" },
     { text: "You underestimate the power… of Brazilian steak.", author: "Darth Vader, Dark Side Deli Digest" },
     { text: "I came back from the future for this sandwich. Worth the flux capacitor.", author: "Marty McFly, Hover Review" },
-
-    // Comedy, Cartoons, SNL
     { text: "WUBBA LUBBA DELICIOUS!", author: "Rick Sanchez, Food Portal Weekly" },
     { text: "It’s so good, I stopped saying ‘D’oh!’", author: "Homer Simpson, Donut Digest" },
     { text: "My Krabby Patty’s jealous.", author: "SpongeBob SquarePants, Undersea Eats Monthly" },
@@ -131,13 +153,9 @@
     { text: "Tastes like freedom… and the tears of my haters.", author: "Eddie Murphy, Comedy King Quarterly" },
     { text: "This sandwich has more charisma than every Saved by the Bell character combined.", author: "Zack M., Time Out Champion" },
     { text: "I passed my GED right after eating it.", author: "Johnny 5, Robot Review Weekly" },
-
-    // Silicon Valley, Internet
     { text: "This sandwich is SO hot right now.", author: "Mugatu, Zoolander Magazine" },
     { text: "This is the sandwich that will disrupt everything.", author: "Richard Hendricks, Silicon Valley Stack Report" },
     { text: "It’s giving... Michelin Star. But make it beef.", author: "Random Food Influencer, #sponsoredmaybe" },
-
-    // YouTube Cooking Legends
     { text: "This sandwich slaps harder than my steak with a cast iron.", author: "Joshua Weissman, YouTube Kitchen Lab" },
     { text: "I tasted it, and then I said... BRUH. That’s flavor.", author: "Mr. Make It Happen, Self-Taught Gourmet Digest" },
     { text: "You want food with soul? THIS is what I’m talkin’ about!", author: "Smokin' & Grillin' with AB, Backyard Boss Magazine" },
@@ -154,12 +172,6 @@
     { text: "Flavor so loud it woke my ancestors.", author: "Cooking Con Claudia, Latino Food Legends" },
     { text: "This is the kind of thing that would make a grandma cry. In a good way.", author: "Emma’s Goodies, Dessert Divine Weekly" }
   ];
-
-  function generateReview() {
-    const random = reviews[Math.floor(Math.random() * reviews.length)];
-    document.getElementById('quote-text').innerText = random.text;
-    document.getElementById('quote-author').innerText = `— ${random.author}`;
-  }
 </script>
 
 
