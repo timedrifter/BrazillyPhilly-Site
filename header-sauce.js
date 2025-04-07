@@ -1,8 +1,100 @@
 // ✅ header-sauce.js
+<style>
+  #nav-menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+  }
 
-// Inject glowing logo and header structure
-const headerHTML = `
-  <canvas id="particles"></canvas>
+  #nav-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #00ffc3;
+    color: #0a0a0a;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #00ffc3;
+    transition: transform 0.2s ease;
+  }
+
+  #nav-toggle:hover {
+    transform: scale(1.15);
+  }
+
+  #nav-links {
+    list-style: none;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #111;
+    border: 1px solid #00ffc3;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #00ffc3;
+    display: none;
+    text-align: left;
+  }
+
+  #nav-links.show {
+    display: block;
+  }
+
+  #nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  #nav-links a {
+    text-decoration: none;
+    color: #00ffc3;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  header img.logo {
+    max-width: 300px;
+    width: 90%;
+    filter: drop-shadow(0 0 10px #00ffc3);
+    animation: pulse 2s infinite;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @keyframes pulse {
+    0% { filter: drop-shadow(0 0 5px #00ffc3); }
+    50% { filter: drop-shadow(0 0 20px #00ffc3); }
+    100% { filter: drop-shadow(0 0 5px #00ffc3); }
+  }
+
+  .kickstarter-glow {
+    margin: 1.5rem auto;
+    padding: 1rem 2rem;
+    border: 2px solid #00ffc3;
+    color: #00ffc3;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 12px;
+    width: 300px;
+    text-shadow: 0 0 10px #00ffc3;
+    animation: pulseGlow 2s infinite;
+    background: transparent;
+    text-decoration: none;
+    display: block;
+  }
+
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px #00ffc3; }
+    50% { box-shadow: 0 0 20px #00ffc3; }
+    100% { box-shadow: 0 0 5px #00ffc3; }
+  }
+</style>
+
+<header>
+  <!-- Hamburger Menu -->
   <nav id="nav-menu">
     <div id="nav-toggle" onclick="toggleMenu()">☰</div>
     <ul id="nav-links">
@@ -14,77 +106,20 @@ const headerHTML = `
     </ul>
   </nav>
 
-  <header>
-    <a href="index.html">
-      <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" style="max-width: 300px; width: 90%; filter: drop-shadow(0 0 10px #00ffc3); animation: pulse 2s infinite; margin-top: 2rem;">
-    </a>
-    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
+  <!-- Glowing Logo -->
+  <a href="index.html">
+    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
+  </a>
 
-    <a href="https://www.kickstarter.com/projects/brazillyphilly" target="_blank" class="kickstarter-glow" style="margin: 2rem auto; padding: 1rem 2rem; border: 2px solid #00ffc3; color: #00ffc3; font-weight: bold; font-size: 1.2rem; text-align: center; border-radius: 12px; width: 300px; text-shadow: 0 0 10px #00ffc3; animation: pulseGlow 2s infinite; display: block; background: #000; text-decoration: none;">
-      🚀 KICKSTARTER PRE-LAUNCH<br>PAGE
-    </a>
-  </header>
-`;
+  <!-- Kickstarter Button -->
+  <a href="https://www.kickstarter.com/projects/brazillyphilly" target="_blank" class="kickstarter-glow">
+    🚀 KICKSTARTER PRE-LAUNCH<br>PAGE
+  </a>
+</header>
 
-document.body.insertAdjacentHTML("afterbegin", headerHTML);
-
-// Hamburger menu toggle
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("show");
-}
-
-// Particle background
-const canvas = document.getElementById("particles");
-if (canvas) {
-  const ctx = canvas.getContext("2d");
-  let particles = [];
-  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
   }
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 1;
-      this.speedY = Math.random() * 0.5 + 0.2;
-      this.color = colors[Math.floor(Math.random() * colors.length)];
-    }
-    update() {
-      this.y += this.speedY;
-      if (this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-  }
-
-  function initParticles(count = 60) {
-    particles = [];
-    for (let i = 0; i < count; i++) particles.push(new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((p) => {
-      p.update();
-      p.draw();
-    });
-    requestAnimationFrame(animate);
-  }
-
-  initParticles();
-  animate();
-}
+</script>
