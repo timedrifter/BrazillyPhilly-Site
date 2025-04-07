@@ -209,7 +209,7 @@
 
   <h2>🌶️ Random Sauce Name Generator</h2>
   <button onclick="generateSauce()">Generate Sauce</button>
-  <div id="sauce-output" style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.2rem;"></div
+  <div id="sauce-output" style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.2rem;"></div>
 
 </section>
 
@@ -253,9 +253,9 @@
 </footer>
 
 
-  <script>
-const sauceNames = [
-  "Dawn's Destiny Sauce",
+<script>
+  const sauceNames = [
+     "Dawn's Destiny Sauce",
   "Raquel's Family Heat",
   "Raquel's Garden Fire",
   "Midnight Mango Blaze",
@@ -310,74 +310,75 @@ const sauceNames = [
   "Brotiger BBQ Tamer",
   "Caipirinha Glacier Drizzle",
   "Cosmic Cilantro Meteor"
-];
+  ];
 
-function generateSauce() {
-  const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-  document.getElementById("sauce-output").innerText = random;
-}
-</script>
+  function generateSauce() {
+    const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
+    document.getElementById("sauce-output").innerText = random;
+  }
 
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Particle Canvas Setup
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  class Particle {
+    constructor() {
+      this.reset();
     }
-
-    const canvas = document.getElementById("particles");
-    const ctx = canvas.getContext("2d");
-    let particles = [];
-    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.speedY = Math.random() * 0.5 + 0.2;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
     }
-
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.reset();
-      }
-      reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedY = Math.random() * 0.5 + 0.2;
-        this.color = colors[Math.floor(Math.random() * colors.length)];
-      }
-      update() {
-        this.y += this.speedY;
-        if (this.y > canvas.height) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-      }
+    update() {
+      this.y += this.speedY;
+      if (this.y > canvas.height) this.reset();
     }
-
-    function initParticles(count = 60) {
-      particles = [];
-      for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-      }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
     }
+  }
 
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-      requestAnimationFrame(animate);
+  function initParticles(count = 60) {
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle());
     }
+  }
 
-    initParticles();
-    animate();
-    <script>
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  initParticles();
+  animate();
+
+  // Emoji Hover
   const emoji = document.getElementById('emoji');
   document.querySelector('.emoji-link').addEventListener('mouseover', () => {
     emoji.textContent = '✨';
@@ -387,6 +388,5 @@ function generateSauce() {
   });
 </script>
 
-  </script>
 </body>
 </html>
