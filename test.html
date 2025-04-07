@@ -4,27 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brazilly Philly – Template Test</title>
-  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="favicon.ico" />
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
       color: #e0e0e0;
+      text-align: center;
       margin: 0;
       padding: 0;
-      text-align: center;
       overflow-x: hidden;
     }
 
     img {
       border-radius: 12px;
-    }
-
-    h1, h2 {
-      color: #00ffc3;
-      text-shadow: 0 0 10px #00ffc3;
     }
 
     canvas#particles {
@@ -38,43 +33,89 @@
       pointer-events: none;
     }
 
-    button {
-      background: #00ffc3;
-      color: #0a0a0a;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      margin-top: 1rem;
+    h1 {
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
     }
 
-    #sauce-output {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #ffcc00;
-      font-size: 1.2rem;
+    section {
+      padding: 2rem;
     }
   </style>
 </head>
-
 <body>
-  <canvas id="particles"></canvas>
 
-  <!-- HEADER -->
+  <!-- 🍔 Header (Nav + Logo + Kickstarter) -->
   <div id="header-placeholder"></div>
 
-  <!-- MAIN CONTENT -->
-  <main style="margin-top: 2rem;">
-    <h1>🔥 Template Test Page</h1>
-    <p>This page is using <code>header-sauce.js</code> and <code>footer-sauce.js</code>.</p>
-  </main>
+  <!-- ✨ Particle background -->
+  <canvas id="particles"></canvas>
 
-  <!-- FOOTER -->
+  <!-- 🔥 Page content -->
+  <section>
+    <h1>This is a Template Page</h1>
+    <p>Use this layout to build and test new pages with a consistent header, footer, and vibe.</p>
+    <img src="free_energy_tech.png" alt="Demo Image" style="width: 300px; box-shadow: 0 0 12px #00ffc3;">
+  </section>
+
+  <!-- 🧪 Footer (includes Sauce Generator + Social + Rights) -->
   <div id="footer-placeholder"></div>
 
-  <!-- LOAD SCRIPTS -->
+  <!-- 🧩 Scripts to Inject Header + Footer -->
   <script src="header-sauce.js"></script>
   <script src="footer-sauce.js"></script>
+
+  <!-- ✨ Particle Animation Script -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  </script>
+
 </body>
 </html>
