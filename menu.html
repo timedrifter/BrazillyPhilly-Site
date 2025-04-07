@@ -455,11 +455,13 @@
     }
 
     // Secret flavor trigger
- if (confirm('🎉 Secret Flavor Unlocked: Caipirinha Glacier!')) {
+document.querySelector('.secret-trigger').addEventListener('click', () => {
+  alert('🎉 Secret Flavor Unlocked: Caipirinha Glacier!');
   const badge = document.getElementById('secretFlavorBadge');
   badge.style.display = 'block';
   badge.scrollIntoView({ behavior: 'smooth' });
-}
+});
+
 
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
