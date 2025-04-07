@@ -138,7 +138,8 @@
       animation: floatdots 60s linear infinite;
       pointer-events: none;
     }
-    #nav-menu {
+   /* Nav Menu */
+#nav-menu {
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -150,7 +151,7 @@
   cursor: pointer;
   background-color: #00ffc3;
   color: #0a0a0a;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.6rem; /* ✅ MATCHES HOMEPAGE */
   border-radius: 6px;
   box-shadow: 0 0 8px #00ffc3;
   transition: transform 0.2s ease;
@@ -162,23 +163,13 @@
 
 #nav-links {
   list-style: none;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem; /* ✅ MATCHES HOMEPAGE */
   margin-top: 0.5rem;
   background-color: #111;
   border: 1px solid #00ffc3;
   border-radius: 8px;
   box-shadow: 0 0 12px #00ffc3;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  text-align: left; /* ✅ Aligns the text left */
-  min-width: 180px;  /* ✅ Adds consistent width */
-}
-
-#nav-links.show {
-  max-height: 500px;
-  opacity: 1;
+  display: none; /* ✅ HOMEPAGE-STYLE MENU (NO .show CLASS HERE) */
 }
 
 #nav-links li {
@@ -189,9 +180,7 @@
   text-decoration: none;
   color: #00ffc3;
   font-weight: bold;
-  font-size: 1rem; /* ✅ Adjust as needed (e.g. 1.1rem if homepage is larger) */
-  padding: 0.3rem 0;
-  display: block;
+  font-size: 1rem;
 }
 
   </style>
