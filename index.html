@@ -117,17 +117,16 @@
       font-size: 1.2rem;
     }
 
-    .badge {
-      width: 125px;
-      height: 125px;
-      filter: drop-shadow(0 0 6px #00ffc3);
-      transition: transform 0.3s ease;
-      margin: 1rem auto;
-    }
-
-    .badge:hover {
-      transform: scale(1.2);
-    }
+  .badge {
+    width: 62.5px;
+    height: 62.5px;
+    filter: drop-shadow(0 0 6px #00ffc3);
+    transition: transform 0.3s ease;
+    margin: 1rem auto;
+  }
+  .badge:hover {
+    transform: scale(1.2);
+  }
 
     .kickstarter-glow {
       margin: 2rem auto;
@@ -217,16 +216,17 @@
 
 
   <section>
-     <a href="menu.html">
-      <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-      <p style="color: #00ffa3; font-weight: bold;">The Food Menu of Life</p>
-    <!-- Comic Badge -->
-    <a href="comicbook.html">
-      <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
-    </a>
-    <p style="color: #00ffa3; font-weight: bold;">Read the Comic – Powered by Robots</p>
+ <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="menu.html">
+    <img src="menu_link.png" alt="View Our Menu" class="badge">
+  </a>
+  <a href="comicbook.html">
+    <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
+  </a>
+  <a href="free-energy.html">
+    <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="badge">
+  </a>
+</div>
 
     <!-- Free Energy Badge -->
     <a href="free-energy.html">
