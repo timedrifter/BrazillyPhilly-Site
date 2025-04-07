@@ -148,17 +148,16 @@
       box-shadow: 0 0 12px #00ffc3;
     }
 
-    .badge {
-      width: 125px;
-      height: 125px;
-      filter: drop-shadow(0 0 6px #00ffc3);
-      transition: transform 0.3s ease;
-      margin: 1rem auto;
-    }
-
-    .badge:hover {
-      transform: scale(1.2);
-    }
+  .badge {
+    width: 96px;
+    height: 96px;
+    filter: drop-shadow(0 0 6px #00ffc3);
+    transition: transform 0.3s ease;
+    margin: 1rem auto;
+  }
+  .badge:hover {
+    transform: scale(1.2);
+  }
 
     .kickstarter-glow {
       margin: 2rem auto;
@@ -324,20 +323,15 @@
   </section>
 
   <!-- Badge Trio -->
-  <div>
-    <img src="msg_badge_updated.png" alt="MSG" class="badge" />
-    <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
+<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="comicbook.html">
+    <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
+  </a>
+  <a href="free-energy.html">
+    <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="badge">
+  </a>
+</div>
 
-    <a href="comicbook.html">
-      <img src="comicbook_badge.png" alt="Comic Book" class="badge" />
-    </a>
-    <p>Read the Comic Book 📚</p>
-
-    <a href="free-energy.html">
-      <img src="free_energy_tech.png" alt="Free Energy" class="badge" />
-    </a>
-    <p>Tech That Powers The Flavor ⚡</p>
-  </div>
 
   <!-- Sauce Generator -->
   <section>
@@ -345,6 +339,27 @@
     <button onclick="generateSauce()">Generate Sauce</button>
     <div id="sauce-output"></div>
   </section>
+<style>
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #ffffff);
+    }
+    100% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+  }
+</style>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="msg_badge_updated.png" alt="We proudly use MSG"
+    style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffffff); transition: transform 0.3s ease; animation: pulse-glow 2s infinite ease-in-out;"
+    onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+
+  <p style="color: #ffffff; font-weight: bold;">Brazilly Philly is powered by<br>MSG = Make Stuff Good 🥢💥</p>
+</div>
 
   <footer style="text-align: center; margin-top: 4rem;">
   <p style="color: #00ffc3; font-weight: bold;">
