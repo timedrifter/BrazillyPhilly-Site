@@ -67,7 +67,7 @@ document.getElementById("header-placeholder").innerHTML = `
         50% { filter: drop-shadow(0 0 20px #00ffc3); }
         100% { filter: drop-shadow(0 0 5px #00ffc3); }
       }
-      .kickstarter-glow {
+     .kickstarter-glow {
   margin: 2rem auto;
   padding: 1rem 2rem;
   border: 2px solid #00ffc3;
@@ -80,6 +80,14 @@ document.getElementById("header-placeholder").innerHTML = `
   text-shadow: 0 0 10px #00ffc3;
   animation: pulseGlow 2s infinite;
 }
+
+.kickstarter-glow a {
+  text-decoration: none;
+  color: #00ffc3;
+  font-weight: bold;
+  display: block;
+}
+
 
     </style>
 
