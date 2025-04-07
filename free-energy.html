@@ -115,19 +115,16 @@
   transform: scale(1.15);
 }
 
-#nav-links {
-  list-style: none;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: #111;
-  border: 1px solid #00ffc3;
-  border-radius: 8px;
-  box-shadow: 0 0 12px #00ffc3;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
+#nav-links a {
+  text-decoration: none;
+  color: #00ffc3;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
 }
+
 
 #nav-links.show {
   max-height: 500px; /* Enough to show all links */
@@ -331,10 +328,11 @@
     document.getElementById("sauce-output").innerText = random;
   }
 
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-  }
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
+}
+
 
   // Particle Canvas Setup
   const canvas = document.getElementById("particles");
