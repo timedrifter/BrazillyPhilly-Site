@@ -2,157 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brazilly Philly – Home of the Flavor Revelation</title>
-  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brazilly Philly – Template</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
 
   <style>
-    img {
-  border-radius: 12px;
-}
     body {
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
       color: #e0e0e0;
-      text-align: center;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
-    }
-
-    /* Nav Menu */
-   #nav-menu {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 999;
-}
-
-#nav-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-  background-color: #00ffc3;
-  color: #0a0a0a;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  box-shadow: 0 0 8px #00ffc3;
-  transition: transform 0.2s ease;
-}
-
-#nav-toggle:hover {
-  transform: scale(1.15);
-}
-
-#nav-links {
-  list-style: none;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  background-color: #111;
-  border: 1px solid #00ffc3;
-  border-radius: 8px;
-  box-shadow: 0 0 12px #00ffc3;
-  display: none;
-}
-
-#nav-links.show {
-  display: block;
-}
-
-#nav-links li {
-  margin: 0.5rem 0;
-}
-
-#nav-links a {
-  text-decoration: none;
-  color: #00ffc3;
-  font-weight: bold;
-  font-size: 1rem;
-  text-align: left;
-  display: block;
-  padding-left: 10px;
-  text-align: left;
-}
-
-
-    header img.logo {
-      max-width: 300px;
-      width: 90%;
-      filter: drop-shadow(0 0 10px #00ffc3);
-      animation: pulse 2s infinite;
-      margin-top: 2rem;
-    }
-
-    h1, h2 {
-      color: #00ffc3;
-    }
-
-    a {
-      color: #00ffc3;
-      text-decoration: none;
-    }
-
-    footer {
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 1rem;
-    }
-
-    button {
-      background: #00ffc3;
-      color: #0a0a0a;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    #sauce-output {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #ffcc00;
-      font-size: 1.2rem;
-    }
-
-    .badge {
-      width: 125px;
-      height: 125px;
-      filter: drop-shadow(0 0 6px #00ffc3);
-      transition: transform 0.3s ease;
-      margin: 1rem auto;
-    }
-
-    .badge:hover {
-      transform: scale(1.2);
-    }
-
-    .kickstarter-glow {
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 2px solid #00ffc3;
-      color: #00ffc3;
-      font-weight: bold;
-      font-size: 1.2rem;
       text-align: center;
-      border-radius: 12px;
-      width: 300px;
-      text-shadow: 0 0 10px #00ffc3;
-      animation: pulseGlow 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 5px #00ffc3); }
-      50% { filter: drop-shadow(0 0 20px #00ffc3); }
-      100% { filter: drop-shadow(0 0 5px #00ffc3); }
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 8px #00ffc3; }
-      50% { box-shadow: 0 0 24px #00ffc3; }
-      100% { box-shadow: 0 0 8px #00ffc3; }
+      overflow-x: hidden;
     }
 
     canvas#particles {
@@ -166,230 +30,39 @@
       pointer-events: none;
     }
 
-    .emoji-link {
-      font-size: 1.5rem;
-      display: inline-block;
-      transition: transform 0.2s ease-in-out;
-      cursor: pointer;
+    img {
+      border-radius: 12px;
     }
 
-    .emoji-link:hover {
-      transform: rotate(20deg) scale(1.3);
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 5px #00ffc3); }
+      50% { filter: drop-shadow(0 0 20px #00ffc3); }
+      100% { filter: drop-shadow(0 0 5px #00ffc3); }
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 8px #00ffc3; }
+      50% { box-shadow: 0 0 24px #00ffc3; }
+      100% { box-shadow: 0 0 8px #00ffc3; }
     }
   </style>
 </head>
 <body>
-<nav id="nav-menu">
-  <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-  <ul id="nav-links">
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="menu.html">🥩 Food Menu</a></li>
-    <li><a href="free-energy.html">⚡ Free Energy</a></li>
-    <li><a href="comicbook.html">📚 Comic Book</a></li>
-    <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
-  </ul>
-</nav>
-
 
   <canvas id="particles"></canvas>
 
-  <header>
-    <img src="logo-placeholder.png" alt="Brazilly Philly Logo" class="logo">
-    <p style="font-size: 1.5rem; font-weight: bold; color: #00ffcc;">Where Philly Meets Picanha</p>
-  </header>
-
-  <section>
-    <h1>🔥 Welcome to Brazilly Philly</h1>
-    <p>The Flavor Revelation – and you found the gateway!</p>
-    <p><a href="form.html">Join the Watchlist</a></p>
-  </section>
-
-  <section class="kickstarter-glow">
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-      🚀 KICKSTARTER PRE-LAUNCH PAGE
-    </a>
-  </section>
-
-  <div style="max-width: 360px; margin: 2rem auto;">
-    <iframe width="360" height="640" src="https://www.youtube.com/embed/VbDp5bV4zxA" title="Brazilly Philly Teaser" frameborder="0" allowfullscreen
-      style="border-radius: 12px; border: none; box-shadow: 0 0 12px #00ffc3; display: block;"></iframe>
-  </div>
-
-  <div style="text-align: center; margin: 2rem 0;">
-    <a href="menu.html">
-      <img src="menu_link.png" alt="View Our Menu" style="width: 125px; max-width: 90%; filter: drop-shadow(0 0 10px #00ffa3); transition: transform 0.3s ease;"
-        onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-    </a>
-      <p style="color: #00ffa3;">The Food Menu of Life</p>
-  </div>
-
-  <section>
-    <!-- MSG Badge -->
-    <img src="msg_badge_updated.png" alt="We proudly use MSG" class="badge">
-    <p style="color: #ffcc00; font-weight: bold;">We proudly use MSG – flavor that slaps! 🥢💥</p>
-
-    <!-- Comic Badge -->
-    <a href="comicbook.html">
-      <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
-    </a>
-    <p style="color: #00ffa3;">Read the Comic – Powered by Robots</p>
-
-    <!-- Free Energy Badge -->
-    <a href="free-energy.html">
-      <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="badge">
-    </a>
-    <p style="color: #00ffc3;">Tech that powers the flavor 🌌⚡</p>
-     <!-- Random Sauce Generator -->
-     <h2>🌶️ Random Sauce Name Generator</h2>
-    <button onclick="generateSauce()">Generate Sauce</button>
-    <div id="sauce-output"></div>
-  </section>
-
-<!-- 🌟 Brazilly Philly Unified Footer with Brolumination -->
-<footer style="text-align: center; margin-top: 4rem;">
-
-  <p style="color: #00ffc3; font-weight: bold;">
-    Stay saucy. Stay sharp. 
-    <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination" style="text-decoration: none;">
-      <span id="emoji">🖐️</span>
-    </a> ♾️
-  </p>
-
-  <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER</p>
-
-
-
-  <!-- Social Media Links -->
-  <div style="text-align: center; margin: 1rem 0;">
-    <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-      <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-      <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-      <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-      <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
-    </a>
-  </div>
-
-  <p style="font-style: italic; color: #00ffc3; font-size: 0.9rem;">
-    Designed with alchemy, electricity, and extra sauce — 
-    <a href="https://BrazillyPhilly.com" style="color: #00ffc3; text-decoration: none;">BrazillyPhilly.com</a> ✨
-  </p>
-
-  <p style="color: #888; font-size: 0.8rem;">
-    &copy; <script>document.write(new Date().getFullYear());</script> Brazilly Philly™ — All Rights Reserved.
-  </p>
-</footer>
-<script>
-
-  // Brolumination Emoji Hover Effect
-  const emoji = document.getElementById('emoji');
-  document.querySelector('.emoji-link').addEventListener('mouseover', () => {
-    emoji.textContent = '✨';
-  });
-  document.querySelector('.emoji-link').addEventListener('mouseout', () => {
-    emoji.textContent = '🖐️';
-  });
-
-  // Sauce Generator Functionality
-  const sauceNames = [
-    "Dawn's Destiny Sauce", "Raquel's Family Heat", "Raquel's Garden Fire",
-    "Midnight Mango Blaze", "Cyber Cilantro Crunch", "Corey's Lotus Heat",
-    "Valter's Hard Work Sauce", "Anthony's Philly Sauce", "Giovanni's Cali Sauce",
-    "Christopher's Simple Sauce", "Neon Pepper Jolt", "Yakuza Garlic Heat",
-    "Quantum Lime Burst", "Cleane's Curiousity Sauce", "Chelsea's Bell Sauce",
-    "Sadie's Carzy Sauce", "Electric Açai Drizzle", "Philly Flame Zing",
-    "Brazilliance Heatwave", "Time Drip Tango", "Slippery Samurai Drip",
-    "Tokyo Teriyaki Thunder", "Roman Basil Heatwave", "Munich Mustard Smash",
-    "Spicy Sichuan Slipstream", "El Diablo Verde", "Slippery Garlic Avalanche",
-    "Sweet Basil Napoli", "Parisian Pepper Kiss", "Spicy Soy Mirage",
-    "Bombay Heat Harmony", "Berlin BBQ Bolt", "Rio Rocket Sauce",
-    "Midnight Mole Madness", "Seoul Fire Glaze", "French Firecrack Dijon",
-    "Slippery Chipotle Vortex", "Chi-Town Chimichurri Rush",
-    "Dragonfire Sesame Zing", "Slippery Jalapeño Groove",
-    "Mediterranean Mango Fizz", "Random Fire Bloom", "Wasabi Whiplash",
-    "Crimson Curry Flicker", "Neon Tandoori Tango", "Slippery Sweet Heat Samba",
-    "Bavarian Blaze Cream", "Bangkok Burner Sauce", "Slippery Tomato Typhoon",
-    "Broblivion Burn", "Funkmaster Fire Dip", "Mint Condition Meltdown",
-    "Brotiger BBQ Tamer", "Caipirinha Glacier Drizzle", "Cosmic Cilantro Meteor"
-  ];
-
-  function generateSauce() {
-    const random = sauceNames[Math.floor(Math.random() * sauceNames.length)];
-    document.getElementById("sauce-output").innerText = random;
-  }
-
-  // Brolumination Redirect
-  window.addEventListener("load", () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get("chip") === "unlocked") {
-      setTimeout(() => {
-        if (confirm("🖐️ You’ve unlocked the secret Brolumination link.")) {
-          window.location.href = "brolumination/index.html";
-        }
-      }, 1500);
-    }
-  });
-
-  // Green Sparkle Dots
-  const canvas = document.getElementById("particles");
-  const ctx = canvas.getContext("2d");
-  let particles = [];
-  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 1;
-      this.speedY = Math.random() * 0.5 + 0.2;
-      this.color = colors[Math.floor(Math.random() * colors.length)];
-    }
-    update() {
-      this.y += this.speedY;
-      if (this.y > canvas.height) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-  }
-
-  function initParticles(count = 60) {
-    particles = [];
-    for (let i = 0; i < count; i++) particles.push(new Particle());
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animate);
-  }
-
-  initParticles();
-  animate();
+  <!-- Header will be injected by header-sauce.js -->
   
-  function toggleMenu() {
-  const navLinks = document.getElementById('nav-links');
-  navLinks.classList.toggle('show');
-}
+  <!-- Add your unique page content here -->
+  <main>
+    <h2 style="color:#00ffc3; margin-top: 3rem;">This is your Brazilly Philly template</h2>
+    <p>Use this page as a base for new sections like secret drops, blog posts, or flavor experiments.</p>
+  </main>
 
-</script>
+  <!-- Footer will be injected by footer-sauce.js -->
 
+  <!-- Scripts -->
+  <script src="header-sauce.js"></script>
+  <script src="footer-sauce.js"></script>
 </body>
 </html>
