@@ -143,19 +143,29 @@
     transform: scale(1.2);
   }
 
-    .kickstarter-glow {
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      border: 2px solid #00ffc3;
-      color: #00ffc3;
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-align: center;
-      border-radius: 12px;
-      width: 300px;
-      text-shadow: 0 0 10px #00ffc3;
-      animation: pulseGlow 2s infinite;
-    }
+ .kickstarter-glow {
+  display: inline-block;
+  margin: 1.5rem auto 0 auto;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #00ffc3;
+  background: transparent;
+  color: #00ffc3;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 12px;
+  width: auto;
+  text-shadow: 0 0 10px #00ffc3;
+  box-shadow: 0 0 15px #00ffc3;
+  text-decoration: none;
+  animation: pulseGlow 2s infinite;
+  transition: transform 0.2s ease;
+}
+
+.kickstarter-glow:hover {
+  transform: scale(1.05);
+}
+
 
     @keyframes pulseGlow {
       0% { box-shadow: 0 0 8px #00ffc3; }
