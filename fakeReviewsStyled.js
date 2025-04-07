@@ -41,7 +41,7 @@ function generateReview() {
       max-width: 600px;
       text-align: center;
       color: #fff;
-      margin: 40px auto;
+      margin: 20px auto 10px;
       font-family: 'Arial', sans-serif;
       box-shadow: 0 0 25px #00aeef66;
     ">
