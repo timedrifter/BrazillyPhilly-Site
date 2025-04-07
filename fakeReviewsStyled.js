@@ -1,5 +1,5 @@
 
-// Brazilly Philly Fake Review Generator — Non-Repeating + Styled
+// Brazilly Philly Fake Review Generator — True Non-Repeating + Styled
 
 const fullReviewList = [
   { text: "Listening to them convinced me to choose the red pill.", author: "Neo, Matrix Magazine" },
@@ -14,7 +14,7 @@ const fullReviewList = [
   { text: "Tastes like freedom… and the tears of my haters.", author: "Eddie Murphy, Comedy King Quarterly" }
 ];
 
-let shuffledIndex = [];
+let shuffledIndex = shuffleIndexArray(fullReviewList.length);
 let currentIndex = 0;
 
 function shuffleIndexArray(length) {
@@ -27,7 +27,8 @@ function shuffleIndexArray(length) {
 }
 
 function generateReview() {
-  if (shuffledIndex.length === 0 || currentIndex >= shuffledIndex.length) {
+  if (currentIndex >= shuffledIndex.length) {
+    // Only reshuffle AFTER the list is fully used
     shuffledIndex = shuffleIndexArray(fullReviewList.length);
     currentIndex = 0;
   }
