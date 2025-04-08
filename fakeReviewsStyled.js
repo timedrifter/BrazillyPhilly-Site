@@ -2,6 +2,47 @@
 
 const fullReviewList = [
   {
+  text: "We traveled back to the ’80s… and still couldn’t find a sandwich this good.",
+  author: "🧖 Lou Dorchen, Cleveland Eats Monthly"
+},
+{
+  text: "One bite and I forgot my whole timeline. Again.",
+  author: "🧢 Nick Webber, Lougle Review Quarterly"
+},
+{
+  text: "It’s like the sandwich knew the future… and came back to save us all.",
+  author: "🔧 Jacob, Geek Gear & Grub Digest"
+},
+{
+  text: "I’ve made a lot of bad choices. This sandwich wasn’t one of them.",
+  author: "🥴 Adam Yates, Regret & Redemption Cuisine Weekly"
+},
+{
+  text: "If I could redo my life, I’d eat this sandwich first.",
+  author: "💔 Adam (Alt), Hot Tub Regret Gazette"
+},
+{
+  text: "Brazilly Philly made me rich in *tastecoin*.",
+  author: "🤑 Future Lou, Cryptocurrency Cuisine Chronicles"
+},
+{
+  text: "My algorithm predicted the perfect bite. It was this. Every time.",
+  author: "🤖 Smart Lougle AI, FlavorTech Review"
+},
+{
+  text: "I screamed, cried, and time-jumped. But the sandwich? It stayed amazing.",
+  author: "🎤 Nick (Alt), Auto-Tuned Appetite Digest"
+},
+{
+  text: "I'd relive 1986 forever if it meant unlimited Brazilly Philly.",
+  author: "🎮 Jacob (Alt), Paradox Snack Magazine"
+},
+{
+  text: "No hot tub needed. Just heat, meat, and destiny.",
+  author: "🛁 The Hot Tub Itself, Quantum Spa Cuisine Weekly"
+},
+
+  {
   text: "You best start believin’ in delicious sandwiches… you’re eatin’ one!",
   author: "🦴 Captain Barbossa, Cursebreaker’s Cuisine Digest"
 },
