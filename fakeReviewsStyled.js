@@ -736,6 +736,11 @@ const fullReviewList = [
   author: "🧃👅 Mike Tyson (Alt), Lethal Lunch Monthly"
 }
 
+
+  {
+    text: "Sweet sandwich of liberty! That picanha hit harder than a Hypnotoad blast.",
+    author: "👨‍🚀 Fry, 31st Century Eats"
+  },
 ];
 
 let reviewPool = [];
@@ -745,11 +750,7 @@ function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
-,
-  {
-    text: "Sweet sandwich of liberty! That picanha hit harder than a Hypnotoad blast.",
-    author: "👨‍🚀 Fry, 31st Century Eats"
-  },
+
   {
     text: "Bite my flavor-enhanced shiny metal ass!",
     author: "🤖 Bender, Bending Gourmet Quarterly"
