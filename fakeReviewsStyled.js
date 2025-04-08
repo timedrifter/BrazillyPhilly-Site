@@ -1,4 +1,15 @@
 
+// ✅ Emoji Font Style Injection
+const styleTag = document.createElement('style');
+styleTag.textContent = `
+  body, .styled-btn, #quote-box {
+    font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
+  }
+`;
+document.head.appendChild(styleTag);
+
+
+
 // Brazilly Philly Fake Review Generator — True Non-Repeating + Styled
 
 const fullReviewList = [
