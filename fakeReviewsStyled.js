@@ -261,7 +261,7 @@ const fullReviewList = [
   {
     "text": "Love isn\u2019t the only thing that transcends dimensions\u2026 apparently provolone does too.",
     "author": "\ud83c\udf0c Cooper, Interstellar Review"
-  }
+  },
   { text: "Great Scott! One bite of this Brazilly Philly and I hit 88mph with flavor. The flux capacitor’s got competition!",
     author: "🧑‍🔬 Doc Brown, Back to the Future Magazine" },
   { text: "I came back in time… for this sandwich. I’ll be back. With guaraná.",
@@ -353,7 +353,7 @@ const fullReviewList = [
   { text: "Jamie can have the whiskey. I’ll take this sandwich. It transcends centuries.",
     author: "🏴‍☠️ Claire Fraser, Outlander Times" },
   { text: "Oh boy… this sandwich is leaps ahead of its time.",
-    author: "🔮 Sam Beckett, Quantum Leap Weekly" }
+    author: "🔮 Sam Beckett, Quantum Leap Weekly" },
 
   // OLD SCHOOL
   {
