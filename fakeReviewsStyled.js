@@ -2,6 +2,55 @@
 
 const fullReviewList = [
   {
+  text: "You best start believin’ in delicious sandwiches… you’re eatin’ one!",
+  author: "🦴 Captain Barbossa, Cursebreaker’s Cuisine Digest"
+},
+{
+  text: "It’s not just the rum… it’s the sandwich. Why is the sandwich always gone?",
+  author: "🏴‍☠️ Jack Sparrow, Black Pearl Bites Weekly"
+},
+{
+  text: "This Brazilly Philly is the one thing I’d actually die for. Again.",
+  author: "💀 Bootstrap Bill, Davy Jones’ Locker Review"
+},
+{
+  text: "I tasted it, then I blacked out. When I woke, I’d sworn a new pirate code.",
+  author: "🗺️ Will Turner, Sword & Sandwich Gazette"
+},
+{
+  text: "This sandwich belongs in a museum. Or at least my mouth.",
+  author: "💍 Elizabeth Swann, Crowned Flavor Journal"
+},
+{
+  text: "Even a cursed coin can’t buy flavor like this.",
+  author: "🪙 Pintel, Pirate Snack Chronicles"
+},
+{
+  text: "We may be ugly, but this sandwich makes us feel handsome.",
+  author: "🦑 Ragetti, Wooden Eye Weekly"
+},
+{
+  text: "Release the flavor! RELEASE IT!",
+  author: "🦑 Davy Jones, Tentacle Gourmet Times"
+},
+{
+  text: "I made a deal with the devil for immortality. Should’ve asked for this sandwich instead.",
+  author: "⚓ Captain Salazar, Ghost Ship Gourmet"
+},
+{
+  text: "This is no mere sandwich... this is a treasure charted by destiny.",
+  author: "🧭 Jack Sparrow (Alt), Compass Cuisine Monthly"
+},
+{
+  text: "Do you fear death? Not when I’ve got Brazilly Philly in hand.",
+  author: "⚓ Davy Jones (Alt), Eternal Eats Review"
+},
+{
+  text: "Mark my words: that sandwich be the only thing ever to tame the Kraken.",
+  author: "🐙 Anonymous Deckhand, Legend & Lard Monthly"
+},
+
+  {
   text: "This sandwich has the power He-Who-Must-Not-Be-Named never knew. Flavor.",
   author: "⚡ Harry Potter, The Boy Who Ate Digest"
 },
