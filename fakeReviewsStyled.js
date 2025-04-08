@@ -216,6 +216,46 @@ const fullReviewList = [
   {
     "text": "This is the kind of thing that would make a grandma cry. In a good way.",
     "author": "\ud83e\uddc1 Emma\u2019s Goodies, Dessert Divine Weekly"
+  },
+  {
+    "text": "Great Scott! One bite of this Brazilly Philly and I hit 88mph with flavor. The flux capacitor\u2019s got competition!",
+    "author": "\ud83e\uddd1\u200d\ud83d\udd2c Doc Brown, Back to the Future Magazine"
+  },
+  {
+    "text": "I came back in time\u2026 for this sandwich. I\u2019ll be back. With guaran\u00e1.",
+    "author": "\ud83e\udd16 T-800, The Terminator Review"
+  },
+  {
+    "text": "We stole gold from Napoleon, but THIS? This sandwich is the real treasure of the multiverse.",
+    "author": "\ud83e\udddd\u200d\u2642\ufe0f Randall, Time Bandits Digest"
+  },
+  {
+    "text": "I traversed epochs in search of enlightenment. Then I tasted this sandwich. My journey is complete.",
+    "author": "\ud83c\udfa9 H.G. Wells\u2019 Time Traveler, Epoch Explorer Quarterly"
+  },
+  {
+    "text": "I built a box to cheat time\u2026 turns out I just needed to cheat lunch. Brazilly Philly rewires your taste timeline.",
+    "author": "\ud83e\udde0 Abe, Primer Magazine"
+  },
+  {
+    "text": "It\u2019s me, serving myself, the same sandwich, at every moment in time. I\u2019m all the customers. And it\u2019s always worth it.",
+    "author": "\ud83c\udf00 Agent, Predestination Weekly"
+  },
+  {
+    "text": "28 days\u2026 6 hours\u2026 42 minutes\u2026 12 seconds\u2026 until you taste true destiny: the Brazilly Philly.",
+    "author": "\ud83d\udc07 Frank the Rabbit, Donnie Darko Digest"
+  },
+  {
+    "text": "In every version of reality, the sandwich slaps. The universe converged to make this one thing consistent.",
+    "author": "\ud83d\udeaa Everyone in that house, Coherence Magazine"
+  },
+  {
+    "text": "I ate it forwards, then inverted and tasted it backwards. Still incredible. Sandwich entropy is real.",
+    "author": "\ud83d\udd04 The Protagonist, Tenet Circular"
+  },
+  {
+    "text": "Love isn\u2019t the only thing that transcends dimensions\u2026 apparently provolone does too.",
+    "author": "\ud83c\udf0c Cooper, Interstellar Review"
   }
 ];
 
@@ -282,4 +322,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   generateReview();
-};
+});
