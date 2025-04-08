@@ -2,6 +2,45 @@
 
 const fullReviewList = [
   {
+  text: "You are not trash. You are not broken. You are a man... who deserves this sandwich. You are flavor-worthy. You are sauce-worthy. You are enough.",
+  author: "🪞 Stensland, Bathroom Wall Mantra Digest"
+},
+
+  {
+  text: "You’re a mess, Stensland. But that sandwich? That sandwich is a masterpiece.",
+  author: "🪞 Stensland (Bathroom Mirror Edition), Self-Help Snack Digest"
+},
+
+  {
+  text: "She broke my heart. But Brazilly Philly put it back together with melted cheese.",
+  author: "💔 Stensland, Sad Boy Sandwich Digest"
+},
+{
+  text: "I hated everything. Then I bit into this sandwich and hated 1% less.",
+  author: "🪞 Grady, Midlife Crisis Cuisine Quarterly"
+},
+{
+  text: "I crashed on a couch. I crashed in life. But this sandwich? It never lets you down.",
+  author: "🛋️ Stensland (Alt), Couchsurfing Flavor Review"
+},
+{
+  text: "It’s therapy. With bread.",
+  author: "🧠 Grady (Alt), Unlicensed Flavor Journal"
+},
+{
+  text: "I was emotionally unavailable—until this sandwich held me like no one else would.",
+  author: "🥀 Stensland (Again), Hopeless Romantic Eats Monthly"
+},
+{
+  text: "Honestly, I thought I was just angry. Turns out I was hungry.",
+  author: "🧃 Grady (Again), Divorce & Deli Quarterly"
+},
+{
+  text: "There are only two things worth fighting for: closure and Brazilly Philly.",
+  author: "🥊 Stensland & Grady, Roommate Redemption Report"
+},
+
+  {
   text: "We traveled back to the ’80s… and still couldn’t find a sandwich this good.",
   author: "🧖 Lou Dorchen, Cleveland Eats Monthly"
 },
