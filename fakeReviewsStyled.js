@@ -4,7 +4,7 @@ const fullReviewList = [
   {
   text: "Now that’s a fire!",
   author: "🔥 Eddie Murphy, Comedy King Quarterly"
-},
+}
 
   {
     "text": "Eating a Brazilly Philly sandwich convinced me to choose the red pill.",
@@ -356,112 +356,43 @@ const fullReviewList = [
     author: "🔮 Sam Beckett, Quantum Leap Weekly" },
 
   // OLD SCHOOL
-  {
-    character: "Frank the Tank (Old School) 🍺",
-    quote: "Once it hits your lips… it’s sooo good! Brazilly Philly, baby! I’m back!"
-  },
-  {
-    character: "Mitch (Old School) 😐",
-    quote: "I wasn’t trying to start a new life... I was just trying to finish this sandwich."
-  },
-  {
-    character: "Beanie (Old School) 😎",
-    quote: "You're crazy for this one, Renato. But I respect it. Bring me three."
-  },
-  {
-    character: "Blue (Old School) 👴",
-    quote: "You're my boy, Brazilly Philly!"
-  },
+  { text: "Once it hits your lips… it’s sooo good! Brazilly Philly, baby! I’m back!", author: "Frank the Tank (Old School) 🍺" },
+  { text: "I wasn’t trying to start a new life... I was just trying to finish this sandwich.", author: "Mitch (Old School) 😐" },
+  { text: "You're crazy for this one, Renato. But I respect it. Bring me three.", author: "Beanie (Old School) 😎" },
+  { text: "You're my boy, Brazilly Philly!", author: "Blue (Old School) 👴" },
 
   // LEGO MOVIE / LEGO BATMAN
-  {
-    character: "Emmet (The LEGO Movie) 🧱😀",
-    quote: "Everything is delicious! Especially Brazilly Philly!"
-  },
-  {
-    character: "LEGO Batman 🦇🧱",
-    quote: "I only eat darkness... and Brazilly Philly."
-  },
-  {
-    character: "LEGO Batman (Alt) 🦇🧀",
-    quote: "I'm not wearing hockey pads — but I am wearing sauce."
-  },
-  {
-    character: "President Business 🧱👔",
-    quote: "This sandwich is so good... it should be illegal in all 12 universes!"
-  },
+  { text: "Everything is delicious! Especially Brazilly Philly!", author: "Emmet (The LEGO Movie) 🧱😀" },
+  { text: "I only eat darkness... and Brazilly Philly.", author: "LEGO Batman 🦇🧱" },
+  { text: "I'm not wearing hockey pads — but I am wearing sauce.", author: "LEGO Batman (Alt) 🦇🧀" },
+  { text: "This sandwich is so good... it should be illegal in all 12 universes!", author: "President Business 🧱👔" },
 
   // IP MAN
-  {
-    character: "Ip Man 🥋🇨🇳",
-    quote: "I do not fight for pride. I fight for flavor. This sandwich... is balance."
-  },
-  {
-    character: "Ip Man Opponent 😵🥊",
-    quote: "What style is that? Grilled picanha with... provolone?!"
-  },
-  {
-    character: "Master Hung 🍵",
-    quote: "This is the taste of Wing Chun… crispy, elegant, unstoppable."
-  },
+  { text: "I do not fight for pride. I fight for flavor. This sandwich... is balance.", author: "Ip Man 🥋🇨🇳" },
+  { text: "What style is that? Grilled picanha with... provolone?!", author: "Ip Man Opponent 😵🥊" },
+  { text: "This is the taste of Wing Chun… crispy, elegant, unstoppable.", author: "Master Hung 🍵" },
 
   // SQUID GAME
-  {
-    character: "Front Man (Squid Game) 🟥😶",
-    quote: "456 survived everything... but couldn’t resist Brazilly Philly."
-  },
-  {
-    character: "Player 456 (Gi-hun) 🟢💰",
-    quote: "I risked my life for a cash prize. But I’d trade it all for another bite of that sandwich."
-  },
-  {
-    character: "Player 001 (Il-nam) 👴🧠",
-    quote: "It tastes like childhood… and victory."
-  },
+  { text: "456 survived everything... but couldn’t resist Brazilly Philly.", author: "Front Man (Squid Game) 🟥😶" },
+  { text: "I risked my life for a cash prize. But I’d trade it all for another bite of that sandwich.", author: "Player 456 (Gi-hun) 🟢💰" },
+  { text: "It tastes like childhood… and victory.", author: "Player 001 (Il-nam) 👴🧠" },
 
   // THE FIFTH ELEMENT
-  {
-    character: "Leeloo 🔵💫",
-    quote: "Moooolti... flavor!"
-  },
-  {
-    character: "Leeloo (Alt) 🧡🔥",
-    quote: "Brazilly Philly… SUPREME."
-  },
-  {
-    character: "Korben Dallas 🔫🚖",
-    quote: "Big bada sandwich."
-  },
-  {
-    character: "Ruby Rhod 🎤💅",
-    quote: "This thing is ZEEE-FLAVOORR! Green? Super green!"
-  },
+  { text: "Moooolti... flavor!", author: "Leeloo 🔵💫" },
+  { text: "Brazilly Philly… SUPREME.", author: "Leeloo (Alt) 🧡🔥" },
+  { text: "Big bada sandwich.", author: "Korben Dallas 🔫🚖" },
+  { text: "This thing is ZEEE-FLAVOORR! Green? Super green!", author: "Ruby Rhod 🎤💅" },
 
   // BRUCE LEE
-  {
-    character: "Bruce Lee 🐉🥋",
-    quote: "Be formless, shapeless... like a sandwich. You put picanha in a roll, it becomes the roll. You put cheese on it, it becomes the cheese. Now taste... and become like Brazilly Philly, my friend."
-  },
+  { text: "Be formless, shapeless... like a sandwich. You put picanha in a roll, it becomes the roll. You put cheese on it, it becomes the cheese. Now taste... and become like Brazilly Philly, my friend.", author: "Bruce Lee 🐉🥋" },
 
   // MUHAMMAD ALI
-  {
-    character: "Muhammad Ali 🥊🦋",
-    quote: "I float like a butterfly, sting like a bee — But nothing hits like Brazilly Philly on me."
-  },
-  {
-    character: "Muhammad Ali (Alt) 🎤🌍",
-    quote: "I shook up the world! Then I took a bite... and the world shook back."
-  },
+  { text: "I float like a butterfly, sting like a bee — But nothing hits like Brazilly Philly on me.", author: "Muhammad Ali 🥊🦋" },
+  { text: "I shook up the world! Then I took a bite... and the world shook back.", author: "Muhammad Ali (Alt) 🎤🌍" },
 
   // MIKE TYSON
-  {
-    character: "Mike Tyson 🥊🐅",
-    quote: "I’m not just knocking people out anymore… I’m knocking out this sandwich. It’s got bite."
-  },
-  {
-    character: "Mike Tyson (Alt) 🧃👅",
-    quote: "Custom sauce. Picanha. Provowone. Ith called the Baddest Sandwich on the Planet."
-  }
+  { text: "I’m not just knocking people out anymore… I’m knocking out this sandwich. It’s got bite.", author: "Mike Tyson 🥊🐅" },
+  { text: "Custom sauce. Picanha. Provowone. Ith called the Baddest Sandwich on the Planet.", author: "Mike Tyson (Alt) 🧃👅" }
 
 ];
 
