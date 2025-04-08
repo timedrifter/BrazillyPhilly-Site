@@ -105,8 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', generateReview);
   }
 
-  const styleTag = document.createElement('style');
-  styleTag.textContent = `
+  const styleTag = document.createElement('style'); styleTag.textContent = `
+    body, .styled-btn, #quote-box {
+      font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+    }
+
     .styled-btn {
       padding: 12px 24px;
       font-size: 1rem;
