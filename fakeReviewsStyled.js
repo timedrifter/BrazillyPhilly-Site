@@ -2,7 +2,12 @@
 
 const fullReviewList = [
   {
-    "text": "Listening to them convinced me to choose the red pill.",
+  text: "Now that’s a fire!",
+  author: "🔥 Eddie Murphy, Comedy King Quarterly"
+}
+
+  {
+    "text": "Eating a Brazilly Philly sandwich convinced me to choose the red pill.",
     "author": "\ud83d\udd76\ufe0f Neo, Matrix Magazine"
   },
   {
@@ -14,7 +19,7 @@ const fullReviewList = [
     "author": "\ud83e\uddd4 Pedro, Napoleon Dynamite Magazine"
   },
   {
-    "text": "They wake up in the morning and piss excellence.",
+    "text": "I wake up in the morning and piss excellence, They wake up in the morning and cook excellence.",
     "author": "\ud83c\udfce\ufe0f Ricky Bobby, Talladega Nights Digest"
   },
   {
@@ -34,7 +39,7 @@ const fullReviewList = [
     "author": "\ud83e\uddd3 Some old broad, Old People Magazine"
   },
   {
-    "text": "It's breathtaking.",
+    "text": "Have a Brazilly Philly, It's breathtaking.",
     "author": "\ud83d\ude3c Dr. Evil, Virtucon Digest"
   },
   {
@@ -66,7 +71,7 @@ const fullReviewList = [
     "author": "\ud83e\udd63 Mikey's Big Brother, Life Cereal Digest"
   },
   {
-    "text": "We have a Hulk. But we also have picanha.",
+    "text": "We have a Hulk. But we also have Brazilly Philly.",
     "author": "\ud83e\udde0 Tony Stark, Stark Industries Catering Review"
   },
   {
@@ -158,11 +163,11 @@ const fullReviewList = [
     "author": "\ud83d\udcf8 Random Food Influencer, #sponsoredmaybe"
   },
   {
-    "text": "This sandwich slaps harder than my steak with a cast iron.",
+    "text": "Let's have another Brazilly Philly, SHall We?",
     "author": "\ud83d\udc68\u200d\ud83c\udf73 Joshua Weissman, YouTube Kitchen Lab"
   },
   {
-    "text": "I tasted it, and then I said... BRUH. That\u2019s flavor.",
+    "text": "Brazilly Philly is here for a long time\u2019s and a good time.",
     "author": "\ud83d\udd25 Mr. Make It Happen, Self-Taught Gourmet Digest"
   },
   {
@@ -170,7 +175,7 @@ const fullReviewList = [
     "author": "\ud83c\udf57 Smokin' & Grillin' with AB, Backyard Boss Magazine"
   },
   {
-    "text": "It's not just another cooking show. It's another universe of taste.",
+    "text": "Feed Yourself....Brazilly Philly.",
     "author": "\ud83c\udfa5 Not Another Cooking Show, Grandma-Approved Gazette"
   },
   {
@@ -194,11 +199,11 @@ const fullReviewList = [
     "author": "\ud83d\udc68\u200d\ud83c\udf73 Chef Martin Yan, East Meets Feast Review"
   },
   {
-    "text": "Flavor so bold, it should be locked up.",
+    "text": " This is a made sandwich, Family Boss.",
     "author": "\ud83d\udd74\ufe0f Michael Franzese, Made Man Menu Report"
   },
   {
-    "text": "If I don\u2019t yell \u2018LET'S GET IT\u2019 after eating, something\u2019s wrong.",
+    "text": "It's Brazilian, Enough Said. Cheers Everybody!",
     "author": "\ud83e\udd69 Guga Foods, Meat Science Monthly"
   },
   {
@@ -206,7 +211,7 @@ const fullReviewList = [
     "author": "\ud83c\uddeb\ud83c\uddf7 Chef Jean-Pierre, French American Finesse"
   },
   {
-    "text": "Even Uncle Roger would not be mad. Maybe.",
+    "text": "MSG!!!!!!",
     "author": "\ud83c\udf73 Uncle Roger, Rice Not Included Weekly"
   },
   {
@@ -257,6 +262,7 @@ const fullReviewList = [
     "text": "Love isn\u2019t the only thing that transcends dimensions\u2026 apparently provolone does too.",
     "author": "\ud83c\udf0c Cooper, Interstellar Review"
   }
+    
 ];
 
 let reviewPool = [];
