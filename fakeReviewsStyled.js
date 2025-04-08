@@ -2,6 +2,75 @@
 
 const fullReviewList = [
   {
+  text: "This sandwich has the power He-Who-Must-Not-Be-Named never knew. Flavor.",
+  author: "⚡ Harry Potter, The Boy Who Ate Digest"
+},
+{
+  text: "Ten points to Brazilly Philly—for being bloody brilliant!",
+  author: "🦁 Ron Weasley, Gryffindor Grub Gazette"
+},
+{
+  text: "It's not just magic... it's culinary transfiguration.",
+  author: "📚 Hermione Granger, Hogwarts Flavor Journal"
+},
+{
+  text: "I've eaten many strange things... but this? This is unforgettable.",
+  author: "🧝‍♂️ Albus Dumbledore, Elder Eats Quarterly"
+},
+{
+  text: "I can taste the ancient magic... and maybe some horseradish.",
+  author: "🐍 Severus Snape, Potion Master’s Palate"
+},
+{
+  text: "You dare challenge the Dark Lord with this much flavor? Bold.",
+  author: "🐍 Lord Voldemort, Forbidden Flavor Gazette"
+},
+{
+  text: "The sandwich chooses the wizard. And this one chose me.",
+  author: "🪄 Ollivander, Wandmaker’s Weekly Eats"
+},
+{
+  text: "Mischief managed… and hunger too.",
+  author: "👣 Fred & George Weasley, Prankster Provisions Monthly"
+},
+{
+  text: "I'd trade my Firebolt for another bite. And that’s saying something.",
+  author: "🧹 Harry Potter (Alt), Seeker’s Snack Report"
+},
+{
+  text: "If you’re going to eat with honor, eat Brazilly Philly.",
+  author: "🦁 Minerva McGonagall, Transfiguration Table Talk"
+},
+{
+  text: "My sandwiches scream. This one sings.",
+  author: "🧞 Moaning Myrtle, Bathroom Bites Digest"
+},
+{
+  text: "This sandwich is more powerful than my vault at Gringotts.",
+  author: "🐉 Draco Malfoy, Slytherin Snack Society"
+},
+{
+  text: "I solemnly swear this sandwich is delicious.",
+  author: "🗺️ Remus Lupin, Marauder’s Menu Magazine"
+},
+{
+  text: "I once ate 36 of them. On accident.",
+  author: "🪶 Dudley Dursley, Heavy Bites Bulletin"
+},
+{
+  text: "Mum made the best treacle tart. But this sandwich... wow.",
+  author: "💫 Lily Potter, Great Hall Memories Digest"
+},
+{
+  text: "Every flavor... every layer... perfectly balanced. Like Divination in a bun.",
+  author: "🔮 Sybill Trelawney, Prophetic Palate Weekly"
+},
+{
+  text: "Even goblins are talking about it. And they hate everything.",
+  author: "🧙‍♂️ Hagrid, Forbidden Forest Eats"
+},
+
+  {
     text: "Now that’s a fire!",
     author: "🔥 Eddie Murphy, Comedy King Quarterly"
   },
