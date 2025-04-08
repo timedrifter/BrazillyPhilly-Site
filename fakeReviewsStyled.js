@@ -4,7 +4,7 @@ const fullReviewList = [
   {
   text: "Now that’s a fire!",
   author: "🔥 Eddie Murphy, Comedy King Quarterly"
-}
+},
 
   {
     "text": "Eating a Brazilly Philly sandwich convinced me to choose the red pill.",
