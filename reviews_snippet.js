@@ -50,7 +50,7 @@
   { text: "We went back to change the past. But even there, Brazilly Philly was king. Time-proof.",
     author: "📹 David, Project Almanac Times" },
   { text: "We’re stuck in a time loop, but with sandwiches like this? Who cares.",
-    author: "🔁 Renton, ARQ Circular" },
+    author: "🔁 Ren, ARQ Circular" },
   { text: "Eight minutes to save the world? Fine. But first, let me finish this Brazilly Philly.",
     author: "🚆 Colter Stevens, Source Code Review" },
   { text: "I saw this sandwich coming two minutes early. And I STILL wasn’t ready.",
