@@ -354,6 +354,115 @@ const fullReviewList = [
     author: "🏴‍☠️ Claire Fraser, Outlander Times" },
   { text: "Oh boy… this sandwich is leaps ahead of its time.",
     author: "🔮 Sam Beckett, Quantum Leap Weekly" }
+
+  // OLD SCHOOL
+  {
+    character: "Frank the Tank (Old School) 🍺",
+    quote: "Once it hits your lips… it’s sooo good! Brazilly Philly, baby! I’m back!"
+  },
+  {
+    character: "Mitch (Old School) 😐",
+    quote: "I wasn’t trying to start a new life... I was just trying to finish this sandwich."
+  },
+  {
+    character: "Beanie (Old School) 😎",
+    quote: "You're crazy for this one, Renato. But I respect it. Bring me three."
+  },
+  {
+    character: "Blue (Old School) 👴",
+    quote: "You're my boy, Brazilly Philly!"
+  },
+
+  // LEGO MOVIE / LEGO BATMAN
+  {
+    character: "Emmet (The LEGO Movie) 🧱😀",
+    quote: "Everything is delicious! Especially Brazilly Philly!"
+  },
+  {
+    character: "LEGO Batman 🦇🧱",
+    quote: "I only eat darkness... and Brazilly Philly."
+  },
+  {
+    character: "LEGO Batman (Alt) 🦇🧀",
+    quote: "I'm not wearing hockey pads — but I am wearing sauce."
+  },
+  {
+    character: "President Business 🧱👔",
+    quote: "This sandwich is so good... it should be illegal in all 12 universes!"
+  },
+
+  // IP MAN
+  {
+    character: "Ip Man 🥋🇨🇳",
+    quote: "I do not fight for pride. I fight for flavor. This sandwich... is balance."
+  },
+  {
+    character: "Ip Man Opponent 😵🥊",
+    quote: "What style is that? Grilled picanha with... provolone?!"
+  },
+  {
+    character: "Master Hung 🍵",
+    quote: "This is the taste of Wing Chun… crispy, elegant, unstoppable."
+  },
+
+  // SQUID GAME
+  {
+    character: "Front Man (Squid Game) 🟥😶",
+    quote: "456 survived everything... but couldn’t resist Brazilly Philly."
+  },
+  {
+    character: "Player 456 (Gi-hun) 🟢💰",
+    quote: "I risked my life for a cash prize. But I’d trade it all for another bite of that sandwich."
+  },
+  {
+    character: "Player 001 (Il-nam) 👴🧠",
+    quote: "It tastes like childhood… and victory."
+  },
+
+  // THE FIFTH ELEMENT
+  {
+    character: "Leeloo 🔵💫",
+    quote: "Moooolti... flavor!"
+  },
+  {
+    character: "Leeloo (Alt) 🧡🔥",
+    quote: "Brazilly Philly… SUPREME."
+  },
+  {
+    character: "Korben Dallas 🔫🚖",
+    quote: "Big bada sandwich."
+  },
+  {
+    character: "Ruby Rhod 🎤💅",
+    quote: "This thing is ZEEE-FLAVOORR! Green? Super green!"
+  },
+
+  // BRUCE LEE
+  {
+    character: "Bruce Lee 🐉🥋",
+    quote: "Be formless, shapeless... like a sandwich. You put picanha in a roll, it becomes the roll. You put cheese on it, it becomes the cheese. Now taste... and become like Brazilly Philly, my friend."
+  },
+
+  // MUHAMMAD ALI
+  {
+    character: "Muhammad Ali 🥊🦋",
+    quote: "I float like a butterfly, sting like a bee — But nothing hits like Brazilly Philly on me."
+  },
+  {
+    character: "Muhammad Ali (Alt) 🎤🌍",
+    quote: "I shook up the world! Then I took a bite... and the world shook back."
+  },
+
+  // MIKE TYSON
+  {
+    character: "Mike Tyson 🥊🐅",
+    quote: "I’m not just knocking people out anymore… I’m knocking out this sandwich. It’s got bite."
+  },
+  {
+    character: "Mike Tyson (Alt) 🧃👅",
+    quote: "Custom sauce. Picanha. Provowone. Ith called the Baddest Sandwich on the Planet."
+  }
+
 ];
 
 let reviewPool = [];
