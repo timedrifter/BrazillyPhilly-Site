@@ -699,6 +699,56 @@ function shuffle(array) {
     text: "*BOOM* Warning: repeated consumption may cause permanent happiness. Proceed.",
     author: "🚨 Orbital Ad Bot #42, Glitched Promotion Loop"
   }
+      // BACK TO THE FUTURE REVIEWS
+  {
+    text: "You're a slacker, McFly. But this sandwich? It’s no slacker.",
+    author: "📋 Mr. Strickland, Discipline Digest"
+  },
+  {
+    text: "Hey McFly! You gonna eat that sandwich or are you chicken?",
+    author: "💢 Biff Tannen, Bully Eats Quarterly"
+  },
+  {
+    text: "I'm your density. I mean... your delicious destiny.",
+    author: "📖 George McFly, Enchantment Under the Flavor Digest"
+  },
+  {
+    text: "Marty! Whatever happens, don’t forget the vinagrete!",
+    author: "⚡ Doc Brown, Temporal Tasting Times"
+  },
+  {
+    text: "It’s heavy, Doc. The sauce… it’s really heavy.",
+    author: "🎸 Marty McFly, Guitar & Grub Gazette"
+  },
+  {
+    text: "All I said was I didn’t want the sandwich. And then I tasted it. Great Scott!",
+    author: "🧠 Jennifer Parker, Hill Valley High Flavor Report"
+  },
+  {
+    text: "Nobody... calls me chicken. Especially not in front of a Brazilly Philly.",
+    author: "🐔 Marty (Alt), Flavor Honor Monthly"
+  },
+  {
+    text: "It’s like kissing you for the first time… but with grilled meat and cheese.",
+    author: "💋 Lorraine Baines, Mother’s Memory Magazine"
+  },
+  {
+    text: "My calculations were off. I didn’t predict this much flavor.",
+    author: "🔬 Doc (Alt), Theoretical Taste Quarterly"
+  },
+  {
+    text: "I built a time machine out of a DeLorean… just to come back for lunch.",
+    author: "🚗 Doc Brown (Again), Culinary Continuum Review"
+  },
+  {
+    text: "This sandwich hit me with 1.21 gigaflavor. My future's forever changed.",
+    author: "🕶️ Future Marty, Hoverboard Digest"
+  },
+  {
+    text: "If you’re gonna build a sandwich into a time machine, why not do it with some style?",
+    author: "🔥 Doc Brown (Stylish Edition), Stainless Steel Flavor Weekly"
+  }
+
 ];
   }
   return array;
