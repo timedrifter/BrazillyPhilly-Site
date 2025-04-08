@@ -740,15 +740,15 @@ const fullReviewList = [
 
 let reviewPool = [];
 
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i],
-// FUTURAMA REVIEWS
-  {
-    text: "Good news, everyone! This sandwich cured my space madness!",
-    author: "🧪 Professor Farnsworth, Daily Planet Express Digest"
-  },
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+,
   {
     text: "Sweet sandwich of liberty! That picanha hit harder than a Hypnotoad blast.",
     author: "👨‍🚀 Fry, 31st Century Eats"
