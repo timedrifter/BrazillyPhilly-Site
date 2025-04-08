@@ -445,98 +445,99 @@ const fullReviewList = [
     text: "Oh boy… this sandwich is leaps ahead of its time.",
     author: "🔮 Sam Beckett, Quantum Leap Weekly"
   },
-  {
-    text: "Once it hits your lips… it’s sooo good! Brazilly Philly, baby! I’m back!",
-    author: "Frank the Tank (Old School) 🍺"
-  },
-  {
-    text: "I wasn’t trying to start a new life... I was just trying to finish this sandwich.",
-    author: "Mitch (Old School) 😐"
-  },
-  {
-    text: "You're crazy for this one, Renato. But I respect it. Bring me three.",
-    author: "Beanie (Old School) 😎"
-  },
-  {
-    text: "You're my boy, Brazilly Philly!",
-    author: "Blue (Old School) 👴"
-  },
-  {
-    text: "Everything is delicious! Especially Brazilly Philly!",
-    author: "Emmet (The LEGO Movie) 🧱😀"
-  },
-  {
-    text: "I only eat darkness... and Brazilly Philly.",
-    author: "LEGO Batman 🦇🧱"
-  },
-  {
-    text: "I'm not wearing hockey pads — but I am wearing sauce.",
-    author: "LEGO Batman (Alt) 🦇🧀"
-  },
-  {
-    text: "This sandwich is so good... it should be illegal in all 12 universes!",
-    author: "President Business 🧱👔"
-  },
-  {
-    text: "I do not fight for pride. I fight for flavor. This sandwich... is balance.",
-    author: "Ip Man 🥋🇨🇳"
-  },
-  {
-    text: "What style is that? Grilled picanha with... provolone?!",
-    author: "Ip Man Opponent 😵🥊"
-  },
-  {
-    text: "This is the taste of Wing Chun… crispy, elegant, unstoppable.",
-    author: "Master Hung 🍵"
-  },
-  {
-    text: "456 survived everything... but couldn’t resist Brazilly Philly.",
-    author: "Front Man (Squid Game) 🟥😶"
-  },
-  {
-    text: "I risked my life for a cash prize. But I’d trade it all for another bite of that sandwich.",
-    author: "Player 456 (Gi-hun) 🟢💰"
-  },
-  {
-    text: "It tastes like childhood… and victory.",
-    author: "Player 001 (Il-nam) 👴🧠"
-  },
-  {
-    text: "Moooolti... flavor!",
-    author: "Leeloo 🔵💫"
-  },
-  {
-    text: "Brazilly Philly… SUPREME.",
-    author: "Leeloo (Alt) 🧡🔥"
-  },
-  {
-    text: "Big bada sandwich.",
-    author: "Korben Dallas 🔫🚖"
-  },
-  {
-    text: "This thing is ZEEE-FLAVOORR! Green? Super green!",
-    author: "Ruby Rhod 🎤💅"
-  },
-  {
-    text: "Be formless, shapeless... like a sandwich. You put picanha in a roll, it becomes the roll. You put cheese on it, it becomes the cheese. Now taste... and become like Brazilly Philly, my friend.",
-    author: "Bruce Lee 🐉🥋"
-  },
-  {
-    text: "I float like a butterfly, sting like a bee — But nothing hits like Brazilly Philly on me.",
-    author: "Muhammad Ali 🥊🦋"
-  },
-  {
-    text: "I shook up the world! Then I took a bite... and the world shook back.",
-    author: "Muhammad Ali (Alt) 🎤🌍"
-  },
-  {
-    text: "I’m not just knocking people out anymore… I’m knocking out this sandwich. It’s got bite.",
-    author: "Mike Tyson 🥊🐅"
-  },
-  {
-    text: "Custom sauce. Picanha. Provowone. Ith called the Baddest Sandwich on the Planet.",
-    author: "Mike Tyson (Alt) 🧃👅"
-  }
+ {
+  text: "Once it hits your lips… it’s sooo good! Brazilly Philly, baby! I’m back!",
+  author: "🍺 Frank the Tank (Old School), Frat House Flavor Digest"
+},
+{
+  text: "I wasn’t trying to start a new life... I was just trying to finish this sandwich.",
+  author: "😐 Mitch (Old School), Sandwich Redemption Weekly"
+},
+{
+  text: "You're crazy for this one, Renato. But I respect it. Bring me three.",
+  author: "😎 Beanie (Old School), Wild Man Eats Monthly"
+},
+{
+  text: "You're my boy, Brazilly Philly!",
+  author: "👴 Blue (Old School), Legendary Bites Review"
+},
+{
+  text: "Everything is delicious! Especially Brazilly Philly!",
+  author: "🧱😀 Emmet (The LEGO Movie), Awesome Flavor Gazette"
+},
+{
+  text: "I only eat darkness... and Brazilly Philly.",
+  author: "🦇🧱 LEGO Batman, Brooding Bites Bulletin"
+},
+{
+  text: "I'm not wearing hockey pads — but I am wearing sauce.",
+  author: "🦇🧀 LEGO Batman (Alt), Vigilante Eats Digest"
+},
+{
+  text: "This sandwich is so good... it should be illegal in all 12 universes!",
+  author: "🧱👔 President Business, Corporate Flavor Control Magazine"
+},
+{
+  text: "I do not fight for pride. I fight for flavor. This sandwich... is balance.",
+  author: "🥋🇨🇳 Ip Man, Martial Meal Monthly"
+},
+{
+  text: "What style is that? Grilled picanha with... provolone?!",
+  author: "😵🥊 Ip Man Opponent, Knockout Cuisine Quarterly"
+},
+{
+  text: "This is the taste of Wing Chun… crispy, elegant, unstoppable.",
+  author: "🍵 Master Hung, Traditional Technique Tasting Journal"
+},
+{
+  text: "456 survived everything... but couldn’t resist Brazilly Philly.",
+  author: "🟥😶 Front Man (Squid Game), Survival Flavor Report"
+},
+{
+  text: "I risked my life for a cash prize. But I’d trade it all for another bite of that sandwich.",
+  author: "🟢💰 Player 456 (Gi-hun), Hunger Games Quarterly"
+},
+{
+  text: "It tastes like childhood… and victory.",
+  author: "👴🧠 Player 001 (Il-nam), Nostalgia Bites Digest"
+},
+{
+  text: "Moooolti... flavor!",
+  author: "🔵💫 Leeloo, Supreme Taste Log"
+},
+{
+  text: "Brazilly Philly… SUPREME.",
+  author: "🧡🔥 Leeloo (Alt), Fifth Element Eats"
+},
+{
+  text: "Big bada sandwich.",
+  author: "🔫🚖 Korben Dallas, Galaxy Grub Gazette"
+},
+{
+  text: "This thing is ZEEE-FLAVOORR! Green? Super green!",
+  author: "🎤💅 Ruby Rhod, Intergalactic Glam Grub Quarterly"
+},
+{
+  text: "Be formless, shapeless... like a sandwich. You put picanha in a roll, it becomes the roll. You put cheese on it, it becomes the cheese. Now taste... and become like Brazilly Philly, my friend.",
+  author: "🐉🥋 Bruce Lee, Dragon Flavor Digest"
+},
+{
+  text: "I float like a butterfly, sting like a bee — But nothing hits like Brazilly Philly on me.",
+  author: "🥊🦋 Muhammad Ali, Knockout Cuisine Chronicle"
+},
+{
+  text: "I shook up the world! Then I took a bite... and the world shook back.",
+  author: "🎤🌍 Muhammad Ali (Alt), Champion’s Flavor Review"
+},
+{
+  text: "I’m not just knocking people out anymore… I’m knocking out this sandwich. It’s got bite.",
+  author: "🥊🐅 Mike Tyson, Heavyweight Hunger Report"
+},
+{
+  text: "Custom sauce. Picanha. Provowone. Ith called the Baddest Sandwich on the Planet.",
+  author: "🧃👅 Mike Tyson (Alt), Lethal Lunch Monthly"
+}
+
 ];
 
 let reviewPool = [];
