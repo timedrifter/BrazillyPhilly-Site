@@ -27,7 +27,7 @@ const fullReviewList = [
   },
   {
     text: "I'm in a glass case of emotion!",
-    author: "\ud83d\udcfa Ron Burgundy, Anchorman Weekly"
+    author: "\ud83d\udcfa Ron Burgundy, Anchorman Digest"
   },
   {
     text: "I recognize a one-man wolfpack when I see one.",
@@ -51,7 +51,7 @@ const fullReviewList = [
   },
   {
     text: "I only have a minute, but this sells itself.",
-    author: "\ud83e\uddfd ShamWow Guy, Infomercial Network"
+    author: "\ud83e\uddfd ShamWow Guy, Infomercial Digest"
   },
   {
     text: "I'll be back.",
@@ -75,15 +75,15 @@ const fullReviewList = [
   },
   {
     text: "I could do this all day\u2026 if the sandwich keeps coming.",
-    author: "\ud83d\udee1\ufe0f Captain America, Stars & Stripes Eats"
+    author: "\ud83d\udee1\ufe0f Captain America, Stars & Stripes Digest"
   },
   {
     text: "This is the way... to flavor.",
-    author: "\ud83d\udee1\ufe0f The Mandalorian, Helmet-Off Cuisine"
+    author: "\ud83d\udee1\ufe0f The Mandalorian, Helmet-Off Quarterly"
   },
   {
     text: "Set phasers to DELICIOUS.",
-    author: "\ud83d\ude80 Captain Kirk, Enterprise Eats"
+    author: "\ud83d\ude80 Captain Kirk, Enterprise Digest"
   },
   {
     text: "Resistance is futile\u2026 especially when you're hungry.",
@@ -99,7 +99,7 @@ const fullReviewList = [
   },
   {
     text: "The Force is strong with this one\u2026 especially the sauce.",
-    author: "\ud83e\uddd9 Yoda, Tiny Food Critic Weekly"
+    author: "\ud83e\uddd9 Yoda, Tiny Food Critic Digest"
   },
   {
     text: "You underestimate the power\u2026 of Brazilian steak.",
@@ -111,7 +111,7 @@ const fullReviewList = [
   },
   {
     text: "WUBBA LUBBA DELICIOUS!",
-    author: "\ud83e\uddea Rick Sanchez, Food Portal Weekly"
+    author: "\ud83e\uddea Rick Sanchez, Food Portal Magazine"
   },
   {
     text: "It\u2019s so good, I stopped saying \u2018D\u2019oh!\u2019",
@@ -119,11 +119,11 @@ const fullReviewList = [
   },
   {
     text: "My Krabby Patty\u2019s jealous.",
-    author: "\ud83c\udf4d SpongeBob SquarePants, Undersea Eats Monthly"
+    author: "\ud83c\udf4d SpongeBob SquarePants, Undersea Eats Digest"
   },
   {
     text: "We want to pump... you up... with FLAVOR!",
-    author: "\ud83d\udcaa Hans & Franz, SNL Protein Pack"
+    author: "\ud83d\udcaa Hans & Franz, SNL Protein Quarterly"
   },
   {
     text: "Well isn\u2019t that special?",
