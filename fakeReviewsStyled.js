@@ -744,143 +744,143 @@ const fullReviewList = [
 {
     text: "Sweet sandwich of liberty! That picanha hit harder than a Hypnotoad blast.",
     author: "👨‍🚀 Fry, 31st Century Eats"
-  },,
+  },
 {
     text: "Bite my flavor-enhanced shiny metal ass!",
     author: "🤖 Bender, Bending Gourmet Quarterly"
-  },,
+  },
 {
     text: "I calculated a 0.000001% chance something could taste this good. I was wrong.",
     author: "🧠 Hermes Conrad, Bureaucratic Flavor Times"
-  },,
+  },
 {
     text: "This sandwich is technically illegal in 3 star systems. I call that a win.",
     author: "👾 Zapp Brannigan, Interstellar Romance Review"
-  },,
+  },
 {
     text: "They put picanha in the roll... then rolled it into my heart. Emotional damage achieved.",
     author: "💔 Leela, One-Eyed Culinary Review"
-  },,
+  },
 {
     text: "It even made Nibbler purr. And he eats dark matter.",
     author: "🐾 Nibbler's Translator, Omicronian Eats Monthly"
-  },,
+  },
 {
     text: "This is the only sandwich I'd trust to lead humanity against the robot uprising.",
     author: "🖖 Bender (again), Robotic Uprising Survival Digest"
-  },,
+  },
 {
     text: "No need to clone this flavor—one Brazilly Philly is enough to make me believe in taste reincarnation.",
     author: "🧬 Cubert Farnsworth, Teenage Skeptic Weekly"
-  },,
+  },
 {
     text: "Why not Zoidberg? Because Brazilly Philly exists, that’s why!",
     author: "🦞 Dr. Zoidberg, Claw Cuisine Chronicle"
-  },,
+  },
 {
     text: "This sandwich made my tastebuds do the conga. Wooo!",
     author: "💃 Amy Wong, Mars University Flavors Quarterly"
-  },,
+  },
 {
     text: "Who needs a boyfriend when you’ve got grilled picanha and provolone?",
     author: "💅 Amy Wong (Alt), Pink Sauce Gazette"
-  },,
+  },
 {
     text: "It's rich. It's bold. It's... exploitable. I want it in every vending machine by Monday.",
     author: "👵 Mom, MomCorp Digest"
-  },,
+  },
 {
     text: "The sandwich is magnificent, you cretinous meatbags. Now get back to work.",
     author: "🤖 MomBot #2, Corporate Flavor Bulletin"
-  },,
+  },
 {
     text: "I bit into one and saw the fabric of time unravel. It was mostly cheese.",
     author: "🔮 Flexo, Universe B Deli Weekly"
-  },,
+  },
 {
     text: "I don’t cry. But this sandwich? It *moistened* my eye-holes.",
     author: "😢 Robot Santa, Holiday Grub Gazette"
-  },,
+  },
 {
     text: "This tastes better than destroying DOOP cruisers. Almost.",
     author: "🪖 Kif Kroker, Interstellar Regret Quarterly"
-  },,
+  },
 {
     text: "If I had a nickel for every Brazilly Philly I loved... I’d still never sell you one. Get your own.",
     author: "🪙 Scruffy, Janitor’s Choice Digest"
-  },,
+  },
 {
     text: "We chased space junk for years. Then we found treasure in a sandwich.",
     author: "🚀 Captain Jang, Victory Crew Digest"
-  },,
+  },
 {
     text: "That sandwich? Worth more than a whole cargo of orbiting plutonium.",
     author: "💼 Tiger Park, Galactic Bounty Eats"
-  },,
+  },
 {
     text: "I’d sell my entire robot body for one more bite. And I mean *every* part.",
     author: "🤖 Bubs, AI Maintenance Quarterly"
-  },,
+  },
 {
     text: "It’s got flavor. It’s got fire. It’s got that spicy moral ambiguity I live for.",
     author: "🔫 Tae-ho, Ex-Military Bites Weekly"
-  },,
+  },
 {
     text: "I recalculated my purpose after tasting Brazilly Philly. It now includes lunch.",
     author: "📡 Dorothy, Adorable Android Cuisine Monthly"
-  },,
+  },
 {
     text: "I hacked a satellite just to download the recipe. Still can’t replicate it.",
     author: "🖥️ UTS Black Hat Chef, Techno Flavor Review"
-  },,
+  },
 {
     text: "The galaxy’s full of trash. This sandwich is proof there's still something sacred.",
     author: "♻️ Captain Jang (Alt), Space Redemption Report"
-  },,
+  },
 {
     text: "I’d jump back into low orbit just to smell that picanha grilling again.",
     author: "🌍 Tae-ho (Alt), Earth's Last Flavor Gazette"
-  },,
+  },
 {
     text: "Eat one and suddenly, you're not just surviving. You're living.",
     author: "🧭 Tiger Park (Alt), Flavor with a Fight Digest"
-  },,
+  },
 {
     text: "You think I’m evil? You haven’t tasted the sandwich that made me this way.",
     author: "💼 Sullivan, UTS Power Quarterly"
-  },,
+  },
 {
     text: "Brazilly Philly is the only thing in the galaxy I can’t control. And that terrifies me.",
     author: "🛰️ UTS Command AI, Rogue Network Digest"
-  },,
+  },
 {
     text: "I tried to suppress it. Delete the recipe. Then I tasted it. Now I serve it in secret.",
     author: "👁️‍🗨️ Blacksite Chef, Hidden Menu Chronicles"
-  },,
+  },
 {
     text: "Our enemies were starving. We gave them a Brazilly Philly. They joined us.",
     author: "🔒 Commander of the Red Belt, Strategic Flavor Report"
-  },,
+  },
 {
     text: "I feared only one thing: hunger. Then I feared two. Hunger… and craving more.",
     author: "💀 Junk Pirate Warlord, Outer Orbit Grit"
-  },,
+  },
 {
     text: "[STATIC] ...if you can hear this... get to Sector 9... there's still time... there's still sauce...",
     author: "📻 Smuggled Signal, Pirate Flavor Frequency"
-  },,
+  },
 {
     text: "BRAZILLY--[crackle]--PHILLY--flavor coordinates locked. Upload to taste core. Repeat: taste core.",
     author: "📡 Unknown Drone Broadcast, Junkwave Network"
-  },,
+  },
 {
     text: "You are not alone. Brazilly Philly exists in all timelines. Bite... and be reborn.",
     author: "🌀 Temporal Echo Transmission, Lost Crew Log 273-B"
-  },,
+  },
 {
     text: "[DATA CORRUPTED]...sandwich so good it broke containment... avoid hunger riots.",
     author: "📀 Intergalactic Emergency Feed, UTS Flavor Lockdown"
-  },,
+  },
 {
     text: "*BOOM* Warning: repeated consumption may cause permanent happiness. Proceed.",
     author: "🚨 Orbital Ad Bot #42, Glitched Promotion Loop"
@@ -888,52 +888,52 @@ const fullReviewList = [
 {
     text: "You're a slacker, McFly. But this sandwich? It’s no slacker.",
     author: "📋 Mr. Strickland, Discipline Digest"
-  },,
+  },
 {
     text: "Hey McFly! You gonna eat that sandwich or are you chicken?",
     author: "💢 Biff Tannen, Bully Eats Quarterly"
-  },,
+  },
 {
     text: "I'm your density. I mean... your delicious destiny.",
     author: "📖 George McFly, Enchantment Under the Flavor Digest"
-  },,
+  },
 {
     text: "Marty! Whatever happens, don’t forget the vinagrete!",
     author: "⚡ Doc Brown, Temporal Tasting Times"
-  },,
+  },
 {
     text: "It’s heavy, Doc. The sauce… it’s really heavy.",
     author: "🎸 Marty McFly, Guitar & Grub Gazette"
-  },,
+  },
 {
     text: "All I said was I didn’t want the sandwich. And then I tasted it. Great Scott!",
     author: "🧠 Jennifer Parker, Hill Valley High Flavor Report"
-  },,
+  },
 {
     text: "Nobody... calls me chicken. Especially not in front of a Brazilly Philly.",
     author: "🐔 Marty (Alt), Flavor Honor Monthly"
-  },,
+  },
 {
     text: "It’s like kissing you for the first time… but with grilled meat and cheese.",
     author: "💋 Lorraine Baines, Mother’s Memory Magazine"
-  },,
+  },
 {
     text: "My calculations were off. I didn’t predict this much flavor.",
     author: "🔬 Doc (Alt), Theoretical Taste Quarterly"
-  },,
+  },
 {
     text: "I built a time machine out of a DeLorean… just to come back for lunch.",
     author: "🚗 Doc Brown (Again), Culinary Continuum Review"
-  },,
+  },
 {
     text: "This sandwich hit me with 1.21 gigaflavor. My future's forever changed.",
     author: "🕶️ Future Marty, Hoverboard Digest"
-  },,
+  },
 {
     text: "If you’re gonna build a sandwich into a time machine, why not do it with some style?",
     author: "🔥 Doc Brown (Stylish Edition), Stainless Steel Flavor Weekly"
   }
-];];
+];
 
 let reviewPool = [];
 
@@ -942,10 +942,7 @@ function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
-,
-  {
-    text: "Sweet sandwich of liberty! That picanha hit harder than a Hypnotoad blast.",
-    author: "👨‍🚀 Fry, 31st Century Eats"
+  }
   },
   {
     text: "Bite my flavor-enhanced shiny metal ass!",
