@@ -13,19 +13,19 @@
     img {
   border-radius: 12px;
     }
-    .kickstarter-glow {
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  border: 2px solid #00ffc3;
+.kickstarter-glow a {
   color: #00ffc3;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-align: center;
-  border-radius: 12px;
-  width: 300px;
-  text-shadow: 0 0 10px #00ffc3;
-  animation: pulseGlow 2s infinite;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
+
+.kickstarter-glow a:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 14px #00ffc3;
+}
+
 
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 8px #00ffc3; }
@@ -225,14 +225,6 @@
     <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
   </ul>
 </nav>
-<div style="text-align: center; padding: 1rem 0;">
-  <section class="kickstarter-glow">
-    <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-      🚀 KICKSTARTER PRE-LAUNCH PAGE
-    </a>
-  </section>
-</div>
-
 
   <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: transparent; pointer-events: none;"></canvas>
   
@@ -241,6 +233,12 @@
     <img src="https://timedrifter.github.io/BrazillyPhilly-Site/logo-placeholder.png" alt="Brazilly Philly Logo" class="logo" style="width: 90%; max-width: 300px; height: auto; filter: drop-shadow(0 0 12px #00ffc3); animation: pulse 2s infinite; display: block; margin: 0 auto;">
   </a>
 </header>
+<section class="kickstarter-glow">
+  <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
+    🚀 KICKSTARTER PRE-LAUNCH PAGE
+  </a>
+</section>
+
 <h1 style="text-align: center; font-size: 2.2rem; color: #00ffa3; margin-top: 0; animation: fadeIn 2s ease-in-out;">Brazilly Philly Comic Book</h1>
 
   <div class="nav" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0 10px;">
