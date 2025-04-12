@@ -46,5 +46,19 @@ function showVotes() {
   });
 }
 
-window.onload = showVotes;
+window.onload = () => {
+  const voteRef = db.ref('votes');
+
+  voteRef.on('value', (snapshot) => {
+    const votes = snapshot.val() || {};
+    const yes = votes.yes || 0;
+    const no = votes.no || 0;
+
+    document.getElementById('vote-results').innerHTML = `
+      <p>👍 Yes: ${yes}</p>
+      <p>👎 No: ${no}</p>
+    `;
+  });
+};
+
 
