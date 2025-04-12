@@ -1,4 +1,17 @@
 const footerHTML = `
+  <style>
+    footer img {
+      display: inline-block !important;
+      vertical-align: middle;
+      margin: 0 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px !important;
+      filter: drop-shadow(0 0 4px #00ffff);
+      transition: 0.3s;
+    }
+  </style>
+
   <footer style="text-align: center; margin-top: 4rem;">
     <div style="margin-bottom: 3rem;">
       <h2 style="color: #00ffc3; text-shadow: 0 0 10px #00ffc3;">🌶️ Random Sauce Name Generator</h2>
@@ -18,17 +31,17 @@ const footerHTML = `
     <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER</p>
 
     <div style="text-align: center; margin: 1rem 0;">
-      <a href="https://youtube.com/@BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src="youtube.png" alt="YouTube" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+      <a href="https://youtube.com/@BrazillyPhilly" target="_blank">
+        <img src="youtube.png" alt="YouTube">
       </a>
-      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank" style="margin: 10px;">
-        <img src="instagram.png" alt="Instagram" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+      <a href="https://www.instagram.com/BrazillyPhilly" target="_blank">
+        <img src="instagram.png" alt="Instagram">
       </a>
-      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank" style="margin: 10px;">
-        <img src="tiktok.png" alt="TikTok" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+      <a href="https://www.tiktok.com/@brazillyphilly" target="_blank">
+        <img src="tiktok.png" alt="TikTok">
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank" style="margin: 10px;">
-        <img src="Facebook.png" alt="Facebook" width="40" height="40" style="filter: drop-shadow(0 0 4px #00ffff); transition: 0.3s;">
+      <a href="https://www.facebook.com/profile.php?id=61574591594643" target="_blank">
+        <img src="Facebook.png" alt="Facebook">
       </a>
     </div>
 
