@@ -1,1 +1,179 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brazilly Philly – Flavorverse Reviews</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="favicon.ico" />
+  <style>
+       img {
+  border-radius: 12px;
+}
+      body, .styled-btn, #quote-box {
+    font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
+  }
+   .badge-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+ body {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+    h1 {
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    section {
+      padding: 0.25rem 2rem 1.25rem;
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: transparent;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🍔 Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- ✨ Particle background -->
+  <canvas id="particles"></canvas>
+
+<!-- 🔥 Page content -->
+<section>
+  <!-- ⭐ Flavorverse Reviews Badge (Animated) -->
+  <div class="badge-container">
+    <img src="flavorverse-badge.png" alt="Flavorverse Reviews Badge">
+  </div>
+
+  <h1>Click to Reveal Review's From Another Flavorverse</h1>
+</section>
+  
+
+
+  <!-- 🧪 Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 🧩 Header & Footer Inject -->
+  <script src="header-sauce.js"></script>
+  <script src="footer-sauce.js"></script>
+
+  <!-- ✨ Particle Animation -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedY = Math.random() * 0.5 + 0.2;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+      update() {
+        this.y += this.speedY;
+        if (this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles(count = 60) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animate);
+    }
+
+    initParticles();
+    animate();
+  </script>
+<style>
+  .badge-container {
+    width: 90vw;
+    max-width: 400px;
+    margin: 1.5rem auto 1rem;
+    animation: flicker 4s infinite;
+  }
+
+  .badge-container img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+    animation: glowPulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+    }
+    20%, 24%, 55% {
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #00aeef) drop-shadow(0 0 35px #ffd700);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .badge-container {
+      max-width: 90vw;
+    }
+  }
+</style>
+
+</body>
+</html>
