@@ -101,6 +101,7 @@ document.getElementById("header-placeholder").innerHTML = `
       <ul id="nav-links">
         <li><a href="index.html">🏠 Home</a></li>
         <li><a href="menu.html">🥩 Food Menu</a></li>
+          <li><a href="flavor-lab.html">🧪 Flavor Lab</a></li>
         <li><a href="reviews.html">🎤 Reviews</a></li>
         <li><a href="free-energy.html">⚡ Free Energy</a></li>
         <li><a href="comicbook.html">📚 Comic Book</a></li>
