@@ -241,7 +241,15 @@
       cursor: pointer;
       z-index: 1000;
     }
-  
+
+@media (max-width: 480px) {
+  .badge {
+    width: 72px;
+    height: 72px;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+}
+    
   </style>
 </head>
 <body>
