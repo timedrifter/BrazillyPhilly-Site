@@ -7,25 +7,28 @@
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="favicon.ico" />
+
   <style>
-       img {
-  border-radius: 12px;
-}
-  body, .styled-btn, #quote-box {
-  font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
-  }
-   
- body {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+    body, .styled-btn {
+      font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      text-align: center;
+    }
 
+    img {
+      border-radius: 12px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-    h1 {
+    h1, h2 {
       color: #00ffc3;
       text-shadow: 0 0 10px #00ffc3;
       margin-top: 1.25rem;
@@ -46,70 +49,65 @@
       background: transparent;
       pointer-events: none;
     }
-    <style>
-.badge-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 400px;
-  animation: flicker 4s infinite;
-  box-sizing: border-box;
-}
 
-.badge-container img {
-  display: block;
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  border-radius: 12px;
-  margin: 0 auto;
-  filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
-  animation: glowPulse 2.5s ease-in-out infinite;
-}
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      margin: 1.5rem auto 1rem;
+      width: 100%;
+      max-width: 400px;
+      animation: flicker 4s infinite;
+      box-sizing: border-box;
+    }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.3;
-  }
-}
+    .badge-container img {
+      max-width: 360px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+      animation: glowPulse 2.5s ease-in-out infinite;
+    }
 
-@keyframes glowPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
-  }
-  50% {
-    filter: drop-shadow(0 0 20px #00aeef) drop-shadow(0 0 35px #ffd700);
-  }
-}
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0.3;
+      }
+    }
 
-@keyframes orangePulse {
-  0% {
-    filter: drop-shadow(0 0 4px #ffa500);
-    transform: scale(1);
-  }
-  50% {
-    filter: drop-shadow(0 0 12px #ff7f00);
-    transform: scale(1.05);
-  }
-  100% {
-    filter: drop-shadow(0 0 4px #ffa500);
-    transform: scale(1);
-  }
-}
+    @keyframes glowPulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+      }
+      50% {
+        filter: drop-shadow(0 0 20px #00aeef) drop-shadow(0 0 35px #ffd700);
+      }
+    }
 
-@media (max-width: 500px) {
-  .badge-container {
-    max-width: 90vw;
-  }
-}
-</style>
+    @keyframes orangePulse {
+      0% {
+        filter: drop-shadow(0 0 4px #ffa500);
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 12px #ff7f00);
+        transform: scale(1.05);
+      }
+      100% {
+        filter: drop-shadow(0 0 4px #ffa500);
+        transform: scale(1);
+      }
+    }
 
+    @media (max-width: 500px) {
+      .badge-container {
+        max-width: 90vw;
+      }
+    }
   </style>
 </head>
 <body>
@@ -120,60 +118,40 @@
   <!-- ✨ Particle background -->
   <canvas id="particles"></canvas>
 
-<!-- 🔥 Page content -->
-<section>
-  <!-- ⭐ Badge (Animated) -->
-  <div class="badge-container">
-    <img src="flavor-lab.png" alt="Flavor Lab">
-  </div>
-  <h1>Welcome to The Flavor Lab!</h1>
-</section>
+  <!-- 🔥 Page content -->
   <section>
-  <img src="pao_de_queijo.jpg" alt="Pão de Queijo" style="
-    display: block;
-    margin: 40px auto;
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    border-radius: 12px;
-    animation: orangePulse 2s ease-in-out infinite;
-    filter: drop-shadow(0 0 8px #ffa500);
-  ">
-</section>
+    <!-- ⭐ Flavor Lab Badge -->
+    <div class="badge-container">
+      <img src="flavor-lab.png" alt="Flavor Lab Badge">
+    </div>
+    <h1>Welcome to The Flavor Lab!</h1>
+  </section>
 
+  <!-- 🧀 Pão de Queijo Image -->
+  <section>
+    <img src="pao_de_queijo.jpg" alt="Pão de Queijo" style="
+      display: block;
+      margin: 40px auto;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 12px;
+      animation: orangePulse 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 8px #ffa500);
+    ">
+  </section>
 
-<style>
-@keyframes orangePulse {
-  0% {
-    filter: drop-shadow(0 0 4px #ffa500);
-    transform: scale(1);
-  }
-  50% {
-    filter: drop-shadow(0 0 12px #ff7f00);
-    transform: scale(1.05);
-  }
-  100% {
-    filter: drop-shadow(0 0 4px #ffa500);
-    transform: scale(1);
-  }
-}
-</style>
-</section>
-<div id="vote-area">
-  <h2>Do you want to see Páo De Queijo<br> as an Optional Cheessteak Roll?</h2>
-  <button onclick="castVote('yes')">👍 Yes</button>
-  <button onclick="castVote('no')">👎 No</button>
-  <p id="vote-message"></p>
-  <div id="vote-results"></div>
-</div>
+  <!-- 🗳️ Vote Area -->
+  <div id="vote-area">
+    <h2>Do you want to see Pão de Queijo<br>as an Optional Cheesesteak Roll?</h2>
+    <button onclick="castVote('yes')">👍 Yes</button>
+    <button onclick="castVote('no')">👎 No</button>
+    <p id="vote-message"></p>
+    <div id="vote-results"></div>
+  </div>
 
-<script src="vote_counter.js"></script>
-
-
-  <!-- 🧪 Footer -->
-  <div id="footer-placeholder"></div>
-
-  <!-- 🧩 Header & Footer Inject -->
+  <!-- ✅ JS Logic -->
+  <script src="vote_counter.js"></script>
   <script src="header-sauce.js"></script>
   <script src="footer-sauce.js"></script>
 
@@ -228,45 +206,6 @@
     initParticles();
     animate();
   </script>
-<style>
-  .badge-container {
-    width: 90vw;
-    max-width: 400px;
-    margin: 1.5rem auto 1rem;
-    animation: flicker 4s infinite;
-  }
-
-  .badge-container img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
-    animation: glowPulse 2.5s ease-in-out infinite;
-  }
-
-  @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      opacity: 1;
-    }
-    20%, 24%, 55% {
-      opacity: 0.3;
-    }
-  }
-
-  @keyframes glowPulse {
-    0%, 100% {
-      filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
-    }
-    50% {
-      filter: drop-shadow(0 0 20px #00aeef) drop-shadow(0 0 35px #ffd700);
-    }
-  }
-
-  @media (max-width: 500px) {
-    .badge-container {
-      max-width: 90vw;
-    }
-  }
-</style>
 
 </body>
 </html>
