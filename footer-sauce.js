@@ -1,14 +1,29 @@
 const footerHTML = `
   <style>
-    footer img {
-      display: inline-block !important;
-      vertical-align: middle;
+    .social-icons {
+      text-align: center;
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      display: inline-block;
       margin: 0 10px;
+      list-style: none;
+    }
+
+    .social-icons a::marker {
+      content: none !important;
+    }
+
+    .social-icons img {
       width: 40px;
       height: 40px;
-      border-radius: 12px !important;
+      border-radius: 12px;
       filter: drop-shadow(0 0 4px #00ffff);
       transition: 0.3s;
+      vertical-align: middle;
     }
   </style>
 
@@ -30,7 +45,7 @@ const footerHTML = `
 
     <p style="color: #00ffc3; font-weight: bold; font-size: 1.1rem;">HIGH FIVE FOREVER</p>
 
-    <div style="text-align: center; margin: 1rem 0;">
+    <div class="social-icons">
       <a href="https://youtube.com/@BrazillyPhilly" target="_blank">
         <img src="youtube.png" alt="YouTube">
       </a>
