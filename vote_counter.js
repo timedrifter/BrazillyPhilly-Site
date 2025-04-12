@@ -1,39 +1,46 @@
-
 // vote_counter.js
 
-// Initialize vote counts if not already stored
-if (!localStorage.getItem('votes')) {
-  const initialVotes = { yes: 0, no: 0 };
-  localStorage.setItem('votes', JSON.stringify(initialVotes));
-}
+const voteURL = 'vote_handler.php';
 
-// Cast vote function
 function castVote(choice) {
-  if (localStorage.getItem('hasVoted')) {
+  if (sessionStorage.getItem('hasVoted')) {
     document.getElementById('vote-message').textContent = "You've already voted!";
     return;
   }
 
-  const votes = JSON.parse(localStorage.getItem('votes'));
-
-  if (choice === 'yes') votes.yes++;
-  if (choice === 'no') votes.no++;
-
-  localStorage.setItem('votes', JSON.stringify(votes));
-  localStorage.setItem('hasVoted', 'true');
-
-  document.getElementById('vote-message').textContent = "Thank you for voting!";
-  showVotes();
+  fetch(voteURL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ vote: choice })
+  })
+  .then(res => res.json())
+  .then(data => {
+    sessionStorage.setItem('hasVoted', 'true');
+    document.getElementById('vote-message').textContent = "Thank you for voting!";
+    showVotes(data);
+  })
+  .catch(err => {
+    console.error('Vote failed:', err);
+    document.getElementById('vote-message').textContent = "Vote failed. Try again!";
+  });
 }
 
-// Display current vote totals
-function showVotes() {
-  const votes = JSON.parse(localStorage.getItem('votes'));
-  document.getElementById('vote-results').innerHTML = `
-    <p>👍 Yes: ${votes.yes}</p>
-    <p>👎 No: ${votes.no}</p>
-  `;
+function showVotes(votes = null) {
+  const updateUI = (v) => {
+    document.getElementById('vote-results').innerHTML = `
+      <p>👍 Yes: ${v.yes}</p>
+      <p>👎 No: ${v.no}</p>
+    `;
+  };
+
+  if (votes) {
+    updateUI(votes);
+  } else {
+    fetch(voteURL)
+      .then(res => res.json())
+      .then(data => updateUI(data));
+  }
 }
 
-// Run on page load
 window.onload = showVotes;
+
