@@ -10,6 +10,21 @@
     img {
   border-radius: 12px;
 }
+@keyframes bigBluePulse {
+  0%   { box-shadow: 0 0 10px #00ccff; }
+  50%  { box-shadow: 0 0 40px #00ccff; }
+  100% { box-shadow: 0 0 10px #00ccff; }
+}
+
+.free-energy-glow {
+  width: 90%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+  animation: bigBluePulse 2.5s infinite ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
 
 
     body {
@@ -199,9 +214,9 @@
 <script src="header-sauce.js"></script>
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="free_energy_machine.png" alt="Free Energy Machine"
-       style="max-width: 45%; height: auto; border-radius: 12px; box-shadow: 0 0 20px #00ccff;" />
+  <img src="free_energy_machine.png" alt="Free Energy Machine" class="free-energy-glow" />
 </div>
+
 
 
   
