@@ -199,6 +199,26 @@
   display: block;
 }
 
+    .badge {
+  width: 96px;
+  height: 96px;
+  filter: drop-shadow(0 0 6px #00ffc3);
+  transition: transform 0.3s ease;
+  margin: 1rem auto;
+  animation: pulseGlow 2s infinite;
+}
+
+  .badge:hover {
+    transform: scale(1.2);
+  }
+    @media (max-width: 480px) {
+  .badge {
+    width: 96px;
+    height: 96px;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -303,7 +323,18 @@
       <li><strong>DJ Bot-tle</strong>: Refuses to serve food unless the playlist is fire. Will pause mid-beat to judge your song request.</li>
     </ul>
   </div>
-
+  
+ <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="menu.html">
+    <img src="menu_link.png" alt="View Our Menu" class="badge">
+  </a>
+  <a href="free-energy.html">
+    <img src="free_energy_tech.png" alt="Free Energy Tech Badge" class="badge">
+  </a>
+ <a href="reviews.html">
+    <img src="flavorverse-badge.png" alt="Flavorverse Reviews" class="badge">
+  </a>
+</div>
 <script>
   const canvas = document.getElementById("particles");
   const ctx = canvas.getContext("2d");
