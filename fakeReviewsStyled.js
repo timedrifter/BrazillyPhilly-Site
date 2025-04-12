@@ -394,7 +394,7 @@ const fullReviewList = [
     author: "\ud83d\udc68\u200d\ud83c\udf73 Joshua Weissman, YouTube Kitchen Lab"
   },
   {
-    text: "Brazilly Philly is here for a long time\u2019s and a good time.",
+    text: "Brazilly Philly is here for a long time and a good time.",
     author: "\ud83d\udd25 Mr. Make It Happen, Self-Taught Gourmet Digest"
   },
   {
