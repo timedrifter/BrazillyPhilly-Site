@@ -70,6 +70,17 @@
       animation: glowPulse 2.5s ease-in-out infinite;
     }
 
+    footer a {
+      font-size: 0; /* eliminate inline gaps */
+    }
+
+    footer img {
+      display: inline-block !important;
+      margin: 0 10px;
+      vertical-align: middle;
+      font-size: initial;
+    }
+
     @keyframes flicker {
       0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 1;
@@ -108,12 +119,6 @@
         max-width: 90vw;
       }
     }
-    footer img {
-  display: inline-block !important;
-  margin: 0 10px;
-  vertical-align: middle;
-}
-
   </style>
 </head>
 <body>
