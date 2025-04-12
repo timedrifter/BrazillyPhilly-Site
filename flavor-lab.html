@@ -16,13 +16,6 @@
       body, .styled-btn, #quote-box {
     font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
   }
-   .badge-container img {
-  width: 360px;
-  height: auto;
-  border-radius: 12px;
-  filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
-  animation: glowPulse 2.5s ease-in-out infinite;
-}
 .badge-container {
   display: flex;
   justify-content: center;
@@ -30,13 +23,15 @@
 }
 
 .badge-container img {
-  width: 360px;
+  max-width: 200px; /* or whatever size you like */
+  width: 100%;
   height: auto;
   border-radius: 12px;
   filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
   animation: glowPulse 2.5s ease-in-out infinite;
 }
 
+    
  body {
   background-color: #0a0a0a;
   color: #e0e0e0;
