@@ -7,20 +7,55 @@
   <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="favicon.ico" />
-  <style>
-       img {
-  border-radius: 12px;
+<style>
+body, .styled-btn, #quote-box {
+  font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center;
 }
-      body, .styled-btn, #quote-box {
-    font-family: 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
-  }
 
+img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: #00ffc3;
+  text-shadow: 0 0 10px #00ffc3;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+section {
+  padding: 0.25rem 2rem 1.25rem;
+}
+
+canvas#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* ✅ Badge Container Fixed */
 .badge-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 1rem;
-  margin: 0 auto;
+  margin: 1.5rem auto 1rem;
   width: 100%;
   max-width: 400px;
   animation: flicker 4s infinite;
@@ -28,51 +63,39 @@
 }
 
 .badge-container img {
-  display: block;
-  width: 100%;
   max-width: 360px;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
-  margin: 0 auto;
   filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
   animation: glowPulse 2.5s ease-in-out infinite;
 }
 
-
-
-
- body {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+/* ✅ Glows and Animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
 }
 
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #00aeef) drop-shadow(0 0 20px #ffd700);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #00aeef) drop-shadow(0 0 35px #ffd700);
+  }
+}
 
-    h1 {
-      color: #00ffc3;
-      text-shadow: 0 0 10px #00ffc3;
-      margin-top: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
+@media (max-width: 500px) {
+  .badge-container {
+    max-width: 90vw;
+  }
+}
+</style>
 
-    section {
-      padding: 0.25rem 2rem 1.25rem;
-    }
-
-    canvas#particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background: transparent;
-      pointer-events: none;
-    }
-  </style>
 </head>
 <body>
 
