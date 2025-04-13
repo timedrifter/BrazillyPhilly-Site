@@ -24,6 +24,12 @@ const footerHTML = `
       filter: drop-shadow(0 0 4px #00ffff);
       transition: 0.3s;
       vertical-align: middle;
+      border: none;
+      outline: none;
+    }
+
+    .social-icons a:focus {
+      outline: none;
     }
   </style>
 
@@ -37,7 +43,7 @@ const footerHTML = `
     </div>
 
     <p style="color: #00ffc3; font-weight: bold;">
-      Stay saucy. Stay sharp. 
+      Stay saucy. Stay sharp.
       <a href="brolumination/?chip=unlocked" class="emoji-link" title="Unlock the Brolumination" style="text-decoration: none;">
         <span id="emoji">🖐️</span>
       </a> ♾️
@@ -73,10 +79,10 @@ const footerHTML = `
 
 document.body.insertAdjacentHTML("beforeend", footerHTML);
 
-// Dynamic year
+// Update dynamic year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Sauce Generator
+// Sauce Generator functionality
 const sauceNames = [
   "Dawn's Destiny Sauce", "Raquel's Family Heat", "Raquel's Garden Fire",
   "Midnight Mango Blaze", "Cyber Cilantro Crunch", "Corey's Lotus Heat",
@@ -105,7 +111,7 @@ function generateSauce() {
   if (output) output.innerText = random;
 }
 
-// Emoji hover animation
+// Emoji hover animation for the sauce generator
 const emoji = document.getElementById('emoji');
 if (emoji) {
   document.querySelector('.emoji-link').addEventListener('mouseover', () => emoji.textContent = '✨');
