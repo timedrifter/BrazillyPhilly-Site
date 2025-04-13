@@ -148,18 +148,22 @@ img:not(footer img) {
       filter: drop-shadow(0 0 8px #ffa500);
     ">
   </section>
+<div style="display: flex; justify-content: center; padding: 20px;">
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdzntCa0EtlCMhkuS925DD94M5JHFHi0HY45ZOJg9sGbMxWgw/viewform?embedded=true" 
+    width="360" 
+    height="240" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0" 
+    style="border-radius: 12px; box-shadow: 0 0 16px rgba(0, 255, 195, 0.25);">
+    Loading…
+  </iframe>
+</div>
 
-  <!-- 🗳️ Vote Area -->
-  <div id="vote-area">
-    <h2>Do you want to see Pão de Queijo<br>as an Optional Cheesesteak Roll?</h2>
-    <button onclick="castVote('yes')">👍 Yes</button>
-    <button onclick="castVote('no')">👎 No</button>
-    <p id="vote-message"></p>
-    <div id="vote-results"></div>
-  </div>
-
+ 
   <!-- ✅ JS Logic -->
-  <script src="vote_counter_firebase.js"></script>
+ 
   <script src="header-sauce.js"></script>
   <script src="footer-sauce.js"></script>
 
