@@ -1,154 +1,116 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brazilly Philly Comic Book</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Energy – Brazilly Philly</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
   <style>
     img {
   border-radius: 12px;
-    }
-
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 8px #00ffc3; }
-  50% { box-shadow: 0 0 24px #00ffc3; }
-  100% { box-shadow: 0 0 8px #00ffc3; }
+}
+@keyframes bigBluePulse {
+  0%   { box-shadow: 0 0 10px #00ccff; }
+  50%  { box-shadow: 0 0 40px #00ccff; }
+  100% { box-shadow: 0 0 10px #00ccff; }
 }
 
+.free-energy-glow {
+  width: 90%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+  animation: bigBluePulse 2.5s infinite ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+
     body {
-      background-color: #0b0f1a;
-      color: #00ffa3;
-      font-family: 'Arial', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      text-align: center;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       overflow-x: hidden;
     }
     h1 {
-      text-align: center;
-      color: #00ffa3;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      animation: fadeIn 2s ease-in-out;
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
+      margin-top: 1rem;
     }
-    .nav {
-      text-align: center;
-      margin-bottom: 30px;
+    p {
+      max-width: 600px;
+      margin: 0.5rem auto;
     }
-    .nav a {
-      color: #00d0ff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+    .glow {
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
     }
-    .nav a:hover {
-      color: #ff4f4f;
+    .highlight {
+      color: #ffcc00;
     }
-    .comic-section {
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: #111;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 20px #00ffa3;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: slideIn 1.5s ease-in-out;
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
     }
-    .comic-section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 25px #00ffcc;
+    .badge-container img {
+      width: 125px;
+      height: 125px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 6px #00ffc3);
     }
-    .comic-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      color: #00d0ff;
+    .badge-container img:hover {
+      transform: scale(1.2);
     }
-    .comic-img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .bot-bio {
-      font-size: 0.95rem;
-      color: #b0fdf5;
-    }
-    .teaser {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 1.2rem;
-      color: #00ffa3;
-      font-style: italic;
-      animation: pulse 2s infinite;
-    }
-    .behind-the-bots {
-      max-width: 800px;
-      margin: 60px auto 0;
-      background-color: #112233;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #0099ff;
-    }
-    .behind-the-bots h2 {
-      color: #00d0ff;
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-    }
-    .behind-the-bots ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .behind-the-bots li {
-      margin-bottom: 10px;
-      color: #ccf6ff;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.85rem;
-      color: #009fa3;
-      font-style: italic;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
-    }
-      @keyframes floatdots {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
-      @keyframes floatdots {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
-    #dot-background {
+    canvas#particles {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: radial-gradient(rgba(0, 255, 170, 0.1) 1px, transparent 1px);
-      background-size: 20px 20px;
-      z-index: 0;
-      animation: floatdots 60s linear infinite;
+      z-index: -1;
       pointer-events: none;
     }
+    .button {
+      margin: 1.5rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00ffc3;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .socials a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .socials img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 4px #00ffff);
+      transition: 0.3s;
+    }
 
-
-   /* Nav Menu */
-#nav-menu {
+    #nav-menu {
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -160,7 +122,7 @@
   cursor: pointer;
   background-color: #00ffc3;
   color: #0a0a0a;
-  padding: 0.3rem 0.6rem; /* ✅ MATCHES HOMEPAGE */
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
   box-shadow: 0 0 8px #00ffc3;
   transition: transform 0.2s ease;
@@ -172,13 +134,17 @@
 
 #nav-links {
   list-style: none;
-  padding: 0.5rem; /* ✅ MATCHES HOMEPAGE */
+  padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #111;
   border: 1px solid #00ffc3;
   border-radius: 8px;
   box-shadow: 0 0 12px #00ffc3;
-  display: none; /* ✅ HOMEPAGE-STYLE MENU (NO .show CLASS HERE) */
+  display: none;
+}
+
+#nav-links.show {
+  display: block;
 }
 
 #nav-links li {
@@ -190,121 +156,117 @@
   color: #00ffc3;
   font-weight: bold;
   font-size: 1rem;
-  text-align: left; 
-  display: block;
   text-align: left;
-  padding-left: 10px;
-}
-#nav-links.show {
   display: block;
+  padding-left: 10px;
+  text-align: left;
+
+}
+.badge {
+  width: 96px;
+  height: 96px;
+  filter: drop-shadow(0 0 6px #00ffc3);
+  transition: transform 0.3s ease;
+  margin: 1rem auto;
+  animation: pulseGlow 2s infinite;
+}
+
+  .badge:hover {
+    transform: scale(1.2);
+  }
+
+
+    .logo {
+  max-width: 300px;
+  width: 90%;
+  filter: drop-shadow(0 0 10px #00ffc3);
+  animation: pulse 2s infinite;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%   { filter: drop-shadow(0 0 5px #00ffc3); }
+  50%  { filter: drop-shadow(0 0 20px #00ffc3); }
+  100% { filter: drop-shadow(0 0 5px #00ffc3); }
+}
+    @media (max-width: 360px) {
+  .badge {
+    width: 56px;
+    height: 56px;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
 }
 
   </style>
 </head>
 <body>
-  <!-- Nav -->
-<nav id="nav-menu">
-  <div id="nav-toggle" onclick="toggleMenu()">☰</div>
-  <ul id="nav-links">
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="menu.html">🥩 Food Menu</a></li>
-    <li><a href="reviews.html">🎤 Reviews</a></li>
-    <li><a href="free-energy.html">⚡ Free Energy</a></li>
-    <li><a href="comicbook.html">📚 Comic Book</a></li>
-    <li><a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">🚀 Kickstarter</a></li>
-  </ul>
-</nav>
 
-  <canvas id="particles" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: transparent; pointer-events: none;"></canvas>
-  
+
+  <canvas id="particles"></canvas>
+
  <!-- 🍔 Header -->
   <div id="header-placeholder"></div>
 <script src="header-sauce.js"></script>
 
-<h1 style="text-align: center; font-size: 2.2rem; color: #00ffa3; margin-top: 0; animation: fadeIn 2s ease-in-out;">Brazilly Philly Comic Book</h1>
 
-  <div class="nav" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0 10px;">
-  <a href="#primo">Primo & Saucy</a>
-  <a href="#scrubby">Scrubby</a>
-  <a href="#dj">DJ Bot-tle</a>
+
+
+
+
+ <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="menu.html">
+    <img src="menu_link.png" alt="View Our Menu" class="badge">
+  </a>
+  <a href="comicbook.html">
+    <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
+  </a>
+ <a href="reviews.html">
+    <img src="flavorverse-badge.png" alt="Flavorverse Reviews" class="badge">
+  </a>
 </div>
+<!-- MSG Badge -->
+    <section>
+<style>
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #ffffff);
+    }
+    100% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+  }
+</style>
 
-  <div id="primo" class="comic-section">
-    
-    <img class="comic-img" src="comic_01_primo_saucy.png" alt="When Primo Met Saucy">
-    <div class="bot-bio">Meet BP-R1 "Primo" and BP-R2 "Saucy" — the smooth food server and the silly sauce artist. Their chemistry? Instant flavor. <br><em>"Slippery when drippery."</em></div>
-  </div>
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="msg_badge_updated.png" alt="We proudly use MSG"
+    style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffffff); transition: transform 0.3s ease; animation: pulse-glow 2s infinite ease-in-out;"
+    onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
 
-  <div id="scrubby" class="comic-section">
-    
-    <img class="comic-img" src="comic_02_scrubby.png" alt="Scrubby Enters the Chat">
-    <div class="bot-bio">BP-R3 "Scrubby" keeps things spotless, even if it means panicking over every sauce drop. He's neurotic. He's clean. He's not amused. <br><em>"You... spilled... the SAUCE!"</em></div>
-  </div>
-
-  <div id="dj" class="comic-section">
-   
-    <img class="comic-img" src="comic_03_dj_bottle.png" alt="Enter DJ Bot-tle">
-    <div class="bot-bio">BP-R4 "DJ Bot-tle" drops beats with your burger. He’s loud, loyal, and lives for the bass. Every order’s a show. <br><em>"You ready for the drop?"</em></div>
-  </div>
-
-  <div id="react" class="comic-section">
-   
-    <img class="comic-img" src="comic_05_bot_reacts.png" alt="Bots React to Fan Comments">
-    <div class="bot-bio">From sauce-splatter fan art to playlist critiques, our bots have opinions. This strip captures their spicy responses in real time. <br><em>"You call THAT spicy?" – Saucy</em></div>
-  </div>
-
-  <div class="comic-section" id="bot-roster">
-    <div class="comic-title">🤖 Meet the Bots</div>
-    <div class="bot-bio">
-      <ul style="list-style: none; padding-left: 0;">
-        <li><img src="/bot_primo_icon.png" alt="Primo Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R1 &quot;Primo&quot;</strong> – Food delivery master. Kind, precise, always in service mode.</li>
-        <li><img src="/bot_saucy_icon.png" alt="Saucy Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R2 &quot;Saucy&quot;</strong> – Sauce-slinger with style. Funky, fast, and full of flare.</li>
-        <li><img src="/bot_scrubby_icon.png" alt="Scrubby Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R3 &quot;Scrubby&quot;</strong> – Clean freak and chaos controller. A little neurotic but pure-hearted.</li>
-        <li><img src="/bot_dj_icon.png" alt="DJ Bot-tle Icon" style="height: 24px; vertical-align: middle; margin-right: 8px;"><strong>BP-R4 &quot;DJ Bot-tle&quot;</strong> – Mix master. Lives for the beat and never skips an order.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="comic-section" id="bot-generator">
-    <div class="comic-title">🛠️ Build Your Own Bot</div>
-    <div class="bot-bio">
-      What would YOUR robot do at Brazilly Philly? Sauce cannon arms? Built-in jukebox? Use your imagination!
-    </div>
-    <div style="text-align: center; margin-top: 15px;">
-      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00ffa3; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Launch Bot Builder (Coming Soon)</button>
-    </div>
-  </div>
-
-  <div class="comic-section" id="vote-next">
-    <div class="comic-title">🗳️ Vote for the Next Bot</div>
-    <div class="bot-bio">
-      We’re building more bots — and YOU get to help decide! Who should join the Flavor Force?
-    </div>
-    <div style="text-align: center; margin-top: 15px;">
-      <button style="padding: 10px 20px; font-size: 1rem; background-color: #00d0ff; color: #0b0f1a; border: none; border-radius: 8px; cursor: pointer;">Cast Your Vote (Coming Soon)</button>
-    </div>
-  </div>
-
-  <div class="comic-section" id="flavor-boss">
-  <div class="comic-title">The Flavor Boss Has Entered the Building</div>
-  <img class="comic-img" src="comic_07_flavor_boss_enters.png" alt="The Flavor Boss Has Entered the Building">
-  <div class="bot-bio">
-    The bots are in chaos — sauce everywhere, music blasting, panic rising... until HE walks in. Hair flowing. Eyes focused. The Flavor Boss arrives, and silence hits like a dropped beat. <br><em>“Back to work, robots. Let’s feed the revelation.”</em>
-  </div>
+  <p style="color: #ffffff; font-weight: bold;">Brazilly Philly is powered by<br>MSG = Make Stuff Good</p>
 </div>
+    </section>
+<script src="footer-sauce.js"></script>
 
 
-  <div class="behind-the-bots">
-    <h2>🔧 Behind the Bots: Quirks in the Code</h2>
-    <ul>
-      <li><strong>Primo</strong>: Sometimes hums elevator music while idle. Can balance 12 trays at once.</li>
-      <li><strong>Saucy</strong>: Remixes his own sauce splats and calls it "Flavor Beats Vol. 1"</li>
-      <li><strong>Scrubby</strong>: Runs a diagnostics scan every 10 minutes... even on his birthday.</li>
-      <li><strong>DJ Bot-tle</strong>: Refuses to serve food unless the playlist is fire. Will pause mid-beat to judge your song request.</li>
-    </ul>
-  </div>
+
 
 <script>
+
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
+}
+
+
+
+  // Particle Canvas Setup
   const canvas = document.getElementById("particles");
   const ctx = canvas.getContext("2d");
   let particles = [];
@@ -360,12 +322,9 @@
   initParticles();
   animate();
 
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
+ 
+ 
 </script>
-<script src="footer-sauce.js"></script>
 
 </body>
 </html>
