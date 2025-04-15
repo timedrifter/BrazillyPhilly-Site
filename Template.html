@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Energy – Brazilly Philly</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+  <style>
+    img {
+  border-radius: 12px;
+}
+@keyframes bigBluePulse {
+  0%   { box-shadow: 0 0 10px #00ccff; }
+  50%  { box-shadow: 0 0 40px #00ccff; }
+  100% { box-shadow: 0 0 10px #00ccff; }
+}
+
+.free-energy-glow {
+  width: 90%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 12px;
+  animation: bigBluePulse 2.5s infinite ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+
+    body {
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
+      margin-top: 1rem;
+    }
+    p {
+      max-width: 600px;
+      margin: 0.5rem auto;
+    }
+    .glow {
+      color: #00ffc3;
+      text-shadow: 0 0 12px #00ffc3;
+    }
+    .highlight {
+      color: #ffcc00;
+    }
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .badge-container img {
+      width: 125px;
+      height: 125px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 6px #00ffc3);
+    }
+    .badge-container img:hover {
+      transform: scale(1.2);
+    }
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .button {
+      margin: 1.5rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background: #00ffc3;
+      color: #0a0a0a;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00ffc3;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .socials a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .socials img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 4px #00ffff);
+      transition: 0.3s;
+    }
+
+    #nav-menu {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+}
+
+#nav-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: #00ffc3;
+  color: #0a0a0a;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00ffc3;
+  transition: transform 0.2s ease;
+}
+
+#nav-toggle:hover {
+  transform: scale(1.15);
+}
+
+#nav-links {
+  list-style: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #111;
+  border: 1px solid #00ffc3;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00ffc3;
+  display: none;
+}
+
+#nav-links.show {
+  display: block;
+}
+
+#nav-links li {
+  margin: 0.5rem 0;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #00ffc3;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+  display: block;
+  padding-left: 10px;
+  text-align: left;
+
+}
+.badge {
+  width: 96px;
+  height: 96px;
+  filter: drop-shadow(0 0 6px #00ffc3);
+  transition: transform 0.3s ease;
+  margin: 1rem auto;
+  animation: pulseGlow 2s infinite;
+}
+
+  .badge:hover {
+    transform: scale(1.2);
+  }
+
+
+    .logo {
+  max-width: 300px;
+  width: 90%;
+  filter: drop-shadow(0 0 10px #00ffc3);
+  animation: pulse 2s infinite;
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%   { filter: drop-shadow(0 0 5px #00ffc3); }
+  50%  { filter: drop-shadow(0 0 20px #00ffc3); }
+  100% { filter: drop-shadow(0 0 5px #00ffc3); }
+}
+    @media (max-width: 360px) {
+  .badge {
+    width: 56px;
+    height: 56px;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+
+  <canvas id="particles"></canvas>
+
+ <!-- 🍔 Header -->
+  <div id="header-placeholder"></div>
+<script src="header-sauce.js"></script>
+
+
+
+
+
+
+ <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+  <a href="menu.html">
+    <img src="menu_link.png" alt="View Our Menu" class="badge">
+  </a>
+  <a href="comicbook.html">
+    <img src="comicbook_badge.png" alt="Read the Comic" class="badge">
+  </a>
+ <a href="reviews.html">
+    <img src="flavorverse-badge.png" alt="Flavorverse Reviews" class="badge">
+  </a>
+</div>
+<!-- MSG Badge -->
+    <section>
+<style>
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+    50% {
+      filter: drop-shadow(0 0 20px #ffffff);
+    }
+    100% {
+      filter: drop-shadow(0 0 6px #ffffff);
+    }
+  }
+</style>
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="msg_badge_updated.png" alt="We proudly use MSG"
+    style="width: 125px; height: 125px; filter: drop-shadow(0 0 6px #ffffff); transition: transform 0.3s ease; animation: pulse-glow 2s infinite ease-in-out;"
+    onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+
+  <p style="color: #ffffff; font-weight: bold;">Brazilly Philly is powered by<br>MSG = Make Stuff Good</p>
+</div>
+    </section>
+<script src="footer-sauce.js"></script>
+
+
+
+
+<script>
+
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
+}
+
+
+
+  // Particle Canvas Setup
+  const canvas = document.getElementById("particles");
+  const ctx = canvas.getContext("2d");
+  let particles = [];
+  const colors = ["#00ffc3", "#00ffee", "#00ff88"];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  class Particle {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 2 + 1;
+      this.speedY = Math.random() * 0.5 + 0.2;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+    }
+    update() {
+      this.y += this.speedY;
+      if (this.y > canvas.height) this.reset();
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  function initParticles(count = 60) {
+    particles = [];
+    for (let i = 0; i < count; i++) {
+      particles.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+
+  initParticles();
+  animate();
+
+ 
+ 
+</script>
+
+</body>
+</html>
 
