@@ -124,7 +124,7 @@ document.getElementById("header-placeholder").innerHTML = `
   <!-- Kickstarter Glow Box -->
 <section class="kickstarter-glow">
   <a href="https://www.kickstarter.com/projects/brazillyphilly/brazilly-philly-where-philly-meets-picanha" target="_blank">
-    🚀 KICKSTARTER PRE-LAUNCH PAGE
+    🚀 KICKSTARTER IS LIVE!
   </a>
 </section>
 
